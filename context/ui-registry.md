@@ -46,8 +46,9 @@ After building any component — update this file with the component name, file 
 
 #### `PublicShell`
 - **Path:** `src/components/layout/PublicShell.jsx`
-- **Tokens/Classes:** `min-h-screen flex flex-col bg-background text-text-primary`, `Reveal` wrapper `w-full` with `transition-all duration-700 ease-out`, `visible` state `opacity-100 translate-y-0`, hidden state `opacity-0 translate-y-5`.
-- **Purpose:** Outer layout wrapper for all public pages mounting `PublicNavbar`, `Reveal`-wrapped `<Outlet />`, and `PublicFooter`. The reveal now applies at the route shell so every public page shares the same fade-in animation as the homepage.
+- **Last updated:** 2026-09-02
+- **Tokens/Classes:** `min-h-screen flex flex-col bg-background text-text-primary`.
+- **Purpose:** Outer layout wrapper for all public pages mounting `PublicNavbar`, `<Outlet />`, and `PublicFooter`. The whole-page `Reveal` wrapper was removed (2026-09-02) — its `threshold: 0.12` IntersectionObserver required 12% of the entire page to be visible, leaving all content `opacity-0` on narrow/mobile viewports (only the fixed navbar rendered). Page content now renders immediately; per-section `Reveal`s inside pages still handle scroll animations.
 
 ### Public Homepage Components
 

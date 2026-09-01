@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { PublicNavbar } from "@/components/layout/PublicNavbar";
 import { PublicFooter } from "@/components/layout/PublicFooter";
-import { Reveal } from "@/components/shared/Reveal";
 
 export function PublicShell() {
   const { pathname, hash } = useLocation();
@@ -22,9 +21,7 @@ export function PublicShell() {
     <div className="min-h-screen flex flex-col bg-background text-text-primary selection:bg-primary-light selection:text-primary">
       <PublicNavbar />
       <main className="flex-1 w-full">
-        <Reveal as="div" className="w-full">
-          <Outlet />
-        </Reveal>
+        <Outlet />
       </main>
       <PublicFooter />
     </div>
