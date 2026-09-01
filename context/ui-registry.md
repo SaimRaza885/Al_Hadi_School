@@ -78,11 +78,6 @@ After building any component — update this file with the component name, file 
 - **Tokens/Classes:** `bg-surface py-20`, cards `bg-surface border border-border rounded-xl overflow-hidden shadow-card hover:shadow-md`, grid `lg:grid-cols-3` (3 programs: Middle, Secondary, STEM Wings), grade badge `bg-surface/90 backdrop-blur-sm rounded-full`.
 - **Purpose:** Curriculum overview — three programs for Grades 6–10 (Primary Wing removed 2026-08-18 per school scope).
 
-#### `NoticeBoardSection`
-- **Path:** `src/components/public/NoticeBoardSection.jsx`
-- **Tokens/Classes:** `bg-background py-20`, category filter pills `bg-surface p-1 rounded-full border`, notice cards `bg-surface border border-border rounded-xl p-6 shadow-card`.
-- **Purpose:** Filterable official notices and circulars grid.
-
 #### `BlogHighlightsSection`
 - **Path:** `src/components/public/BlogHighlightsSection.jsx`
 - **Tokens/Classes:** `bg-surface py-20`, two-column story cards `bg-background border border-border rounded-xl overflow-hidden shadow-card`, image panel with `object-cover` and hover scale, category badge `bg-surface/90 rounded-full`, metadata icons `text-text-muted`.
@@ -147,12 +142,6 @@ After building any component — update this file with the component name, file 
 - **Path:** `src/pages/public/MemoriesPage.jsx`
 - **Tokens/Classes:** filter pills `rounded-full px-5 py-2` (active `bg-text-primary text-text-inverse`), gallery cards `rounded-xl overflow-hidden` with `h-56` image + `bg-gradient-to-t from-slate-950/80` overlay, category badge `bg-primary text-primary-foreground`, lightbox `fixed inset-0 z-[100] bg-slate-950/90` with round nav buttons `bg-white/10 hover:bg-white/20`.
 - **Purpose:** Photo gallery with category filter pills and a full lightbox (prev/next, close, keyboard-accessible dialog).
-
-#### `NoticesPage`
-- **Path:** `src/pages/public/NoticesPage.jsx`
-- **Tokens/Classes:** filter pills `rounded-full px-5 py-2` (active `bg-text-primary text-text-inverse`), notice cards `bg-surface border-border rounded-xl p-6 sm:p-8 shadow-card hover:shadow-md scroll-mt-32`, category badges match `NoticeBoardSection` (Academic `bg-primary-light text-primary`, Circulars `bg-success-light text-success-foreground`, Events `bg-warning-light text-warning-foreground`), expandable detail via `<details>` with `border-t border-border-light` divider.
-- **Purpose:** Full notice board with category filter pills and expandable full-notice detail per card. `id={slug}` anchors support the homepage "Read Full Notice" links.
-- **2026-09-02:** now routed at `/notices` (previously a file with no route — the homepage "View All Notices" button and `/notices#<slug>` anchors were 404ing).
 
 #### `AdmissionsPage`
 - **Path:** `src/pages/public/AdmissionsPage.jsx`

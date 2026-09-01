@@ -62,7 +62,6 @@ src/
 | `/facilities`   | Facilities                      |
 | `/activities`   | Activities                      |
 | `/gallery`      | Memories / photo gallery        |
-| `/notices`      | Notice board                    |
 | `/blogs`        | Blog listing                    |
 | `/blogs/:slug`  | Blog article detail             |
 | `/staff`        | Staff information               |

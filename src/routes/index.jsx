@@ -7,7 +7,6 @@ import { CoCurricularPage } from "@/pages/public/CoCurricularPage";
 import { FacilitiesPage } from "@/pages/public/FacilitiesPage";
 import { ActivitiesPage } from "@/pages/public/ActivitiesPage";
 import { GalleryPage } from "@/pages/public/GalleryPage";
-import { NoticesPage } from "@/pages/public/NoticesPage";
 import { BlogsPage } from "@/pages/public/BlogsPage";
 import { BlogDetailPage } from "@/pages/public/BlogDetailPage";
 import { ContactPage } from "@/pages/public/ContactPage";
@@ -48,10 +47,6 @@ export const router = createBrowserRouter([
       {
         path: "gallery",
         element: <GalleryPage />,
-      },
-      {
-        path: "notices",
-        element: <NoticesPage />,
       },
       {
         path: "blogs",
