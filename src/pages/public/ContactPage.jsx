@@ -233,6 +233,7 @@ export function ContactPage() {
                       <Phone className="size-4 text-primary shrink-0" />
                       {contact.phone}
                     </p>
+                    <br/>
                     <p className="inline-flex items-center gap-2 text-text-secondary">
                       <Mail className="size-4 text-primary shrink-0" />
                       {contact.email}

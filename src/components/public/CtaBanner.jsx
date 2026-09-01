@@ -22,7 +22,7 @@ export function CtaBanner() {
 
               <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
                 <Link
-                  to="/admissions"
+                  to="/application"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-white text-primary text-sm font-bold hover:bg-slate-50 transition-colors shadow-md focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary"
                 >
                   <span>Start Application Now</span>

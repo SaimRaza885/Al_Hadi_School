@@ -1,31 +1,10 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import {
-  ArrowRight,
-  GraduationCap,
-  FileCheck2,
-  ReceiptText,
-  BookOpen,
-  FileText,
-} from "lucide-react";
 import { siteContent } from "@/data/siteContent.data";
 import { dummyImages } from "@/lib/dummyImages";
 import { Reveal } from "@/components/shared/Reveal";
 import { cn } from "@/lib/utils";
 
-const actionIcons = {
-  GraduationCap: GraduationCap,
-  FileCheck2: FileCheck2,
-  ReceiptText: ReceiptText,
-  BookOpen: BookOpen,
-};
-
 export function HeroSection() {
-  const getIcon = (iconName) => {
-    const Icon = actionIcons[iconName] || FileText;
-    return <Icon className="size-5" />;
-  };
-
   const slides = dummyImages.heroSlides || [dummyImages.pageHeroBg];
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -112,34 +91,6 @@ export function HeroSection() {
           </div>
         )}
       </section>
-
-      {/* 2. QUICK LINKS STRIP — refined, quiet, one line each */}
-      {/* <section className="bg-surface border-b border-border-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-border">
-            {siteContent.quickActions.map((action) => (
-              <Link
-                key={action.id}
-                to={action.link}
-                className="group flex items-center gap-3.5 px-5 py-5 transition-colors hover:bg-surface-tertiary/70"
-              >
-                <span className="size-10 rounded-lg bg-primary-light text-primary flex items-center justify-center shrink-0 transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                  {getIcon(action.icon)}
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="block text-sm font-semibold text-text-primary transition-colors group-hover:text-primary">
-                    {action.title}
-                  </span>
-                  <span className="block text-xs text-text-muted mt-0.5 truncate">
-                    {action.subtitle}
-                  </span>
-                </span>
-                <ArrowRight className="size-4 text-primary shrink-0 -translate-x-1 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 }

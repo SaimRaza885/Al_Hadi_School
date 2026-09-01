@@ -32,42 +32,6 @@ export const siteContent = {
     lsaNote: "Our comprehensive Life Skills & Activities (LSA) program ensures every student finds their passion and builds resilient character.",
   },
 
-  quickActions: [
-    {
-      id: "results",
-      title: "Find Exam Results",
-      subtitle: "Look up session results by roll number",
-      link: "/results",
-      actionText: "View Results",
-      icon: "GraduationCap",
-      badge: "Live Portal",
-    },
-    {
-      id: "admission-status",
-      title: "Check Admission Status",
-      subtitle: "Track your submitted application",
-      link: "/admissions/status",
-      actionText: "Track Application →",
-      icon: "FileCheck2",
-    },
-    {
-      id: "fees",
-      title: "Fee Structure & Dates",
-      subtitle: "Session fee schedule and terms",
-      link: "/admissions#fees",
-      actionText: "Quick PDF/View",
-      icon: "ReceiptText",
-    },
-    {
-      id: "prospectus",
-      title: "Download Prospectus",
-      subtitle: "Comprehensive curriculum overview",
-      link: "/about#prospectus",
-      actionText: "View Page",
-      icon: "BookOpen",
-    },
-  ],
-
   stats: [
     { value: "25+", label: "YEARS OF EXCELLENCE" },
     { value: "100%", label: "FULLY EQUIPPED LABS" },
@@ -274,6 +238,12 @@ export const siteContent = {
       { name: "Mr. K. Mehmood", role: "Head of STEM", bio: "Leads robotics, coding, and the innovation lab program.", image: dummyImages.staffStem },
       { name: "Ms. S. Iqbal", role: "Head of Activities (LSA)", bio: "Coordinates athletics, arts, clubs, and community service.", image: dummyImages.staffActivities },
     ],
+    alumuni: [
+      { name: "Adeel Ahmed", Matric: "98%", review: "Al-Hadi Academy is the best school in Gilgit. The teachers genuinely care about every single student.", image: dummyImages.staffPrincipal },
+      { name: "Shoaib Karim", Matric: "96%", review: "The hostel environment kept me focused and helped me turn good habits into great marks.", image: dummyImages.staffAcademics },
+      { name: "Maryam Ali", Matric: "93%", review: "The science labs and STEM program took me far beyond what the board exams required.", image: dummyImages.staffActivities },
+      { name: "Hassan Raza", Matric: "91%", review: "Discipline, caring mentors, and a supportive community made all the difference for me.", image: dummyImages.staffStem },
+    ]
   },
 
   contactPage: {

@@ -23,11 +23,12 @@ export function PublicNavbar() {
         { name: "Overview", path: "/about" },
         { name: "Facilities", path: "/facilities" },
         { name: "Staff Information", path: "/staff" },
+        { name: "Alumuni", path: "/alumuni" },
       ],
     },
     {
       name: "ACADEMICS",
-      path: "/academics",
+      path: "/curriculum",
       dropdown: [
         { name: "Curriculum", path: "/curriculum" },
         { name: "Co-curricular Activities", path: "/co-curricular" },

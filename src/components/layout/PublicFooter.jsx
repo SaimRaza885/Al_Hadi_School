@@ -89,12 +89,12 @@ export function PublicFooter() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link to="/admissions" className="hover:text-primary transition-colors">
+                <Link to="/application" className="hover:text-primary transition-colors">
                   Admission Process
                 </Link>
               </li>
               <li>
-                <Link to="/academics" className="hover:text-primary transition-colors">
+                <Link to="/curriculum" className="hover:text-primary transition-colors">
                   Academic Programs
                 </Link>
               </li>
@@ -137,11 +137,6 @@ export function PublicFooter() {
                   Online Application
                 </Link>
               </li>
-              <li>
-                <Link to="/results" className="hover:text-primary transition-colors">
-                  Student Portal
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -177,14 +172,6 @@ export function PublicFooter() {
         {/* Bottom copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>© 2026 {siteContent.schoolTag || siteContent.schoolName}. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <Link to="/privacy" className="hover:text-slate-300 transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="hover:text-slate-300 transition-colors">
-              Terms of Use
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

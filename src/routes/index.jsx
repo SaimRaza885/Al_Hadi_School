@@ -7,12 +7,14 @@ import { CoCurricularPage } from "@/pages/public/CoCurricularPage";
 import { FacilitiesPage } from "@/pages/public/FacilitiesPage";
 import { ActivitiesPage } from "@/pages/public/ActivitiesPage";
 import { GalleryPage } from "@/pages/public/GalleryPage";
+import { NoticesPage } from "@/pages/public/NoticesPage";
 import { BlogsPage } from "@/pages/public/BlogsPage";
 import { BlogDetailPage } from "@/pages/public/BlogDetailPage";
 import { ContactPage } from "@/pages/public/ContactPage";
 import { StaffPage } from "@/pages/public/StaffPage";
 import { PlaceholderPage } from "@/pages/public/PlaceholderPage";
 import { ApplicationClosedPage } from "@/pages/public/ApplicationClosedPage";
+import { AlumuniPage } from "@/pages/AlumuniPage";
 
 export const router = createBrowserRouter([
   {
@@ -48,6 +50,10 @@ export const router = createBrowserRouter([
         element: <GalleryPage />,
       },
       {
+        path: "notices",
+        element: <NoticesPage />,
+      },
+      {
         path: "blogs",
         element: <BlogsPage />,
       },
@@ -62,6 +68,10 @@ export const router = createBrowserRouter([
       {
         path: "staff",
         element: <StaffPage />,
+      },
+      {
+        path:"alumuni",
+        element: <AlumuniPage/>
       },
       {
         path: "application",

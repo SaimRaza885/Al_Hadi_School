@@ -30,7 +30,7 @@ export function AcademicPrograms() {
           {siteContent.academicPrograms.map((prog, idx) => (
             <Reveal key={prog.id} delay={idx * 80}>
               <Link
-                to="/academics"
+                to="/curriculum"
                 className="group flex flex-col h-full bg-surface border border-border rounded-xl overflow-hidden shadow-card hover:shadow-md transition-all"
               >
                 <div className="relative h-44 w-full overflow-hidden bg-surface-tertiary">

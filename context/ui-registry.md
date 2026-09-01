@@ -32,15 +32,17 @@ After building any component — update this file with the component name, file 
 
 #### `PublicNavbar`
 - **Path:** `src/components/layout/PublicNavbar.jsx`
-- **Last updated:** 2026-08-27
+- **Last updated:** 2026-09-02
 - **Tokens/Classes:** `fixed top-0 z-50 w-full bg-surface/95 backdrop-blur-md border-b border-border-light shadow-xs`, logo tile `size-9 sm:size-11 rounded-xl bg-white ring-1 ring-black/5`, nav links `text-text-secondary hover:text-primary hover:bg-surface-tertiary/60`, active/open state `text-primary` with `bg-primary` underline, desktop dropdown `rounded-lg border border-border bg-surface p-2 shadow-lg`, mobile drawer `bg-surface`, mobile submenu `border-l-2 border-primary-light`.
 - **Purpose:** Public website header with About Us, Academics, and Activities dropdowns, click-away closing, route-change closing, accessible expanded states, and expandable mobile navigation.
+- **2026-09-02:** ACADEMICS nav item `path` changed `/academics` → `/curriculum` (the `/academics` route never existed).
 
 #### `PublicFooter`
 - **Path:** `src/components/layout/PublicFooter.jsx`
-- **Last updated:** 2026-08-18
+- **Last updated:** 2026-09-02
 - **Tokens/Classes:** `bg-[#0B132B] text-slate-300 border-t border-slate-800`, newsletter input `bg-slate-900 border border-slate-700 text-white`, submit icon button `bg-primary hover:bg-primary-hover text-white rounded-md`, brand logo tile `size-10 rounded-lg bg-white ring-1 ring-black/5` with `img` logo (`siteContent.schoolLogo`).
 - **Purpose:** 4-column public site footer with contact details, quick links, portal links, newsletter form, and copyright.
+- **2026-09-02:** "Admission Process" `/admissions` → `/application`, "Academic Programs" `/academics` → `/curriculum`; removed dead `/results` (Student Portal), `/privacy`, and `/terms` links.
 
 #### `PublicShell`
 - **Path:** `src/components/layout/PublicShell.jsx`
@@ -150,6 +152,7 @@ After building any component — update this file with the component name, file 
 - **Path:** `src/pages/public/NoticesPage.jsx`
 - **Tokens/Classes:** filter pills `rounded-full px-5 py-2` (active `bg-text-primary text-text-inverse`), notice cards `bg-surface border-border rounded-xl p-6 sm:p-8 shadow-card hover:shadow-md scroll-mt-32`, category badges match `NoticeBoardSection` (Academic `bg-primary-light text-primary`, Circulars `bg-success-light text-success-foreground`, Events `bg-warning-light text-warning-foreground`), expandable detail via `<details>` with `border-t border-border-light` divider.
 - **Purpose:** Full notice board with category filter pills and expandable full-notice detail per card. `id={slug}` anchors support the homepage "Read Full Notice" links.
+- **2026-09-02:** now routed at `/notices` (previously a file with no route — the homepage "View All Notices" button and `/notices#<slug>` anchors were 404ing).
 
 #### `AdmissionsPage`
 - **Path:** `src/pages/public/AdmissionsPage.jsx`
@@ -160,6 +163,16 @@ After building any component — update this file with the component name, file 
 - **Path:** `src/pages/public/AcademicsPage.jsx`
 - **Tokens/Classes:** approach cards `bg-surface border-border rounded-xl p-6 shadow-card hover:-translate-y-1` with `size-12 rounded-xl bg-primary-light` icon tiles, program filter pills `rounded-full p-1 bg-surface-tertiary` (active `bg-text-primary text-text-inverse`), program cards `bg-surface rounded-xl overflow-hidden shadow-card` with `h-52` image + grades badge `bg-surface/90 rounded-full`, subject checks `rounded-full bg-primary-light` + `text-primary`, highlight checks `rounded-full bg-success-light` + `text-success-foreground`, LSA strip `bg-primary-muted rounded-2xl`.
 - **Purpose:** Learning approach grid, filterable academic programs with subjects + highlights, LSA callout linking to Activities page.
+
+#### `AlumuniPage`
+- **Path:** `src/pages/AlumuniPage.jsx`
+- **Tokens/Classes:** shared `PageHero` (title "Our Alumni", crumb "Alumni / Topers"), stats strip `bg-surface-secondary border-b border-border-light` matching `StatsBar` (`text-3xl sm:text-4xl lg:text-5xl font-extrabold text-text-primary` values + uppercase `text-text-muted` labels), spotlight grid `bg-background py-20` using `SectionHeading` (`align="center"`, eyebrow "Alumni Spotlight"), cards `AlumuniCard`, featured quote band `rounded-2xl bg-primary` with `Quote` icon `text-white/70`, blurred `bg-white/10` orb decorations matching `CtaBanner`, attribution `text-white/85 uppercase`.
+- **Purpose:** Alumni toppers showcase — stats strip, spotlight card grid, featured testimonial band, facilities CTA, shared `CtaBanner`.
+
+#### `AlumuniCard`
+- **Path:** `src/components/shared/AlumuniCard.jsx`
+- **Tokens/Classes:** `bg-surface border border-border rounded-xl p-6 shadow-card hover:shadow-md hover:-translate-y-1 h-full text-center`, corner quote mark `text-primary-light group-hover:text-primary/30`, portrait circle `size-24 rounded-full bg-primary-light ring-4 ring-primary-muted` (fallback `UserRound text-primary`), name `text-base font-bold text-text-primary`, Matric badge pill `rounded-full bg-primary-light text-primary px-3 py-1` with `Award` icon, review `text-sm text-text-muted leading-relaxed` wrapped in curly quotes.
+- **Purpose:** Alumni profile card — portrait, name, Matric marks badge, short review.
 
 #### `ContactPage`
 - **Path:** `src/pages/public/ContactPage.jsx`
