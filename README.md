@@ -77,7 +77,6 @@ Content lives in `src/data/` as plain JavaScript arrays/objects:
 
 - `siteContent.data.js` — school info, hero subtitle, principal, stats, programs, leadership, alumni
 - `blogs.data.js` — blog articles
-- `notices.data.js` — official notices
 - `facilities.data.js` — campus facilities
 - `activities.data.js` — clubs & activities
 - `memories.data.js` — gallery items
