@@ -21,7 +21,7 @@ export function PublicFooter() {
           {/* Col 1: Brand & Contact Info (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
             <div className="flex items-center gap-3">
-              <div className="size-10 rounded-lg bg-white flex items-center justify-center overflow-hidden shadow-sm ring-1 ring-black/5">
+              <div className="size-14 rounded-lg bg-white flex items-center justify-center overflow-hidden shadow-sm ring-1 ring-black/5">
                 <img
                   src={siteContent.schoolLogo}
                   alt={siteContent.schoolName}
