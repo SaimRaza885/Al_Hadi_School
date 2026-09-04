@@ -239,7 +239,7 @@ export const siteContent = {
       { name: "Ms. S. Iqbal", role: "Head of Activities (LSA)", bio: "Coordinates athletics, arts, clubs, and community service.", image: dummyImages.staffActivities },
     ],
     alumuni: [
-      { name: "Adeel Ahmed", Matric: "98%", review: "Al-Hadi Academy is the best school in Gilgit. The teachers genuinely care about every single student.", image: dummyImages.staffPrincipal },
+      { name: "Adeel Abbas", Matric: "98%", review: "Al-Hadi Academy is the best school in Gilgit. The teachers genuinely care about every single student.", image: dummyImages.staffPrincipal },
       { name: "Shoaib Karim", Matric: "96%", review: "The hostel environment kept me focused and helped me turn good habits into great marks.", image: dummyImages.staffAcademics },
       { name: "Maryam Ali", Matric: "93%", review: "The science labs and STEM program took me far beyond what the board exams required.", image: dummyImages.staffActivities },
       { name: "Hassan Raza", Matric: "91%", review: "Discipline, caring mentors, and a supportive community made all the difference for me.", image: dummyImages.staffStem },
