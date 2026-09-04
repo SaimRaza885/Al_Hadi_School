@@ -1,5 +1,3 @@
-import schoolLogo from "@/data/asserts/Al Hadi.jpeg";
-
 // Real school imagery hosted on Unsplash (CDN).
 // Sizes are picked per use: w=1920 for hero/background, w=1200 for cards,
 // w=800 for portraits. crop + auto format keep them lean.
@@ -8,7 +6,7 @@ const u = (id, w, h) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}${h ? `&h=${h}` : ""}&q=80`;
 
 export const dummyImages = {
-  schoolLogo,
+  schoolLogo: "/al-hadi-logo.jpeg",
 
   // Hero student / classroom
   heroStudent: u("1509062522246-3755977927d7", 1200, 900),
