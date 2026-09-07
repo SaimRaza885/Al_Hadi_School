@@ -1,17 +1,16 @@
-// Local image registry — fully offline, no internet image URLs.
+
+// Real school imagery hosted on Unsplash (CDN) — used only as fallbacks where
+// no local image exists yet.
+// Sizes are picked per use: w=1920 for hero/background, w=1200 for cards,
+// w=800 for portraits. crop + auto format keep them lean.
 //
-// Every image on the public site comes from src/data/asserts/, auto-loaded
-// via localImages (Vite import.meta.glob). Add / replace / delete files there
-// and the site picks them up automatically.
-//
-// Landscape "card" keys cycle through the local photo pool (hero + gallery).
-// Portrait keys for staff / alumni stay `undefined` so ProfileCard renders its
-// clean icon fallback until real portraits are dropped into the assets folder.
+// Local images (school logo, hero slider, gallery) are auto-loaded from
+// src/data/asserts/ via localImages. Drop a file in — it goes live automatically.
 
 import { localImages } from "@/lib/localImages";
 
-const pool = [...localImages.heroSlides, ...localImages.gallery];
-const pick = (i) => (pool.length ? pool[i % pool.length] : "");
+const u = (id, w, h) =>
+  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}${h ? `&h=${h}` : ""}&q=80`;
 
 export const dummyImages = {
   schoolLogo: localImages.schoolLogo,
@@ -20,35 +19,68 @@ export const dummyImages = {
   gallery: localImages.gallery,
   galleryFileName: localImages.galleryFileName,
 
-  // Homepage hero auto-slider backgrounds (local hero-*.jpg)
-  heroSlides: localImages.heroSlides,
+  // Hero student / classroom
+  heroStudent: u("1509062522246-3755977927d7", 1200, 900),
 
-  // Inner-page hero background (first local hero photo)
-  pageHeroBg: localImages.pageHeroBg || pick(0),
+  // Principal portrait
+  principal: u("1507003211169-0a1dd7228f2d", 800, 1000),
 
-  // Landscape card imagery — real local school photos
-  heroStudent: pick(0),
-  principal: pick(1),
-  sports: pick(2),
-  arts: pick(3),
-  clubs: pick(4),
-  middleProgram: pick(5),
-  secondaryProgram: pick(6),
-  stemProgram: pick(7),
+  // Staff portraits
+  staffPrincipal: u("1500648767791-00dcc994a43e", 400, 400),
+  staffAcademics: u("1580489944761-15a19d654956", 400, 400),
+  staffStem: u("1560250097-0b93528c311a", 400, 400),
+  staffActivities: u("1551836022-d5d88e9218df", 400, 400),
 
-  // "Gallery" keys kept for editorial / blog fallbacks — local photos
-  gallerySports: pick(8),
-  galleryScience: pick(9),
-  galleryQirat: pick(10),
-  galleryArts: pick(11),
-  galleryLibrary: pick(12),
-  gallerySportsGround: pick(13),
-  galleryCampus: pick(14),
+  // Athletics & Sports
+  sports: u("1461896836934-ffe607ba8211", 1200, 800),
 
-  // Portraits — no local files yet; leave undefined so ProfileCard renders
-  // its icon fallback instead of a fake internet photo
-  staffPrincipal: undefined,
-  staffAcademics: undefined,
-  staffStem: undefined,
-  staffActivities: undefined,
+  // Creative Arts
+  arts: u("1513364776144-60967b0f800f", 1200, 800),
+
+  // Leadership & Clubs
+  clubs: u("1517048676732-d65bc937f952", 1200, 800),
+
+  // Academic Program: Middle
+  middleProgram: u("1523240795612-9a054b0db644", 1200, 800),
+
+  // Academic Program: Secondary
+  secondaryProgram: u("1571260899304-425eee4c7efc", 1200, 800),
+
+  // Academic Program: STEM
+  stemProgram: u("1581092160562-40aa08e78837", 1200, 800),
+
+  // Gallery: Sports Day
+  gallerySports: u("1461896836934-ffe607ba8211", 1200, 900),
+
+  // Gallery: Science Exhibition
+  galleryScience: u("1532094349884-543bc11b234d", 1200, 900),
+
+  // Gallery: Qirat & Culture
+  galleryQirat: u("1546410531-bb4caa6b424d", 1200, 900),
+
+  // Gallery: Arts & Drama
+  galleryArts: u("1513364776144-60967b0f800f", 1200, 900),
+
+  // Gallery: Library
+  galleryLibrary: u("1524995997946-a1c2e315a42f", 1200, 900),
+
+  // Gallery: Sports Ground
+  gallerySportsGround: u("1461896836934-ffe607ba8211", 1200, 900),
+
+  // Gallery: Campus
+  galleryCampus: u("1562774053-701939374585", 1200, 900),
+
+  // Page hero background — campus building (falls back to local hero-1)
+  pageHeroBg: localImages.pageHeroBg || u("1541339907198-e08756dedf3f", 1920),
+
+  // Homepage hero auto-slider backgrounds (full-bleed, sourced locally)
+  heroSlides:
+    localImages.heroSlides.length > 0
+      ? localImages.heroSlides
+      : [
+          u("1541339907198-e08756dedf3f", 1920),
+          u("1562774053-701939374585", 1920),
+          u("1509062522246-3755977927d7", 1920),
+          u("1523240795612-9a054b0db644", 1920),
+        ],
 };
