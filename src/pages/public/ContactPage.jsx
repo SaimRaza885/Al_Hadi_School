@@ -20,12 +20,20 @@ const cardIcons = {
   Mail: Mail,
 };
 
+function toWhatsAppNumber(phone) {
+  const digits = String(phone).replace(/[^0-9]/g, "");
+  // Pakistan mobile: leading 0 → country code 92
+  return digits.startsWith("0") ? `92${digits.slice(1)}` : digits;
+}
+
 function getCardAction(icon, contact) {
   if (icon === "Phone") {
+    const wa = toWhatsAppNumber(contact.phone);
     return {
-      href: `tel:${contact.phone}`,
-      label: "Call Now",
-      Icon: Phone,
+      href: `https://wa.me/${wa}`,
+      label: "WhatsApp",
+      Icon: MessageSquare,
+      external: true,
     };
   }
   if (icon === "Mail") {
@@ -35,8 +43,8 @@ function getCardAction(icon, contact) {
       Icon: Mail,
     };
   }
-  // Map / Visit
-  const mapsQuery = encodeURIComponent(contact.address);
+  // Map / Visit — keep precise mapsQuery for directions
+  const mapsQuery = encodeURIComponent(contact.mapsQuery || contact.address);
   return {
     href: `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`,
     label: "Get Directions",
@@ -64,9 +72,7 @@ export function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const digits = contact.phone.replace(/[^0-9]/g, "");
-    // Pakistan mobile: convert leading 0 to country code 92 for WhatsApp
-    const targetPhone = digits.startsWith("0") ? `92${digits.slice(1)}` : digits;
+    const targetPhone = toWhatsAppNumber(contact.phone);
 
     const text =
       `*New Contact Form Submission*\n\n` +
@@ -82,7 +88,9 @@ export function ContactPage() {
     setSent(true);
   };
 
-  const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contact.address)}`;
+  const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    contact.mapsQuery || contact.address
+  )}`;
 
   return (
     <div className="w-full flex flex-col">
