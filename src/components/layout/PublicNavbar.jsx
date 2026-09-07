@@ -52,8 +52,7 @@ export function PublicNavbar() {
       dropdown: [
         { name: "Curriculum", path: "/curriculum", icon: "BookOpen", caption: "Programs for grades 6–10" },
         { name: "Co-curricular Activities", path: "/co-curricular", icon: "Sparkles", caption: "Sports, arts & clubs" },
-        { name: "Facilities & Labs", path: "/facilities", icon: "FlaskConical", caption: "Science labs & smart classrooms" },
-        { name: "School Activities", path: "/activities", icon: "Trophy", caption: "Clubs, sports & leadership" },
+   
       ],
     },
     { name: "ACTIVITIES", path: "/activities" },
