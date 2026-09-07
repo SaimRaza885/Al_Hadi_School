@@ -1,9 +1,12 @@
 import { dummyImages } from "@/lib/dummyImages";
 
 const schoolContact = {
-  phone: "03121869841",
+  phone: "03555679715",
   email: "alhadiacademygilgit123@gmail.com",
-  address: "W9CJ+C6J, Danyor",
+  // Shown on the website
+  address: "Danyor Main Chock Near Shaheen Adda",
+  // Used only for Google Maps (plus code / precise location)
+  mapsQuery: "W9CJ+C6J, Danyor",
   timings: "Monday – Saturday: 8:00 AM – 2:30 PM",
 };
 
@@ -269,10 +272,10 @@ export const siteContent = {
       },
     ],
     departments: [
-      { name: "Admissions Office", email: "alhadiacademygilgit123@gmail.com", phone: "03121869841" },
-      { name: "Academic Office", email: "alhadiacademygilgit123@gmail.com", phone: "03121869841" },
-      { name: "Accounts & Fees", email: "alhadiacademygilgit123@gmail.com", phone: "03121869841" },
-      { name: "Examinations", email: "alhadiacademygilgit123@gmail.com", phone: "03121869841" },
+      { name: "Admissions Office", email: "alhadiacademygilgit123@gmail.com", phone: "03555679715" },
+      { name: "Academic Office", email: "alhadiacademygilgit123@gmail.com", phone: "03555679715" },
+      { name: "Accounts & Fees", email: "alhadiacademygilgit123@gmail.com", phone: "03555679715" },
+      { name: "Examinations", email: "alhadiacademygilgit123@gmail.com", phone: "03555679715" },
     ],
   },
 };
