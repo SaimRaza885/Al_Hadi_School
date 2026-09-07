@@ -2,8 +2,8 @@ import { dummyImages } from "@/lib/dummyImages";
 
 const schoolContact = {
   phone: "03121869841",
-  email: "admissions@greenwood.edu",
-  address: "123 Academy Blvd, North District, Metropolis 56789",
+  email: "alhadiacademygilgit123@gmail.com",
+  address: "W9CJ+C6J, Danyor",
   timings: "Monday – Saturday: 8:00 AM – 2:30 PM",
 };
 
@@ -269,10 +269,10 @@ export const siteContent = {
       },
     ],
     departments: [
-      { name: "Admissions Office", email: "admissions@greenwood.edu", phone: "03121869841" },
-      { name: "Academic Office", email: "academics@greenwood.edu", phone: "03121869841" },
-      { name: "Accounts & Fees", email: "accounts@greenwood.edu", phone: "03121869841" },
-      { name: "Examinations", email: "exams@greenwood.edu", phone: "03121869841" },
+      { name: "Admissions Office", email: "alhadiacademygilgit123@gmail.com", phone: "03121869841" },
+      { name: "Academic Office", email: "alhadiacademygilgit123@gmail.com", phone: "03121869841" },
+      { name: "Accounts & Fees", email: "alhadiacademygilgit123@gmail.com", phone: "03121869841" },
+      { name: "Examinations", email: "alhadiacademygilgit123@gmail.com", phone: "03121869841" },
     ],
   },
 };
