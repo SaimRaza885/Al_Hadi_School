@@ -1,10 +1,10 @@
 ﻿import { images } from "@/assets/images";
 
 const schoolContact = {
-  phone: "+1 (234) 567-8900",
-  email: "admissions@greenwood.edu",
-  address: "123 Academy Blvd, North District, Metropolis 56789",
-  timings: "Monday â€“ Saturday: 8:00 AM â€“ 2:30 PM",
+  phone: "03121869841",
+  email: "alhadiacademygilgit123@gmail.com",
+  address: "W9CJ+C6J, Danyor",
+  timings: "Monday – Saturday: 8:00 AM – 2:30 PM",
 };
 
 export const siteContent = {
@@ -23,8 +23,8 @@ export const siteContent = {
   principal: {
     name: "Dr. Hassan",
     title: "Principal",
-    image: images.principal,
-    welcomeHeading: "Welcome to Al-Hadi School",
+    image: dummyImages.principal,
+    welcomeHeading: "Welcome to Al-Hadi Academy Gilgit",
     paragraphs: [
       "At Al-Hadi, we believe every child carries unique potential. Our mission is to create an environment where curiosity thrives, character is built, and futures are shaped through education that goes beyond textbooks.",
       "We are dedicated to academic distinction, fostering an atmosphere where digital literacy and holistic life skills are integrated into every facet of the learning journey, ensuring our students are prepared for the global stage.",
@@ -267,10 +267,10 @@ export const siteContent = {
       },
     ],
     departments: [
-      { name: "Admissions Office", email: "admissions@greenwood.edu", phone: "+1 (234) 567-8900" },
-      { name: "Academic Office", email: "academics@greenwood.edu", phone: "+1 (234) 567-8901" },
-      { name: "Accounts & Fees", email: "accounts@greenwood.edu", phone: "+1 (234) 567-8902" },
-      { name: "Examinations", email: "exams@greenwood.edu", phone: "+1 (234) 567-8903" },
+      { name: "Admissions Office", email: "alhadiacademygilgit123@gmail.com", phone: "03121869841" },
+      { name: "Academic Office", email: "alhadiacademygilgit123@gmail.com", phone: "03121869841" },
+      { name: "Accounts & Fees", email: "alhadiacademygilgit123@gmail.com", phone: "03121869841" },
+      { name: "Examinations", email: "alhadiacademygilgit123@gmail.com", phone: "03121869841" },
     ],
   },
 };
