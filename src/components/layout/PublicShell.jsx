@@ -18,7 +18,7 @@ export function PublicShell() {
   }, [pathname, hash]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background text-text-primary selection:bg-primary-light selection:text-primary">
+    <div className="public-shell min-h-screen flex flex-col bg-background text-text-primary selection:bg-primary-light selection:text-primary">
       <PublicNavbar />
       <main className="flex-1 w-full">
         <Outlet />

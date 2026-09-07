@@ -32,10 +32,10 @@ After building any component — update this file with the component name, file 
 
 #### `PublicNavbar`
 - **Path:** `src/components/layout/PublicNavbar.jsx`
-- **Last updated:** 2026-09-02
-- **Tokens/Classes:** `fixed top-0 z-50 w-full bg-surface/95 backdrop-blur-md border-b border-border-light shadow-xs`, logo tile `size-9 sm:size-11 rounded-xl bg-white ring-1 ring-black/5`, nav links `text-text-secondary hover:text-primary hover:bg-surface-tertiary/60`, active/open state `text-primary` with `bg-primary` underline, desktop dropdown `rounded-lg border border-border bg-surface p-2 shadow-lg`, mobile drawer `bg-surface`, mobile submenu `border-l-2 border-primary-light`.
-- **Purpose:** Public website header with About Us, Academics, and Activities dropdowns, click-away closing, route-change closing, accessible expanded states, and expandable mobile navigation.
-- **2026-09-02:** ACADEMICS nav item `path` changed `/academics` → `/curriculum` (the `/academics` route never existed).
+- **Last updated:** 2026-09-07
+- **Tokens/Classes:** `fixed top-0 z-50 w-full bg-surface/95 backdrop-blur-md border-b border-border-light shadow-xs`, logo tile `size-12 sm:size-14 lg:size-20`, nav links `text-text-secondary hover:text-primary hover:bg-surface-tertiary/60`, active/open state `text-primary` with `bg-primary` underline, desktop dropdown panel `absolute left-0 top-full mt-2 w-72 rounded-xl border border-border bg-surface/95 backdrop-blur-md shadow-lg p-2` with top caret (`size-2.5 rotate-45 border-l border-t`) and `.animate-dropdown-in` keyframe (opacity 0→1 + -6px→0 translateY, 0.18s ease-out), item entry `group/item` two-line: icon tile `size-9 rounded-md bg-primary-light text-primary` flipping to `bg-primary text-primary-foreground` on hover + label `text-sm font-semibold` + caption `text-xs text-text-muted` + `ChevronRight` slide-in on hover (`-translate-x-1 opacity-0` → active), mobile drawer `bg-surface`, mobile submenu `border-l-2 border-primary-light` with same icon tiles (`size-8`).
+- **Purpose:** Public website header with About Us and Academics dropdowns, hover-intent opening (120ms in / 180ms leave grace), click-away closing, Escape closing, route-change closing, accessible expanded states (`aria-expanded`/`aria-haspopup`), and expandable mobile navigation.
+- **2026-09-07:** Dropdowns enriched + modernized. ABOUT US now: Overview, Facilities, Staff Information, Alumni & Topers. ACADEMICS now: Curriculum, Co-curricular Activities, Facilities & Labs, School Activities. Every dropdown item gained an icon (`navIconMap` in-component) + one-line caption; desktop panel got caret, blur, entrance animation; hover opens in addition to click with a 180ms grace timer so the panel doesn't close while moving the cursor into it.
 
 #### `PublicFooter`
 - **Path:** `src/components/layout/PublicFooter.jsx`
@@ -55,7 +55,7 @@ After building any component — update this file with the component name, file 
 #### `HeroSection`
 - **Path:** `src/components/public/HeroSection.jsx`
 - **Last updated:** 2026-08-18
-- **Tokens/Classes:** full-bleed auto slider background — images from `dummyImages.heroSlides` (4 verified Unsplash campus scenes at w=1920), crossfade via `opacity` + `transition-opacity duration-1000`, active `opacity-100` / inactive `opacity-0`, autoplay `setInterval` 5000ms (respects `prefers-reduced-motion`), depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20`, dot indicators `h-1.5 rounded-full` active `w-8 bg-white` / inactive `w-3 bg-white/40 hover:bg-white/70`, headline `text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight` (matches `WelcomeSection` principal heading — Plus Jakarta Sans) with light-blue accent `text-primary-light`, subtitle `text-white/95`, CTA `bg-primary text-primary-foreground rounded-sm px-7 py-3.5`, quick-links strip `bg-surface border-b border-border-light` with icon tiles `size-10 rounded-lg bg-primary-light text-primary group-hover:bg-primary group-hover:text-primary-foreground`.
+- **Tokens/Classes:** full-bleed auto slider — images from `dummyImages.heroSlides` (now auto-loaded local `src/data/asserts/website image/hero-*.jpg`; Unsplash fallback only if the folder is empty), crossfade via `opacity` + `transition-opacity duration-1000`, active `opacity-100` / inactive `opacity-0`, autoplay `setInterval` 5000ms (respects `prefers-reduced-motion`), depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20`, dot indicators `h-1.5 rounded-full` active `w-8 bg-white` / inactive `w-3 bg-white/40 hover:bg-white/70`, headline `text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight` (matches `WelcomeSection` principal heading — Plus Jakarta Sans) with light-blue accent `text-primary-light`, subtitle `text-white/95`, CTA `bg-primary text-primary-foreground rounded-sm px-7 py-3.5`, quick-links strip `bg-surface border-b border-border-light` with icon tiles `size-10 rounded-lg bg-primary-light text-primary group-hover:bg-primary group-hover:text-primary-foreground`.
 - **Purpose:** Main hero with auto-rotating campus background slider, eyebrow pill, serif headline, trust stats, single admission CTA, and a 4-item quick-links strip below.
 
 #### `WelcomeSection`
@@ -101,9 +101,8 @@ After building any component — update this file with the component name, file 
 
 #### `PageHero`
 - **Path:** `src/components/public/PageHero.jsx`
-- **Last updated:** 2026-08-18
-- **Last updated:** 2026-08-27
-- **Tokens/Classes:** background image `dummyImages.pageHeroBg` (wide campus scene) with depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20`, text `text-white`, breadcrumb `text-white/70 hover:text-white`, title `text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-sm`, subtitle `text-white/85 drop-shadow-sm`, container `pt-24 sm:pt-32` (clears fixed navbar).
+- **Last updated:** 2026-09-07
+- **Tokens/Classes:** background image `dummyImages.pageHeroBg` (now the first local `hero-*.jpg`, i.e. `localImages.pageHeroBg`; Unsplash fallback if none) with depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20`, text `text-white`, breadcrumb `text-white/70 hover:text-white`, title `text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-sm`, subtitle `text-white/85 drop-shadow-sm`, container `pt-24 sm:pt-32` (clears fixed navbar).
 - **Purpose:** Shared page header for all public subpages, using a short direct title instead of a separate eyebrow badge.
 - **Pattern note:** Depth scrim (bottom-weighted black gradient) matches the homepage hero exactly (`from-black/80 via-black/55 to-black/20`) for consistent legibility.
 
@@ -111,7 +110,7 @@ After building any component — update this file with the component name, file 
 
 #### `AboutPage`
 - **Path:** `src/pages/public/AboutPage.jsx`
-- **Tokens/Classes:** mission card `bg-primary-muted rounded-xl border-border`, vision card `bg-surface-tertiary`, story `bg-background` + milestone timeline card `bg-surface border-border rounded-xl shadow-card`, milestone dot `bg-primary ring-4 ring-primary-light`, values cards `bg-surface rounded-xl shadow-card hover:shadow-md hover:-translate-y-1`, leadership cards `text-center` with `rounded-full bg-primary-light` avatar circles.
+- **Tokens/Classes:** mission card `bg-primary-muted rounded-xl border-border`, vision card `bg-surface-tertiary`, story `bg-background` + story image `relative h-72 lg:h-full overflow-hidden rounded-2xl border border-border shadow-card` (real auto-loaded photo from `dummyImages.gallery[0]`, `object-cover`, bottom gradient `from-black/35`), story grid `lg:grid-cols-12 items-stretch`, values cards `bg-surface rounded-xl shadow-card hover:shadow-md hover:-translate-y-1`, leadership cards `text-center` with `rounded-full bg-primary-light` avatar circles.
 - **Purpose:** Mission/vision, story + milestone timeline, values grid, leadership team.
 
 #### `CurriculumPage`
@@ -139,10 +138,18 @@ After building any component — update this file with the component name, file 
 - **Tokens/Classes:** program cards `bg-surface rounded-xl overflow-hidden shadow-card` with `h-48` images, highlight checks `rounded-full bg-primary-light` + `text-primary`, club cards `bg-background border-border rounded-xl shadow-card hover:-translate-y-1` with `size-12 rounded-xl bg-primary-light` icon tiles.
 - **Purpose:** Co-curricular flagship programs + extra-curricular clubs grid.
 
-#### `MemoriesPage`
-- **Path:** `src/pages/public/MemoriesPage.jsx`
-- **Tokens/Classes:** filter pills `rounded-full px-5 py-2` (active `bg-text-primary text-text-inverse`), gallery cards `rounded-xl overflow-hidden` with `h-56` image + `bg-gradient-to-t from-slate-950/80` overlay, category badge `bg-primary text-primary-foreground`, lightbox `fixed inset-0 z-[100] bg-slate-950/90` with round nav buttons `bg-white/10 hover:bg-white/20`.
-- **Purpose:** Photo gallery with category filter pills and a full lightbox (prev/next, close, keyboard-accessible dialog).
+#### `GalleryPage`
+- **Path:** `src/pages/public/GalleryPage.jsx`
+- **Last updated:** 2026-09-07
+- **Tokens/Classes:** header stats pill `rounded-full bg-surface border border-border` with `Camera` icon, grid `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6`, tiles `rounded-xl bg-surface border border-border shadow-card hover:shadow-md` with `aspect-[4/3] object-cover` image + `group-hover:scale-105`, hover caption `bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent` (filename label), lightbox `fixed inset-0 z-[100] bg-slate-950/90 backdrop-blur-sm` with round nav buttons `bg-white/10 hover:bg-white/20` and filename + counter caption.
+- **Purpose:** Live photo gallery — every `.jpg` in `src/data/asserts/website image/gallery/` renders automatically (sorted by filename), with keyboard-accessible full-screen lightbox (Close, ArrowLeft/Right, Escape, scroll-lock via `document.body.style.overflow`). Formerly `MemoriesPage` with 9 hardcoded editorial cards + category filter pills — removed with the made-up titles/dates (posed stock photos) once real school photos arrived. `memories.data.js` deleted.
+- **2026-09-07:** Removed `memoriesData` import + category filter (All/Sports/Academic/Culture/Events); grid + lightbox now run off `dummyImages.gallery`.
+
+#### `localImages`
+- **Path:** `src/lib/localImages.js`
+- **Last updated:** 2026-09-07
+- **Purpose:** Zero-hardcode image pipeline built on Vite `import.meta.glob` (eager + `query:"?url"`). Auto-loads: every `*.jpg` in `src/data/asserts/website image/gallery/` → `gallery[]`; every `hero-*.jpg` → `heroSlides[]`; first image in `src/data/asserts/` root → `schoolLogo` (rename-proof). `pageHeroBg` = `heroSlides[0]`. `galleryFileName` extracts a clean filename (for alt text/captions). Workflow: add/replace/delete files in `src/data/asserts/` — no code changes ever needed.
+- **2026-09-07:** `dummyImages.js` fully de-interneted — all `images.unsplash.com` CDN URLs and the `u()` helper removed. The site now renders **only local images**: `schoolLogo`, `heroSlides`, `pageHeroBg`, `gallery[]` (all from `localImages`) plus landscape "card" keys (`sports`, `arts`, `clubs`, `middleProgram`, `secondaryProgram`, `stemProgram`, `heroStudent`, `principal`, old `gallery*` keys) that cycle through a local `pool` (hero + gallery). Portrait keys (`staffPrincipal`, `staffAcademics`, `staffStem`, `staffActivities`) are now `undefined` so `ProfileCard`/`StaffCard`/`AlumuniCard` render their built-in `UserRound` icon fallback instead of a fake stock portrait. Remaining external URLs in the codebase are functional links only (WhatsApp `wa.me`, Google Maps) — not images.
 
 #### `AdmissionsPage`
 - **Path:** `src/pages/public/AdmissionsPage.jsx`
@@ -168,3 +175,8 @@ After building any component — update this file with the component name, file 
 - **Path:** `src/pages/public/ContactPage.jsx`
 - **Tokens/Classes:** contact cards `bg-surface rounded-xl shadow-card text-center` with `size-12 rounded-xl bg-primary-light` icon tiles, form fields `rounded-md border-border` + `focus:ring-2 ring-primary`, success state `bg-success-light border-success/20`, department contacts card `bg-surface rounded-xl shadow-card`, office hours card `bg-primary-muted`, map link `bg-background border-border rounded-xl hover:border-primary`.
 - **Purpose:** Contact info cards, message form (static success state), department contacts, office hours, map link.
+
+#### `ProfileCard`
+- **Path:** `src/components/shared/ProfileCard.jsx`
+- **Tokens/Classes:** responsive landscape image `aspect-[4/3]`, `rounded-2xl`, white content panel `bg-surface`, `shadow-card`, `text-brand-accent` details, and responsive grids using `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`.
+- **2026-09-07:** restyled on root text tokens — card now `border border-border` + hover `hover:border-border-strong hover:shadow-lg hover:-translate-y-1`; image gains an on-hover gradient veil `bg-gradient-to-t from-black/45 via-black/10 to-transparent`; decorative `DetailMarker` (primary/success/warning squares) kept; body uses `text-text-primary` name, an animated divider `h-px w-10 bg-primary-light` → `group-hover:w-14 group-hover:bg-primary`, `text-text-secondary` primary detail, and `text-text-muted` secondary detail (no more blue `text-brand-accent` on details).

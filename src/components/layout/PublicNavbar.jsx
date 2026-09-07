@@ -1,14 +1,34 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
+  Building2,
+  BookOpen,
   ChevronDown,
+  ChevronRight,
+  Compass,
   FileText,
+  FlaskConical,
+  GraduationCap,
   LogIn,
   Menu,
+  Sparkles,
+  Trophy,
+  Users,
   X,
 } from "lucide-react";
 import { siteContent } from "@/data/siteContent.data";
 import { cn } from "@/lib/utils";
+
+const navIconMap = {
+  Building2,
+  BookOpen,
+  Compass,
+  FlaskConical,
+  GraduationCap,
+  Sparkles,
+  Trophy,
+  Users,
+};
 
 export function PublicNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,18 +40,20 @@ export function PublicNavbar() {
       name: "ABOUT US",
       path: "/about",
       dropdown: [
-        { name: "Overview", path: "/about" },
-        { name: "Facilities", path: "/facilities" },
-        { name: "Staff Information", path: "/staff" },
-        { name: "Alumuni", path: "/alumuni" },
+        { name: "Overview", path: "/about", icon: "Compass", caption: "Mission, story & leadership" },
+        { name: "Facilities", path: "/facilities", icon: "Building2", caption: "Campus & labs" },
+        { name: "Staff Information", path: "/staff", icon: "Users", caption: "Meet our leadership team" },
+        { name: "Alumni & Topers", path: "/alumuni", icon: "GraduationCap", caption: "Our proud toppers" },
       ],
     },
     {
       name: "ACADEMICS",
       path: "/curriculum",
       dropdown: [
-        { name: "Curriculum", path: "/curriculum" },
-        { name: "Co-curricular Activities", path: "/co-curricular" },
+        { name: "Curriculum", path: "/curriculum", icon: "BookOpen", caption: "Programs for grades 6–10" },
+        { name: "Co-curricular Activities", path: "/co-curricular", icon: "Sparkles", caption: "Sports, arts & clubs" },
+        { name: "Facilities & Labs", path: "/facilities", icon: "FlaskConical", caption: "Science labs & smart classrooms" },
+        { name: "School Activities", path: "/activities", icon: "Trophy", caption: "Clubs, sports & leadership" },
       ],
     },
     { name: "ACTIVITIES", path: "/activities" },
@@ -43,6 +65,7 @@ export function PublicNavbar() {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
   const desktopNavRef = useRef(null);
+  const hoverTimerRef = useRef(null);
 
   const getBasePath = (path) => path.split("#")[0];
 
@@ -52,13 +75,14 @@ export function PublicNavbar() {
     return location.pathname.startsWith(basePath);
   };
 
-  // Close mobile menu on route change
+  // Close menus on route change
   useEffect(() => {
     setMobileMenuOpen(false);
     setOpenDropdown(null);
     setOpenMobileDropdown(null);
   }, [location.pathname, location.hash]);
 
+  // Outside click closes desktop dropdown
   useEffect(() => {
     const handlePointerDown = (event) => {
       if (!desktopNavRef.current?.contains(event.target)) {
@@ -70,6 +94,20 @@ export function PublicNavbar() {
     return () => document.removeEventListener("pointerdown", handlePointerDown);
   }, []);
 
+  // Escape closes any open menu
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setOpenDropdown(null);
+        setOpenMobileDropdown(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  // Collapse mobile drawer on desktop resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -85,15 +123,55 @@ export function PublicNavbar() {
     setOpenMobileDropdown((current) => (current === name ? null : name));
   };
 
+  // Hover-intent: open 120ms after entering, close 180ms after leaving the block
+  const handleDropdownEnter = (name) => {
+    clearTimeout(hoverTimerRef.current);
+    hoverTimerRef.current = setTimeout(() => setOpenDropdown(name), 120);
+  };
+
+  const handleDropdownLeave = (name) => {
+    clearTimeout(hoverTimerRef.current);
+    hoverTimerRef.current = setTimeout(() => {
+      setOpenDropdown((current) => (current === name ? null : current));
+    }, 180);
+  };
+
+  const DropdownMenuItems = ({ items }) =>
+    items.map((child) => {
+      const Icon = navIconMap[child.icon] || Compass;
+      return (
+        <Link
+          key={child.path}
+          to={child.path}
+          className="group/item flex items-center gap-3 rounded-lg px-3 py-2.5 transition-colors hover:bg-surface-tertiary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1"
+        >
+          <span className="size-9 rounded-md bg-primary-light text-primary flex items-center justify-center shrink-0 transition-colors group-hover/item:bg-primary group-hover/item:text-primary-foreground">
+            <Icon className="size-4" />
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-sm font-semibold text-text-primary leading-snug">
+              {child.name}
+            </span>
+            {child.caption && (
+              <span className="block text-xs text-text-muted mt-0.5 leading-snug">
+                {child.caption}
+              </span>
+            )}
+          </span>
+          <ChevronRight className="size-4 text-text-subtle shrink-0 -translate-x-1 opacity-0 transition-all group-hover/item:translate-x-0 group-hover/item:opacity-100" />
+        </Link>
+      );
+    });
+
   return (
-    <header className="fixed top-0 z-50 w-full bg-surface/95 backdrop-blur-md border-b border-border-light shadow-xs">
+    <header className="fixed top-0 z-50 w-full bg-surface backdrop-blur-md border-b border-border-light shadow-xs py-2">
       {/* Main Navbar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
 
           {/* Logo & School Name */}
           <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
-            <div className="size-9 sm:size-11 rounded-xl bg-white flex items-center justify-center overflow-hidden shadow-sm ring-1 ring-black/5 group-hover:scale-105 transition-transform">
+            <div className="size-12 sm:size-14 lg:size-20 rounded-xl flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105">
               <img
                 src={siteContent.schoolLogo}
                 alt={siteContent.schoolName}
@@ -106,7 +184,7 @@ export function PublicNavbar() {
                 {siteContent.schoolTag || siteContent.schoolName}
               </span>
               <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-widest text-text-muted">
-                Excellence in Education
+                 Gilgit Danyore
               </span>
             </div>
           </Link>
@@ -141,7 +219,12 @@ export function PublicNavbar() {
 
               const isOpen = openDropdown === item.name;
               return (
-                <div key={item.path} className="relative">
+                <div
+                  key={item.path}
+                  className="relative"
+                  onMouseEnter={() => handleDropdownEnter(item.name)}
+                  onMouseLeave={() => handleDropdownLeave(item.name)}
+                >
                   <button
                     type="button"
                     onClick={() => setOpenDropdown(isOpen ? null : item.name)}
@@ -165,16 +248,14 @@ export function PublicNavbar() {
                   </button>
 
                   {isOpen && (
-                    <div className="absolute left-0 top-full mt-2 min-w-56 rounded-lg border border-border bg-surface p-2 shadow-lg">
-                      {item.dropdown.map((child) => (
-                        <Link
-                          key={child.path}
-                          to={child.path}
-                          className="block rounded-md px-3 py-2.5 text-xs font-semibold text-text-secondary hover:bg-surface-tertiary hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1"
-                        >
-                          {child.name}
-                        </Link>
-                      ))}
+                    <div className="absolute left-0 top-full mt-2 w-72 rounded-xl border border-border bg-surface/95 backdrop-blur-md shadow-lg p-2 animate-dropdown-in">
+                      <span
+                        className="absolute -top-1 left-8 size-2.5 rotate-45 rounded-[2px] border-l border-t border-border bg-surface"
+                        aria-hidden="true"
+                      />
+                      <div className="flex flex-col gap-0.5">
+                        <DropdownMenuItems items={item.dropdown} />
+                      </div>
                     </div>
                   )}
                 </div>
@@ -185,7 +266,7 @@ export function PublicNavbar() {
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
             <Link
-            to="/application"
+              to="/application"
               className="inline-flex items-center justify-center px-4 xl:px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-xs xl:text-sm font-semibold hover:bg-primary-hover active:bg-primary-active transition-all shadow-xs focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
               Online Application
@@ -194,7 +275,6 @@ export function PublicNavbar() {
 
           {/* Mobile Menu Controls */}
           <div className="flex lg:hidden items-center gap-2 shrink-0">
-           
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -211,7 +291,7 @@ export function PublicNavbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-border bg-surface px-4 pt-3 pb-6 space-y-4 shadow-xl animate-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden border-t border-border bg-surface px-4 pt-3 pb-6 space-y-4 shadow-xl">
           <nav className="flex flex-col space-y-1" aria-label="Mobile navigation">
             {navItems.map((item) => {
               const active = isActive(item.path);
@@ -253,17 +333,33 @@ export function PublicNavbar() {
                     <span>{item.name}</span>
                     <ChevronDown className={cn("size-4 transition-transform", isOpen && "rotate-180")} />
                   </button>
+
                   {isOpen && (
                     <div id={submenuId} className="mt-1 ml-4 border-l-2 border-primary-light pl-3 space-y-1">
-                      {item.dropdown.map((child) => (
-                        <Link
-                          key={child.path}
-                          to={child.path}
-                          className="block rounded-md px-3 py-2.5 text-sm font-medium text-text-secondary hover:bg-surface-tertiary hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1"
-                        >
-                          {child.name}
-                        </Link>
-                      ))}
+                      {item.dropdown.map((child) => {
+                        const Icon = navIconMap[child.icon] || Compass;
+                        return (
+                          <Link
+                            key={child.path}
+                            to={child.path}
+                            className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors hover:bg-surface-tertiary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1"
+                          >
+                            <span className="size-8 rounded-md bg-primary-light text-primary flex items-center justify-center shrink-0 mt-0.5">
+                              <Icon className="size-3.5" />
+                            </span>
+                            <span className="min-w-0 flex-1">
+                              <span className="block text-sm font-medium text-text-secondary leading-snug">
+                                {child.name}
+                              </span>
+                              {child.caption && (
+                                <span className="block text-xs text-text-muted mt-0.5 leading-snug">
+                                  {child.caption}
+                                </span>
+                              )}
+                            </span>
+                          </Link>
+                        );
+                      })}
                     </div>
                   )}
                 </div>

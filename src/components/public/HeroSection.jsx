@@ -36,25 +36,26 @@ export function HeroSection() {
               )}
             />
           ))}
-          {/* Depth scrim — dark toward text, image stays visible above */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/10" />
+          {/* Depth scrim — uniform veil + stronger dark toward text */}
+          {/* <div className="absolute inset-0 bg-black/15" /> */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/60 to-black/25" />
         </div>
 
         {/* Centered content */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28 lg:py-32">
           <div className="max-w-3xl mx-auto text-center space-y-5 sm:space-y-6">
             <Reveal delay={80}>
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold     tracking-tight leading-[1.06] drop-shadow-sm">
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold     tracking-tight leading-[1.06] drop-shadow-md text-white/90">
                 Welcome to{" "}
-                <span className="text-primary-light ">Al-Hadi Academy Gilgit</span>
+                <span className=" ">Al-Hadi Academy Gilgit</span>
               </h1>
             </Reveal>
 
-            <Reveal delay={160}>
+            {/* <Reveal delay={160}>
               <p className="text-base sm:text-lg text-white/85 max-w-2xl mx-auto leading-relaxed drop-shadow-sm">
                 {siteContent.heroSubtitle}
               </p>
-            </Reveal>
+            </Reveal> */}
 
             {/* <Reveal delay={240}>
               <div className="flex flex-wrap items-center justify-center gap-4 pt-2">

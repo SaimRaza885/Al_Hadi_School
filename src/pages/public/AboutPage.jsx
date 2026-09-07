@@ -13,6 +13,7 @@ import {
 import { PageHero } from "@/components/public/PageHero";
 import { CtaBanner } from "@/components/public/CtaBanner";
 import { siteContent } from "@/data/siteContent.data";
+import { dummyImages } from "@/lib/dummyImages";
 import { StaffCard } from "@/components/shared/StaffCard";
 import { Reveal } from "@/components/shared/Reveal";
 
@@ -68,7 +69,7 @@ export function AboutPage() {
       {/* Our Story */}
       <section className="py-20 bg-background border-b border-border-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
             {/* Story text */}
             <div className="lg:col-span-7 space-y-6">
               <Reveal>
@@ -96,32 +97,23 @@ export function AboutPage() {
               </Reveal>
             </div>
 
-            {/* Milestones timeline */}
+            {/* Story image */}
             <div className="lg:col-span-5">
-              <Reveal delay={100}>
-                <div className="bg-surface border border-border rounded-xl shadow-card p-6 sm:p-8">
-                  <h3 className="text-lg font-bold text-text-primary mb-6">
-                    Milestones
-                  </h3>
-                  <ol className="relative space-y-6 border-l border-border pl-6">
-                    {about.milestones.map((m) => (
-                      <li key={m.year} className="relative">
-                        <span className="absolute -left-[31px] top-1.5 size-2.5 rounded-full bg-primary ring-4 ring-primary-light" />
-                        <div className="flex items-baseline gap-2.5">
-                          <span className="text-sm font-bold text-primary">{m.year}</span>
-                          <span className="text-sm font-semibold text-text-primary">{m.title}</span>
-                        </div>
-                        <p className="text-xs text-text-muted mt-1 leading-relaxed">{m.description}</p>
-                      </li>
-                    ))}
-                  </ol>
+              <Reveal delay={100} className="lg:h-full">
+                <div className="relative h-72 lg:h-full lg:min-h-[24rem] w-full overflow-hidden rounded-2xl border border-border shadow-card">
+                  <img
+                    src={dummyImages.heroSlides[0] || dummyImages.pageHeroBg}
+                    alt="Al-Hadi Academy Gilgit campus"
+                    className="size-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
                 </div>
               </Reveal>
             </div>
           </div>
         </div>
       </section>
-
       {/* Values */}
       <section className="py-20 bg-surface border-b border-border-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,7 +126,7 @@ export function AboutPage() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {about.values.map((value, index) => {
               const Icon = valueIcons[value.icon] || GraduationCap;
               return (

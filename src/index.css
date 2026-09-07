@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 @theme {
   /* ---- Font ---- */
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-public-heading: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-public-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 
   /* ---- Page & surfaces (neutral, cool gray) ---- */
   --color-background: #f7f8fa;         /* app canvas */
@@ -24,13 +27,17 @@
   --color-text-subtle: #9ca3af;        /* placeholders, disabled */
   --color-text-inverse: #ffffff;       /* text on primary / dark */
 
-  /* ---- Primary — brand blue (#1C74BD) ---- */
-  --color-primary: #1c74bd;
-  --color-primary-hover: #175e99;      /* button hover */
-  --color-primary-active: #12507f;     /* button pressed */
-  --color-primary-light: #e8f1fa;      /* tint bg (active nav, info chips) */
-  --color-primary-muted: #f2f7fc;      /* very subtle tint */
+  /* ---- Primary — logo teal test palette ---- */
+  --color-primary: #149b84;
+  --color-primary-hover: #0f806d;      /* button hover */
+  --color-primary-active: #0b6657;     /* button pressed */
+  --color-primary-light: #e4f6f1;      /* tint bg (active nav, info chips) */
+  --color-primary-muted: #f1fbf8;      /* very subtle tint */
   --color-primary-foreground: #ffffff; /* text/icon on primary */
+
+  /* ---- Secondary accent — deep blue for logo contrast ---- */
+  --color-brand-accent: #1c74bd;
+  --color-brand-accent-light: #e8f1fa;
 
   /* ---- Success — approved / pass / published-ok (green) ---- */
   --color-success: #16a34a;
@@ -70,6 +77,28 @@
   --shadow-lg: 0 12px 24px -6px rgba(16, 24, 40, 0.12);
 }
 
+/* Public website typography */
+.public-shell {
+  font-family: var(--font-public-body);
+  font-weight: 400;
+}
+
+.public-shell :where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-public-heading);
+  font-weight: 700;
+}
+
+.public-shell :where(p) {
+  font-family: var(--font-public-body);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.public-shell :where(nav, label, button, small, [role="status"]) {
+  font-family: var(--font-public-body);
+  font-weight: 500;
+}
+
 /* Map shadcn/ui semantic variables onto our tokens so shadcn
    components (Button, Dialog, Input, Table, ...) inherit the palette. */
 :root {
@@ -93,6 +122,22 @@
   --input: var(--color-border);
   --ring: var(--color-primary);
   --radius: 0.625rem; /* 10px — shadcn base; components derive sm/lg from it */
+}
+
+/* Navbar dropdown entrance */
+@keyframes dropdown-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-dropdown-in {
+  animation: dropdown-in 0.18s ease-out both;
 }
 
 /* Print utilities */

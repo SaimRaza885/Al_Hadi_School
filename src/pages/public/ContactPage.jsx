@@ -141,7 +141,7 @@ export function ContactPage() {
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-text-secondary mb-1.5">
-                        Email Address 
+                        Email Address (optional)
                       </label>
                       <input
                         id="email"

@@ -9,7 +9,7 @@ const schoolContact = {
 
 export const siteContent = {
   schoolName: "Al-Hadi Academy Gilgit",
-  schoolTag: "Al-Hadi",
+  schoolTag: "Al-Hadi Academy",
   schoolLogo: dummyImages.schoolLogo,
   tagline: "Tomorrow's Leaders Start Here",
   heroSubtitle:

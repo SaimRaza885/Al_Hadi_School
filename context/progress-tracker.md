@@ -36,6 +36,14 @@ Added dedicated public routes for `/curriculum`, `/co-curricular`, and `/staff`.
 
 Simplified the shared public `PageHero`: removed the eyebrow prop and badge, and changed public page heroes to use short direct titles. Restored the `/co-curricular` page route target after build verification found the file missing.
 
+About page "Our Story" (2026-09-07): the right-column Milestones timeline card was removed and replaced with a responsive real-photo image (`dummyImages.gallery[0]`, `h-72 lg:h-full rounded-2xl object-cover` with a subtle bottom gradient); the story grid now uses `items-stretch` so the image column matches the text column height on desktop and stacks below on mobile.
+
+Internet images removed (2026-09-07): all Unsplash CDN URLs deleted from `dummyImages.js` (the `u()` helper is gone). The site is now fully offline-friendly for images — logo, hero slider, inner-page hero bg, gallery, and all landscape "card" images cycle through local `src/data/asserts/` photos via `localImages`. Staff/alumni portraits are `undefined`, so cards show their built-in icon fallback until real portraits are added to the assets folder. Final check: `grep unsplash src` → zero matches; only functional (non-image) external links remain (WhatsApp, Google Maps).
+
+Real/local image pipeline (2026-09-07): new `src/lib/localImages.js` auto-loads school imagery with Vite `import.meta.glob` — logo (first image in `src/data/asserts/` root, rename-proof), hero slider (`website image/hero-*.jpg`), inner-page hero bg (`pageHeroBg` = first hero), and gallery (every `*.jpg` in `website image/gallery/`). `dummyImages.js` merges locals over Unsplash fallbacks so navbar/footer logo, home hero slider, and all PageHero backgrounds now use real school photos. Gallery page rebuilt from the fake 9-card "Memories" editorial grid (made-up event titles/dates on stock photos) + category pills into a live photo grid (27 real photos) with full-screen keyboard-accessible lightbox; `memories.data.js` deleted. Workflow going forward: drop/replace/delete files in `src/data/asserts/` — they appear/update automatically, zero code edits.
+
+Navbar dropdowns enriched and modernized (2026-09-07): ABOUT US dropdown now lists Overview, Facilities, Staff Information, and Alumni & Topers; ACADEMICS now adds Facilities & Labs and School Activities alongside Curriculum and Co-curricular Activities. Every dropdown item renders as a two-line row (lucide icon tile from an in-component `navIconMap` + one-line caption). Desktop panel upgraded to a `w-72 rounded-xl` floating card with top caret, backdrop blur, and a `.animate-dropdown-in` entrance keyframe in `index.css`; menus open on hover-intent (120ms open / 180ms leave grace) in addition to click, close on outside click and on Escape. Mobile drawer submenus match the two-line/icon style.
+
 ### Phase 2 — App Shells & Dashboards
 
 - [ ] 07 App Shells & Dashboards (UI, mock data)

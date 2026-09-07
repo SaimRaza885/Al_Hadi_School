@@ -32,7 +32,7 @@ export function AlumuniPage() {
             <section className="py-20 bg-background">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {alumuni.map((alumuni, index) => (
                             <Reveal key={index} delay={index * 60}>
                                 <AlumuniCard alumuni={alumuni} />
