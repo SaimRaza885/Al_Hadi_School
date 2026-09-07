@@ -5,6 +5,7 @@ import {
   Leaf,
   Code2,
   Target,
+  Mountain,
   Check,
 } from "lucide-react";
 import { PageHero } from "@/components/public/PageHero";
@@ -19,6 +20,7 @@ const extraIcons = {
   Leaf: Leaf,
   Code2: Code2,
   Target: Target,
+  Mountain: Mountain,
 };
 
 export function ActivitiesPage() {
@@ -51,7 +53,7 @@ export function ActivitiesPage() {
             {activitiesData.coCurricular.map((program, index) => (
               <Reveal key={program.id} delay={index * 80}>
                 <div
-                  id={program.id === "act-sports" ? "sports" : program.id === "act-arts" ? "creative-arts" : "leadership"}
+                  id={program.id === "act-hiking" ? "hiking" : program.id === "act-arts" ? "creative-arts" : "leadership"}
                   className="group bg-surface border border-border rounded-xl overflow-hidden shadow-card hover:shadow-md transition-all flex flex-col h-full"
                 >
                   <div className="h-48 w-full overflow-hidden bg-surface-tertiary">

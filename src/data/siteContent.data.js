@@ -1,29 +1,29 @@
-import { dummyImages } from "@/lib/dummyImages";
+﻿import { images } from "@/assets/images";
 
 const schoolContact = {
   phone: "+1 (234) 567-8900",
   email: "admissions@greenwood.edu",
   address: "123 Academy Blvd, North District, Metropolis 56789",
-  timings: "Monday – Saturday: 8:00 AM – 2:30 PM",
+  timings: "Monday â€“ Saturday: 8:00 AM â€“ 2:30 PM",
 };
 
 export const siteContent = {
   schoolName: "Al-Hadi Academy Gilgit",
   schoolTag: "Al-Hadi Academy",
-  schoolLogo: dummyImages.schoolLogo,
+  schoolLogo: images.logo,
   tagline: "Tomorrow's Leaders Start Here",
   heroSubtitle:
     "Experience a transformative education that balances academic rigor with personal growth, preparing students to excel in a global landscape.",
-  admissionsSession: "2026–2027",
+  admissionsSession: "2026â€“2027",
   announcement:
-    "Admissions for Academic Session 2026–2027 are officially OPEN!",
+    "Admissions for Academic Session 2026â€“2027 are officially OPEN!",
 
   contact: schoolContact,
 
   principal: {
     name: "Dr. Hassan",
     title: "Principal",
-    image: dummyImages.principal,
+    image: images.principal,
     welcomeHeading: "Welcome to Al-Hadi School",
     paragraphs: [
       "At Al-Hadi, we believe every child carries unique potential. Our mission is to create an environment where curiosity thrives, character is built, and futures are shaped through education that goes beyond textbooks.",
@@ -32,12 +32,10 @@ export const siteContent = {
     lsaNote: "Our comprehensive Life Skills & Activities (LSA) program ensures every student finds their passion and builds resilient character.",
   },
 
-  stats: [
-    { value: "25+", label: "YEARS OF EXCELLENCE" },
-    { value: "100%", label: "FULLY EQUIPPED LABS" },
-    { value: "45+", label: "CLUBS & ACTIVITIES" },
-    { value: "15:1", label: "STUDENT-TEACHER RATIO" },
-  ],
+  stats: [{ value: "5+", label: "YEARS OF EXCELLENCE" }, 
+    { value: "25:1", label: "STUDENT-TEACHER RATIO" }, 
+    { value: "24/7", label: "HOSTEL CARE & SUPERVISION" },
+     { value: "30+", label: "CLUBS, SPORTS & ACTIVITIES" },],
 
   coCurricular: [
     {
@@ -46,8 +44,8 @@ export const siteContent = {
       description:
         "From competitive football to swimming, we offer professional coaching in over 12 different sports disciplines.",
       link: "/facilities#sports",
-      linkText: "View Sports Facilities →",
-      image: dummyImages.sports,
+      linkText: "View Sports Facilities â†’",
+      image: images.sports,
     },
     {
       id: "arts",
@@ -55,8 +53,8 @@ export const siteContent = {
       description:
         "Our fine arts, music, and drama programs provide a platform for self-expression, theatre production, and creative exploration.",
       link: "/activities#arts",
-      linkText: "Explore the Arts →",
-      image: dummyImages.arts,
+      linkText: "Explore the Arts â†’",
+      image: images.arts,
     },
     {
       id: "clubs",
@@ -64,8 +62,8 @@ export const siteContent = {
       description:
         "Developing civic responsibility through student council, debate clubs, robotics teams, and community service initiatives.",
       link: "/activities#clubs",
-      linkText: "See Active Clubs →",
-      image: dummyImages.clubs,
+      linkText: "See Active Clubs â†’",
+      image: images.clubs,
     },
   ],
 
@@ -73,9 +71,9 @@ export const siteContent = {
     {
       id: "middle",
       name: "Middle School",
-      grades: "Grades 6 – 8",
+      grades: "Grades 6 â€“ 8",
       description: "Exploration of integrated sciences, humanities, analytical mathematics, and creative arts.",
-      image: dummyImages.middleProgram,
+      image: images.middleProgram,
       subjects: [
         "English, Urdu & Regional Languages",
         "Mathematics (Algebra & Geometry)",
@@ -94,9 +92,9 @@ export const siteContent = {
     {
       id: "secondary",
       name: "Secondary School",
-      grades: "Grades 9 – 10",
+      grades: "Grades 9 â€“ 10",
       description: "Rigorous board exam preparation, specialized science and computer applications tracks.",
-      image: dummyImages.secondaryProgram,
+      image: images.secondaryProgram,
       subjects: [
         "English, Urdu & Islamic Studies",
         "Mathematics",
@@ -115,9 +113,9 @@ export const siteContent = {
     {
       id: "stem",
       name: "STEM Wings",
-      grades: "Grades 6 – 10",
+      grades: "Grades 6 â€“ 10",
       description: "Cutting-edge robotics, digital fabrication, computer science, and experiential physics labs.",
-      image: dummyImages.stemProgram,
+      image: images.stemProgram,
       subjects: [
         "Robotics & Coding (Scratch, Python)",
         "Digital Fabrication & 3D Design",
@@ -144,7 +142,7 @@ export const siteContent = {
     approach: [
       {
         title: "Concept-Based Teaching",
-        description: "Lessons build deep understanding through inquiry, discussion, and real-world application — not rote memorisation.",
+        description: "Lessons build deep understanding through inquiry, discussion, and real-world application â€” not rote memorisation.",
         icon: "Lightbulb",
       },
       {
@@ -159,7 +157,7 @@ export const siteContent = {
       },
       {
         title: "Integrated LSA",
-        description: "Life Skills & Activities run alongside academics — athletics, arts, clubs, and leadership at every grade.",
+        description: "Life Skills & Activities run alongside academics â€” athletics, arts, clubs, and leadership at every grade.",
         icon: "HeartHandshake",
       },
     ],
@@ -192,14 +190,14 @@ export const siteContent = {
     heroEyebrow: "Who We Are",
     heroTitle: "A Legacy of Learning, A Future of Leaders",
     heroSubtitle:
-      "Since our founding, Al-Hadi Public School has grown into a modern centre of academic excellence — where every child is known, guided, and challenged to lead.",
+      "Since our founding, Al-Hadi Public School has grown into a modern centre of academic excellence â€” where every child is known, guided, and challenged to lead.",
     mission:
       "To create an environment where curiosity thrives, character is built, and futures are shaped through education that goes beyond textbooks.",
     vision:
       "To nurture confident, compassionate, and digitally-literate global citizens who lead with integrity and serve their communities.",
     story: [
       "Al-Hadi Public School was established with a simple belief: that a great school shapes not only minds but also hearts. What began as a small campus with a few classrooms has grown into a complete educational community serving grades 6 through 10.",
-      "Today our campus houses modern science and robotics laboratories, a central library, sports grounds, and creative arts studios — all in service of a balanced, child-centred education. Our faculty blends experienced educators with young, technology-savvy teachers to keep learning vibrant and relevant.",
+      "Today our campus houses modern science and robotics laboratories, a central library, sports grounds, and creative arts studios â€” all in service of a balanced, child-centred education. Our faculty blends experienced educators with young, technology-savvy teachers to keep learning vibrant and relevant.",
       "We measure success not just in examination results, but in the confidence of a student who speaks on stage, the teamwork of a house that wins a relay, and the character of a graduate who leads with kindness.",
     ],
     values: [
@@ -230,19 +228,19 @@ export const siteContent = {
       { year: "2017", title: "Robotics & STEM", description: "Launched our STEM program with robotics kits and coding curriculum." },
       { year: "2021", title: "Digital Campus", description: "Every classroom upgraded with interactive smart boards." },
       { year: "2024", title: "Results Portal", description: "Online published results and a modern admissions portal go live." },
-      { year: "2026", title: "1,200+ Students", description: "A thriving community of learners across grades 6–10." },
+      { year: "2026", title: "1,200+ Students", description: "A thriving community of learners across grades 6â€“10." },
     ],
     leadership: [
-      { name: "Dr. A. Ali", role: "Principal", bio: "Over 25 years in education leadership, championing holistic learning.", image: dummyImages.staffPrincipal },
-      { name: "Ms. F. Hassan", role: "Vice Principal & Academics", bio: "Drives curriculum design, assessments, and teacher development.", image: dummyImages.staffAcademics },
-      { name: "Mr. K. Mehmood", role: "Head of STEM", bio: "Leads robotics, coding, and the innovation lab program.", image: dummyImages.staffStem },
-      { name: "Ms. S. Iqbal", role: "Head of Activities (LSA)", bio: "Coordinates athletics, arts, clubs, and community service.", image: dummyImages.staffActivities },
+      { name: "Dr. A. Ali", role: "Principal", bio: "Over 25 years in education leadership, championing holistic learning.", image: images.staffPrincipal },
+      { name: "Ms. F. Hassan", role: "Vice Principal & Academics", bio: "Drives curriculum design, assessments, and teacher development.", image: images.staffAcademics },
+      { name: "Mr. K. Mehmood", role: "Head of STEM", bio: "Leads robotics, coding, and the innovation lab program.", image: images.staffStem },
+      { name: "Ms. S. Iqbal", role: "Head of Activities (LSA)", bio: "Coordinates athletics, arts, clubs, and community service.", image: images.staffActivities },
     ],
     alumuni: [
-      { name: "Adeel Ahmed", Matric: "98%", review: "Al-Hadi Academy is the best school in Gilgit. The teachers genuinely care about every single student.", image: dummyImages.staffPrincipal },
-      { name: "Shoaib Karim", Matric: "96%", review: "The hostel environment kept me focused and helped me turn good habits into great marks.", image: dummyImages.staffAcademics },
-      { name: "Maryam Ali", Matric: "93%", review: "The science labs and STEM program took me far beyond what the board exams required.", image: dummyImages.staffActivities },
-      { name: "Hassan Raza", Matric: "91%", review: "Discipline, caring mentors, and a supportive community made all the difference for me.", image: dummyImages.staffStem },
+      { name: "Adeel Ahmed", Matric: "98%", review: "Al-Hadi Academy is the best school in Gilgit. The teachers genuinely care about every single student.", image: images.staffPrincipal },
+      { name: "Shoaib Karim", Matric: "96%", review: "The hostel environment kept me focused and helped me turn good habits into great marks.", image: images.staffAcademics },
+      { name: "Maryam Ali", Matric: "93%", review: "The science labs and STEM program took me far beyond what the board exams required.", image: images.staffActivities },
+      { name: "Hassan Raza", Matric: "91%", review: "Discipline, caring mentors, and a supportive community made all the difference for me.", image: images.staffStem },
     ]
   },
 
@@ -254,7 +252,7 @@ export const siteContent = {
     cards: [
       {
         title: "Visit Our Campus",
-        lines: [schoolContact.address, "Gate opens 8:00 AM – 2:30 PM"],
+        lines: [schoolContact.address, "Gate opens 8:00 AM â€“ 2:30 PM"],
         icon: "MapPin",
       },
       {

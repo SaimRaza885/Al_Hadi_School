@@ -55,8 +55,9 @@ After building any component — update this file with the component name, file 
 #### `HeroSection`
 - **Path:** `src/components/public/HeroSection.jsx`
 - **Last updated:** 2026-08-18
-- **Tokens/Classes:** full-bleed auto slider — images from `dummyImages.heroSlides` (now auto-loaded local `src/data/asserts/website image/hero-*.jpg`; Unsplash fallback only if the folder is empty), crossfade via `opacity` + `transition-opacity duration-1000`, active `opacity-100` / inactive `opacity-0`, autoplay `setInterval` 5000ms (respects `prefers-reduced-motion`), depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20`, dot indicators `h-1.5 rounded-full` active `w-8 bg-white` / inactive `w-3 bg-white/40 hover:bg-white/70`, headline `text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight` (matches `WelcomeSection` principal heading — Plus Jakarta Sans) with light-blue accent `text-primary-light`, subtitle `text-white/95`, CTA `bg-primary text-primary-foreground rounded-sm px-7 py-3.5`, quick-links strip `bg-surface border-b border-border-light` with icon tiles `size-10 rounded-lg bg-primary-light text-primary group-hover:bg-primary group-hover:text-primary-foreground`.
+- **Tokens/Classes:** full-bleed auto slider — images from `images.heroSlides` (`src/assets/images.js` → `src/assets/hero_1/2/3/5.jpg`), crossfade via `opacity` + `transition-opacity duration-1000`, active `opacity-100` / inactive `opacity-0`, autoplay `setInterval` 5000ms (respects `prefers-reduced-motion`), depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20`, dot indicators `h-1.5 rounded-full` active `w-8 bg-white` / inactive `w-3 bg-white/40 hover:bg-white/70`, headline `text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight` (matches `WelcomeSection` principal heading — Plus Jakarta Sans) with light-blue accent `text-primary-light`, subtitle `text-white/95`, CTA `bg-primary text-primary-foreground rounded-sm px-7 py-3.5`, quick-links strip `bg-surface border-b border-border-light` with icon tiles `size-10 rounded-lg bg-primary-light text-primary group-hover:bg-primary group-hover:text-primary-foreground`.
 - **Purpose:** Main hero with auto-rotating campus background slider, eyebrow pill, serif headline, trust stats, single admission CTA, and a 4-item quick-links strip below.
+- **2026-09-07:** background slider layer changed from `absolute inset-0` to `absolute inset-x-0 top-16 lg:top-20 bottom-0` to match `PageHero` — the slider images begin below the fixed navbar so the photo top is no longer hidden behind the solid navbar.
 
 #### `WelcomeSection`
 - **Path:** `src/components/public/WelcomeSection.jsx`
@@ -102,15 +103,16 @@ After building any component — update this file with the component name, file 
 #### `PageHero`
 - **Path:** `src/components/public/PageHero.jsx`
 - **Last updated:** 2026-09-07
-- **Tokens/Classes:** background image `dummyImages.pageHeroBg` (now the first local `hero-*.jpg`, i.e. `localImages.pageHeroBg`; Unsplash fallback if none) with depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20`, text `text-white`, breadcrumb `text-white/70 hover:text-white`, title `text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-sm`, subtitle `text-white/85 drop-shadow-sm`, container `pt-24 sm:pt-32` (clears fixed navbar).
+- **Tokens/Classes:** background image `images.pageHeroBg` (= `src/assets/images.js` → `hero_1.jpg`) with depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20`, text `text-white`, breadcrumb `text-white/70 hover:text-white`, title `text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-sm`, subtitle `text-white/85 drop-shadow-sm`, container `pt-24 sm:pt-32` (clears fixed navbar).
 - **Purpose:** Shared page header for all public subpages, using a short direct title instead of a separate eyebrow badge.
+- **2026-09-07:** background image layer changed from `absolute inset-0` to `absolute inset-x-0 top-16 lg:top-20 bottom-0` so the image starts BELOW the fixed navbar instead of being sliced by it — navbar stays solid, hero image is fully visible from the top of its visible area down.
 - **Pattern note:** Depth scrim (bottom-weighted black gradient) matches the homepage hero exactly (`from-black/80 via-black/55 to-black/20`) for consistent legibility.
 
 ### Public Subpage Components
 
 #### `AboutPage`
 - **Path:** `src/pages/public/AboutPage.jsx`
-- **Tokens/Classes:** mission card `bg-primary-muted rounded-xl border-border`, vision card `bg-surface-tertiary`, story `bg-background` + story image `relative h-72 lg:h-full overflow-hidden rounded-2xl border border-border shadow-card` (real auto-loaded photo from `dummyImages.gallery[0]`, `object-cover`, bottom gradient `from-black/35`), story grid `lg:grid-cols-12 items-stretch`, values cards `bg-surface rounded-xl shadow-card hover:shadow-md hover:-translate-y-1`, leadership cards `text-center` with `rounded-full bg-primary-light` avatar circles.
+- **Tokens/Classes:** mission card `bg-primary-muted rounded-xl border-border`, vision card `bg-surface-tertiary`, story `bg-background` + story image `relative h-72 lg:h-full overflow-hidden rounded-2xl border border-border shadow-card` (real photo from `images.heroSlides[0]` or `images.pageHeroBg`, `object-cover`, bottom gradient `from-black/35`), story grid `lg:grid-cols-12 items-stretch`, values cards `bg-surface rounded-xl shadow-card hover:shadow-md hover:-translate-y-1`, leadership cards `text-center` with `rounded-full bg-primary-light` avatar circles.
 - **Purpose:** Mission/vision, story + milestone timeline, values grid, leadership team.
 
 #### `CurriculumPage`
@@ -142,14 +144,16 @@ After building any component — update this file with the component name, file 
 - **Path:** `src/pages/public/GalleryPage.jsx`
 - **Last updated:** 2026-09-07
 - **Tokens/Classes:** header stats pill `rounded-full bg-surface border border-border` with `Camera` icon, grid `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6`, tiles `rounded-xl bg-surface border border-border shadow-card hover:shadow-md` with `aspect-[4/3] object-cover` image + `group-hover:scale-105`, hover caption `bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent` (filename label), lightbox `fixed inset-0 z-[100] bg-slate-950/90 backdrop-blur-sm` with round nav buttons `bg-white/10 hover:bg-white/20` and filename + counter caption.
-- **Purpose:** Live photo gallery — every `.jpg` in `src/data/asserts/website image/gallery/` renders automatically (sorted by filename), with keyboard-accessible full-screen lightbox (Close, ArrowLeft/Right, Escape, scroll-lock via `document.body.style.overflow`). Formerly `MemoriesPage` with 9 hardcoded editorial cards + category filter pills — removed with the made-up titles/dates (posed stock photos) once real school photos arrived. `memories.data.js` deleted.
+- **Purpose:** Photo gallery — renders every photo listed in the `gallery` array of `src/assets/images.js`, with keyboard-accessible full-screen lightbox (Close, ArrowLeft/Right, Escape, scroll-lock via `document.body.style.overflow`). Formerly `MemoriesPage` with 9 hardcoded editorial cards + category filter pills — removed with the made-up titles/dates (posed stock photos) once real school photos arrived. `memories.data.js` deleted.
 - **2026-09-07:** Removed `memoriesData` import + category filter (All/Sports/Academic/Culture/Events); grid + lightbox now run off `dummyImages.gallery`.
+- **2026-09-07 (simplified):** now runs off `src/assets/images.js` — `const photos = images.gallery`, captions/alts from `images.galleryNames[idx]` (replaces old `galleryFileName()` helper). Gallery grid + lightbox use `images.galleryNames[idx] ?? "campus photo"` for `alt`, `aria-label`, and hover caption. Copy updated to point juniors at `src/assets/images.js`.
 
-#### `localImages`
-- **Path:** `src/lib/localImages.js`
+#### `images` (asset module)
+- **Path:** `src/assets/images.js`
 - **Last updated:** 2026-09-07
-- **Purpose:** Zero-hardcode image pipeline built on Vite `import.meta.glob` (eager + `query:"?url"`). Auto-loads: every `*.jpg` in `src/data/asserts/website image/gallery/` → `gallery[]`; every `hero-*.jpg` → `heroSlides[]`; first image in `src/data/asserts/` root → `schoolLogo` (rename-proof). `pageHeroBg` = `heroSlides[0]`. `galleryFileName` extracts a clean filename (for alt text/captions). Workflow: add/replace/delete files in `src/data/asserts/` — no code changes ever needed.
-- **2026-09-07:** `dummyImages.js` fully de-interneted — all `images.unsplash.com` CDN URLs and the `u()` helper removed. The site now renders **only local images**: `schoolLogo`, `heroSlides`, `pageHeroBg`, `gallery[]` (all from `localImages`) plus landscape "card" keys (`sports`, `arts`, `clubs`, `middleProgram`, `secondaryProgram`, `stemProgram`, `heroStudent`, `principal`, old `gallery*` keys) that cycle through a local `pool` (hero + gallery). Portrait keys (`staffPrincipal`, `staffAcademics`, `staffStem`, `staffActivities`) are now `undefined` so `ProfileCard`/`StaffCard`/`AlumuniCard` render their built-in `UserRound` icon fallback instead of a fake stock portrait. Remaining external URLs in the codebase are functional links only (WhatsApp `wa.me`, Google Maps) — not images.
+- **Purpose:** The single, simple, explicit image manifest replacing the old `localImages.js` (`import.meta.glob` pipeline) and `dummyImages.js` layers. Follows the owner's plain per-file format: one `import x from "./file.jpg"` per photo + a grouped `export const images = {...}`. Assets live in `src/assets/` → `logo.jpg`, `hero_1/2/3/5.jpg`, `gallery/gallary_1…gallary_22.jpg` (alphabetical). Exports: raw photos (`hero_1`, `logo`, `gallary_1`…), site aliases (`heroSlides`, `pageHeroBg`, `gallery`, `galleryNames`, and semantic `principal`/`sports`/`arts`/`clubs`/`middleProgram`/`secondaryProgram`/`stemProgram`/`galleryScience`/`galleryQirat`), plus staff portrait keys as `undefined` so `ProfileCard`/`StaffCard`/`AlumuniCard` render their built-in `UserRound` icon fallback.
+- **Junior workflow:** add a photo = drop the file into `src/assets/` (or `gallery/`), add one `import`, add one line in the export. No magic, no `import.meta.glob`.
+- **2026-09-07:** all `dummyImages.*`/`localImages` references across data + components/pages rewritten to `images.*`; `dummyImages.js`, `localImages.js`, and `src/data/asserts/` deleted. Vite dedups two byte-identical pairs (`gallary_9≡gallary_21`, `hero_5≡gallary_7` — same photo uploaded twice), so 27 source files emit 25 in `dist/`. Zero remaining fake/remote images.
 
 #### `AdmissionsPage`
 - **Path:** `src/pages/public/AdmissionsPage.jsx`
@@ -175,6 +179,11 @@ After building any component — update this file with the component name, file 
 - **Path:** `src/pages/public/ContactPage.jsx`
 - **Tokens/Classes:** contact cards `bg-surface rounded-xl shadow-card text-center` with `size-12 rounded-xl bg-primary-light` icon tiles, form fields `rounded-md border-border` + `focus:ring-2 ring-primary`, success state `bg-success-light border-success/20`, department contacts card `bg-surface rounded-xl shadow-card`, office hours card `bg-primary-muted`, map link `bg-background border-border rounded-xl hover:border-primary`.
 - **Purpose:** Contact info cards, message form (static success state), department contacts, office hours, map link.
+
+#### `EnrichmentPage`
+- **Path:** `src/pages/public/EnrichmentPage.jsx`
+- **Tokens/Classes:** shared `PageHero`, responsive category grid `grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`, cards `bg-surface border border-border rounded-xl p-6 shadow-card`, icon tiles `size-12 rounded-xl bg-primary-light`, and scroll reveals with staggered delays.
+- **Purpose:** Dedicated `/activities/enrichment` page covering academic enrichment, science and technology, arts, sports, research, leadership, excursions, and character/community development.
 
 #### `ProfileCard`
 - **Path:** `src/components/shared/ProfileCard.jsx`

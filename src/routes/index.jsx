@@ -6,6 +6,7 @@ import { CurriculumPage } from "@/pages/public/CurriculumPage";
 import { CoCurricularPage } from "@/pages/public/CoCurricularPage";
 import { FacilitiesPage } from "@/pages/public/FacilitiesPage";
 import { ActivitiesPage } from "@/pages/public/ActivitiesPage";
+import { ExtraCurricularPage } from "@/pages/public/EnrichmentPage";
 import { GalleryPage } from "@/pages/public/GalleryPage";
 import { BlogsPage } from "@/pages/public/BlogsPage";
 import { BlogDetailPage } from "@/pages/public/BlogDetailPage";
@@ -43,6 +44,14 @@ export const router = createBrowserRouter([
       {
         path: "activities",
         element: <ActivitiesPage />,
+      },
+      {
+        path: "activities/extra-curricular",
+        element: <ExtraCurricularPage />,
+      },
+      {
+        path: "activities/enrichment",
+        element: <ExtraCurricularPage />,
       },
       {
         path: "gallery",

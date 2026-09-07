@@ -34,32 +34,39 @@ export function PublicNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  const navItems = [
-    { name: "HOME", path: "/" },
-    {
-      name: "ABOUT US",
-      path: "/about",
-      dropdown: [
-        { name: "Overview", path: "/about", icon: "Compass", caption: "Mission, story & leadership" },
-        { name: "Facilities", path: "/facilities", icon: "Building2", caption: "Campus & labs" },
-        { name: "Staff Information", path: "/staff", icon: "Users", caption: "Meet our leadership team" },
-        { name: "Alumni & Topers", path: "/alumuni", icon: "GraduationCap", caption: "Our proud toppers" },
-      ],
-    },
-    {
-      name: "ACADEMICS",
-      path: "/curriculum",
-      dropdown: [
-        { name: "Curriculum", path: "/curriculum", icon: "BookOpen", caption: "Programs for grades 6–10" },
-        { name: "Co-curricular Activities", path: "/co-curricular", icon: "Sparkles", caption: "Sports, arts & clubs" },
-   
-      ],
-    },
-    { name: "ACTIVITIES", path: "/activities" },
-    { name: "BLOGS", path: "/blogs" },
-    { name: "GALLERY", path: "/gallery" },
-    { name: "CONTACT", path: "/contact" },
-  ];
+const navItems = [
+  { name: "HOME", path: "/" },
+  {
+    name: "ABOUT US",
+    path: "/about",
+    dropdown: [
+      { name: "Overview", path: "/about", icon: "Compass" },
+      { name: "Facilities", path: "/facilities", icon: "Building2" },
+      { name: "Staff Information", path: "/staff", icon: "Users" },
+      { name: "Alumni & Topers", path: "/alumuni", icon: "GraduationCap" },
+    ],
+  },
+  {
+    name: "ACADEMICS",
+    path: "/curriculum",
+    dropdown: [
+      { name: "Curriculum", path: "/curriculum", icon: "BookOpen" },
+    ],
+  },
+  {
+    name: "ACTIVITIES",
+    path: "/activities",
+    dropdown: [
+      { name: "Activities Overview", path: "/activities", icon: "Compass" },
+      { name: "Co-curricular ", path: "/co-curricular", icon: "Sparkles" },
+      { name: "Extra-Curricular  ", path: "/activities/extra-curricular", icon: "Trophy" },
+    ],
+  },
+  { name: "BLOGS", path: "/blogs" },
+  { name: "GALLERY", path: "/gallery" },
+  { name: "CONTACT", path: "/contact" },
+];
+
 
   const [openDropdown, setOpenDropdown] = useState(null);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
@@ -151,11 +158,6 @@ export function PublicNavbar() {
             <span className="block text-sm font-semibold text-text-primary leading-snug">
               {child.name}
             </span>
-            {child.caption && (
-              <span className="block text-xs text-text-muted mt-0.5 leading-snug">
-                {child.caption}
-              </span>
-            )}
           </span>
           <ChevronRight className="size-4 text-text-subtle shrink-0 -translate-x-1 opacity-0 transition-all group-hover/item:translate-x-0 group-hover/item:opacity-100" />
         </Link>
@@ -350,11 +352,6 @@ export function PublicNavbar() {
                               <span className="block text-sm font-medium text-text-secondary leading-snug">
                                 {child.name}
                               </span>
-                              {child.caption && (
-                                <span className="block text-xs text-text-muted mt-0.5 leading-snug">
-                                  {child.caption}
-                                </span>
-                              )}
                             </span>
                           </Link>
                         );

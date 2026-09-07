@@ -1,19 +1,19 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { ChevronRight, Home } from "lucide-react";
-import { dummyImages } from "@/lib/dummyImages";
+import { images } from "@/assets/images";
 
 export function PageHero({ title, subtitle, crumb }) {
   return (
     <section className="relative overflow-hidden text-white">
       {/* Background image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-x-0 top-16 lg:top-20 bottom-0 z-0">
         <img
-          src={dummyImages.pageHeroBg}
+          src={images.pageHeroBg}
           alt=""
           aria-hidden="true"
           className="w-full h-full object-cover object-center"
         />
-        {/* Depth scrim — dark toward text, image stays visible above */}
+        {/* Depth scrim â€” dark toward text, image stays visible above */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/55 to-black/20" />
       </div>
 

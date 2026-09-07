@@ -12,7 +12,7 @@ export function StaffPage() {
     return (
         <div className="w-full flex flex-col">
             <PageHero
-                title="Staff Information"
+                title="Faculty"
                 subtitle="Our leadership team brings experience, care, and a shared commitment to academic and personal growth."
                 crumb="Staff Information"
             />

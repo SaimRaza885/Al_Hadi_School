@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import {
   GraduationCap,
   ShieldCheck,
@@ -13,7 +13,7 @@ import {
 import { PageHero } from "@/components/public/PageHero";
 import { CtaBanner } from "@/components/public/CtaBanner";
 import { siteContent } from "@/data/siteContent.data";
-import { dummyImages } from "@/lib/dummyImages";
+import { images } from "@/assets/images";
 import { StaffCard } from "@/components/shared/StaffCard";
 import { Reveal } from "@/components/shared/Reveal";
 
@@ -102,7 +102,7 @@ export function AboutPage() {
               <Reveal delay={100} className="lg:h-full">
                 <div className="relative h-72 lg:h-full lg:min-h-[24rem] w-full overflow-hidden rounded-2xl border border-border shadow-card">
                   <img
-                    src={dummyImages.heroSlides[0] || dummyImages.pageHeroBg}
+                    src={images.heroSlides[0] || images.pageHeroBg}
                     alt="Al-Hadi Academy Gilgit campus"
                     className="size-full object-cover"
                     loading="lazy"

@@ -3,9 +3,9 @@ import { X, ChevronLeft, ChevronRight, Images, Camera } from "lucide-react";
 import { PageHero } from "@/components/public/PageHero";
 import { CtaBanner } from "@/components/public/CtaBanner";
 import { Reveal } from "@/components/shared/Reveal";
-import { dummyImages } from "@/lib/dummyImages";
+import { images } from "@/assets/images";
 
-const photos = dummyImages.gallery;
+const photos = images.gallery;
 
 export function GalleryPage() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -41,7 +41,7 @@ export function GalleryPage() {
   }, [activeIndex, closeLightbox, prev, next]);
 
   const activePhoto = activeIndex !== null ? photos[activeIndex] : null;
-  const activeAlt = activePhoto ? dummyImages.galleryFileName(activePhoto) : "";
+  const activeAlt = activePhoto ? images.galleryNames[activeIndex] : "";
 
   return (
     <div className="w-full flex flex-col">
@@ -60,8 +60,11 @@ export function GalleryPage() {
                   Campus Memories
                 </h2>
                 <p className="text-sm text-text-muted mt-1">
-                  Photos are auto-loaded from the assets folder — add more any
-                  time.
+                  Managed in{" "}
+                  <code className="text-xs px-1.5 py-0.5 rounded bg-surface-tertiary">
+                    src/assets/images.js
+                  </code>{" "}
+                  — add or remove a photo there any time.
                 </p>
               </div>
               <div className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-surface border border-border text-text-secondary">
@@ -81,12 +84,12 @@ export function GalleryPage() {
                     type="button"
                     onClick={() => openLightbox(idx)}
                     className="group relative w-full h-full rounded-xl overflow-hidden bg-surface border border-border shadow-card hover:shadow-md transition-all text-left focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                    aria-label={`Open photo ${dummyImages.galleryFileName(src)}`}
+                    aria-label={`Open photo ${images.galleryNames[idx] ?? "campus photo"}`}
                   >
                     <div className="aspect-[4/3] w-full overflow-hidden bg-surface-tertiary">
                       <img
                         src={src}
-                        alt={dummyImages.galleryFileName(src)}
+                        alt={images.galleryNames[idx] ?? "campus photo"}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
@@ -94,7 +97,7 @@ export function GalleryPage() {
 
                     <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <p className="text-xs font-medium text-white/90">
-                        {dummyImages.galleryFileName(src)}
+                        {images.galleryNames[idx] ?? "campus photo"}
                       </p>
                     </div>
                   </button>
@@ -106,11 +109,15 @@ export function GalleryPage() {
               <div className="text-center py-16">
                 <Images className="size-10 text-text-subtle mx-auto mb-3" />
                 <p className="text-sm text-text-muted">
-                  Drop photos into{" "}
+                  Drop a photo into{" "}
                   <code className="text-xs px-1.5 py-0.5 rounded bg-surface-tertiary">
-                    src/data/asserts/website image/gallery/
+                    src/assets/gallery/
                   </code>{" "}
-                  and they will appear here automatically.
+                  then import + list it in{" "}
+                  <code className="text-xs px-1.5 py-0.5 rounded bg-surface-tertiary">
+                    src/assets/images.js
+                  </code>
+                  .
                 </p>
               </div>
             </Reveal>

@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { ArrowRight, CalendarDays, Clock3 } from "lucide-react";
 import { blogsData } from "@/data/blogs.data";
-import { dummyImages } from "@/lib/dummyImages";
+import { images } from "@/assets/images";
 import { Reveal } from "@/components/shared/Reveal";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 
-const fallbackImages = [dummyImages.galleryScience, dummyImages.sports];
+const fallbackImages = [images.galleryScience, images.sports];
 
 export function BlogHighlightsSection() {
   const featuredBlogs = blogsData.slice(0, 2);

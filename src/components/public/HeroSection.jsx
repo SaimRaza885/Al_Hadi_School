@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { siteContent } from "@/data/siteContent.data";
-import { dummyImages } from "@/lib/dummyImages";
+import { images } from "@/assets/images";
 import { Reveal } from "@/components/shared/Reveal";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
-  const slides = dummyImages.heroSlides || [dummyImages.pageHeroBg];
+  const slides = images.heroSlides || [images.pageHeroBg];
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -20,10 +22,10 @@ export function HeroSection() {
 
   return (
     <div>
-      {/* 1. HERO — auto-rotating campus images + clean hierarchy */}
+      {/* 1. HERO â€” auto-rotating campus images + clean hierarchy */}
       <section className="relative min-h-screen overflow-hidden text-white flex items-center">
         {/* Background image slider layer */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-x-0 top-16 lg:top-20 bottom-0 z-0">
           {slides.map((src, index) => (
             <img
               key={src}
@@ -36,9 +38,9 @@ export function HeroSection() {
               )}
             />
           ))}
-          {/* Depth scrim — uniform veil + stronger dark toward text */}
+          {/* Depth scrim â€” uniform veil + stronger dark toward text */}
           {/* <div className="absolute inset-0 bg-black/15" /> */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/60 to-black/25" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/50 to-black/25" />
         </div>
 
         {/* Centered content */}
@@ -57,22 +59,21 @@ export function HeroSection() {
               </p>
             </Reveal> */}
 
-            {/* <Reveal delay={240}>
+            <Reveal delay={240}>
               <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
                 <Link
-                  to="#welcome"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-sm bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary-hover active:bg-primary-active transition-colors focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-transparent"
+                  to="/curriculum"
+                  className="group inline-flex items-center gap-2 rounded-sm bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-xl hover:shadow-primary/35 active:translate-y-0 active:bg-primary-active focus:outline-none focus:ring-2 focus:ring-white/80 focus:ring-offset-2 focus:ring-offset-transparent"
                 >
-                 
-                  <span>Learn More</span>
-                  <ArrowRight className="size-4" />
+                  <span>Explore Our Programs</span>
+                  <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />
                 </Link>
               </div>
-            </Reveal> */}
+            </Reveal>
           </div>
         </div>
 
-        {/* Slider dots — pinned to bottom of hero */}
+        {/* Slider dots â€” pinned to bottom of hero */}
         {slides.length > 1 && (
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex items-center justify-center gap-2">
             {slides.map((src, index) => (

@@ -1,11 +1,11 @@
-import { Link, useParams } from "react-router-dom";
+﻿import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, CalendarDays, Clock3 } from "lucide-react";
 import { PageHero } from "@/components/public/PageHero";
 import { PlaceholderPage } from "@/pages/public/PlaceholderPage";
 import { blogsData } from "@/data/blogs.data";
-import { dummyImages } from "@/lib/dummyImages";
+import { images } from "@/assets/images";
 
-const fallbackImages = [dummyImages.galleryScience, dummyImages.sports];
+const fallbackImages = [images.galleryScience, images.sports];
 
 export function BlogDetailPage() {
   const { slug } = useParams();

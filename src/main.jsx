@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "@fontsource-variable/plus-jakarta-sans";
+import "@fontsource/manrope/700.css";
 import "./index.css";
 import { App } from "./App";
 

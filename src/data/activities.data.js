@@ -1,21 +1,21 @@
-import { dummyImages } from "@/lib/dummyImages";
+﻿import { images } from "@/assets/images";
 
 export const activitiesData = {
   intro:
-    "Our Life Skills & Activities (LSA) program balances academics with athletics, creative arts, leadership, and community service — so every student finds their passion and builds resilient character.",
+    "Our Life Skills & Activities (LSA) program balances academics with athletics, creative arts, leadership, and community service â€” so every student finds their passion and builds resilient character.",
   coCurricular: [
     {
-      id: "act-sports",
-      title: "Athletics & Sports",
-      tagline: "Teamwork, discipline & physical excellence",
+      id: "act-hiking",
+      title: "Hiking & Mountain Adventure",
+      tagline: "Explore the valley trails, build endurance",
       description:
-        "From competitive football and cricket to swimming and athletics, our professional coaching staff run daily practice and inter-house tournaments across more than a dozen disciplines.",
-      image: dummyImages.sports,
+        "Surrounded by the peaks of Gilgit Baltistan, our hiking program takes students onto safe, guided mountain trails — building endurance, teamwork, environmental awareness, and a lifelong connection to nature.",
+      image: images.sports,
       highlights: [
-        "Football, cricket, basketball & badminton squads",
-        "Annual Sports Day & inter-house meets",
-        "Morning physical training for all grades",
-        "District & national level competition entries",
+        "Guided weekend hikes on Gilgit's valley & mountain trails",
+        "Camping, navigation & outdoor survival training",
+        "Annual inter-house mountain trekking competition",
+        "Leave-no-trace & environmental stewardship lessons",
       ],
     },
     {
@@ -24,7 +24,7 @@ export const activitiesData = {
       tagline: "Self-expression through art & performance",
       description:
         "Our fine arts, music, and drama programs provide a platform for self-expression, theatre production, and creative exploration through the school's annual arts festival.",
-      image: dummyImages.arts,
+      image: images.arts,
       highlights: [
         "Fine arts, sketching & pottery workshops",
         "Annual theatre production & cultural night",
@@ -38,7 +38,7 @@ export const activitiesData = {
       tagline: "Civic responsibility & student voice",
       description:
         "Developing civic responsibility through student council, debate clubs, robotics teams, and community service initiatives that run throughout the academic year.",
-      image: dummyImages.clubs,
+      image: images.clubs,
       highlights: [
         "Elected student council & prefect body",
         "Debate, quiz & public speaking clubs",
@@ -48,6 +48,12 @@ export const activitiesData = {
     },
   ],
   extraCurricular: [
+    {
+      id: "ext-hiking",
+      title: "Hiking & Mountain Treks",
+      description: "Weekend guided hikes and valley treks that build endurance, teamwork, and a love for Gilgit's mountains.",
+      icon: "Mountain",
+    },
     {
       id: "ext-1",
       title: "Scouting & First Aid",
