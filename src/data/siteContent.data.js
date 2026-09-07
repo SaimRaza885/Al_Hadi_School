@@ -1,7 +1,7 @@
 import { dummyImages } from "@/lib/dummyImages";
 
 const schoolContact = {
-  phone: "+1 (234) 567-8900",
+  phone: "03121869841",
   email: "admissions@greenwood.edu",
   address: "123 Academy Blvd, North District, Metropolis 56789",
   timings: "Monday – Saturday: 8:00 AM – 2:30 PM",
@@ -269,10 +269,10 @@ export const siteContent = {
       },
     ],
     departments: [
-      { name: "Admissions Office", email: "admissions@greenwood.edu", phone: "+1 (234) 567-8900" },
-      { name: "Academic Office", email: "academics@greenwood.edu", phone: "+1 (234) 567-8901" },
-      { name: "Accounts & Fees", email: "accounts@greenwood.edu", phone: "+1 (234) 567-8902" },
-      { name: "Examinations", email: "exams@greenwood.edu", phone: "+1 (234) 567-8903" },
+      { name: "Admissions Office", email: "admissions@greenwood.edu", phone: "03121869841" },
+      { name: "Academic Office", email: "academics@greenwood.edu", phone: "03121869841" },
+      { name: "Accounts & Fees", email: "accounts@greenwood.edu", phone: "03121869841" },
+      { name: "Examinations", email: "exams@greenwood.edu", phone: "03121869841" },
     ],
   },
 };
