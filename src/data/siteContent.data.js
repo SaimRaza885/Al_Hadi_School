@@ -24,7 +24,7 @@ export const siteContent = {
     name: "Dr. Hassan",
     title: "Principal",
     image: dummyImages.principal,
-    welcomeHeading: "Welcome to Al-Hadi School",
+    welcomeHeading: "Welcome to Al-Hadi Academy Gilgit",
     paragraphs: [
       "At Al-Hadi, we believe every child carries unique potential. Our mission is to create an environment where curiosity thrives, character is built, and futures are shaped through education that goes beyond textbooks.",
       "We are dedicated to academic distinction, fostering an atmosphere where digital literacy and holistic life skills are integrated into every facet of the learning journey, ensuring our students are prepared for the global stage.",
