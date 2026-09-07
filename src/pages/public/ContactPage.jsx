@@ -7,6 +7,8 @@ import {
   CheckCircle2,
   ChevronRight,
   MessageSquare,
+  Navigation,
+  ExternalLink,
 } from "lucide-react";
 import { PageHero } from "@/components/public/PageHero";
 import { siteContent } from "@/data/siteContent.data";
@@ -17,6 +19,31 @@ const cardIcons = {
   Phone: Phone,
   Mail: Mail,
 };
+
+function getCardAction(icon, contact) {
+  if (icon === "Phone") {
+    return {
+      href: `tel:${contact.phone}`,
+      label: "Call Now",
+      Icon: Phone,
+    };
+  }
+  if (icon === "Mail") {
+    return {
+      href: `mailto:${contact.email}`,
+      label: "Send Email",
+      Icon: Mail,
+    };
+  }
+  // Map / Visit
+  const mapsQuery = encodeURIComponent(contact.address);
+  return {
+    href: `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`,
+    label: "Get Directions",
+    Icon: Navigation,
+    external: true,
+  };
+}
 
 export function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -29,9 +56,7 @@ export function ContactPage() {
 
   const { contactPage, contact } = siteContent;
 
-  const handleChange = (
-    e
-  ) => {
+  const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
@@ -39,24 +64,25 @@ export function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Clean phone number: remove non-numeric digits
-    const targetPhone = contact.phone.replace(/[^0-9]/g, "");
+    const digits = contact.phone.replace(/[^0-9]/g, "");
+    // Pakistan mobile: convert leading 0 to country code 92 for WhatsApp
+    const targetPhone = digits.startsWith("0") ? `92${digits.slice(1)}` : digits;
 
-    // Format the WhatsApp message text
-    const text = `*New Contact Form Submission*\n\n` +
+    const text =
+      `*New Contact Form Submission*\n\n` +
       `*Name:* ${formData.name}\n` +
-      `*Email:* ${formData.email}\n` +
+      `*Email:* ${formData.email || "N/A"}\n` +
       `*Subject:* ${formData.subject}\n` +
       `*Message:* ${formData.message}`;
 
     const encodedText = encodeURIComponent(text);
     const whatsappUrl = `https://wa.me/${targetPhone}?text=${encodedText}`;
 
-    // Open WhatsApp in a new tab
-    window.open(whatsappUrl, "_blank");
-
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     setSent(true);
   };
+
+  const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contact.address)}`;
 
   return (
     <div className="w-full flex flex-col">
@@ -72,18 +98,32 @@ export function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contactPage.cards.map((card, idx) => {
               const Icon = cardIcons[card.icon] || MapPin;
+              const action = getCardAction(card.icon, contact);
+              const ActionIcon = action.Icon;
+
               return (
                 <Reveal key={card.title} delay={idx * 80}>
-                  <div className="bg-surface border border-border rounded-xl p-6 shadow-card hover:shadow-md transition-all text-center h-full flex flex-col items-center">
+                  <div className="bg-surface border border-border rounded-xl p-6 shadow-card hover:shadow-md hover:border-primary/30 transition-all text-center h-full flex flex-col items-center">
                     <div className="size-12 rounded-xl bg-primary-light flex items-center justify-center text-primary mb-4">
                       <Icon className="size-6" />
                     </div>
                     <h3 className="text-base font-bold text-text-primary">{card.title}</h3>
-                    <div className="mt-2 space-y-1 text-xs sm:text-sm text-text-secondary leading-relaxed">
+                    <div className="mt-2 space-y-1 text-xs sm:text-sm text-text-secondary leading-relaxed flex-1">
                       {card.lines.map((line) => (
-                        <p key={line}>{line}</p>
+                        <p key={line} className="break-all">{line}</p>
                       ))}
                     </div>
+                    <a
+                      href={action.href}
+                      {...(action.external
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
+                      className="mt-5 inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary-hover active:bg-primary-active shadow-xs focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                    >
+                      <ActionIcon className="size-4 shrink-0" />
+                      <span>{action.label}</span>
+                      {action.external && <ExternalLink className="size-3.5 opacity-80" />}
+                    </a>
                   </div>
                 </Reveal>
               );
@@ -233,8 +273,7 @@ export function ContactPage() {
                       <Phone className="size-4 text-primary shrink-0" />
                       {contact.phone}
                     </p>
-                    <br/>
-                    <p className="inline-flex items-center gap-2 text-text-secondary">
+                    <p className="inline-flex items-center gap-2 text-text-secondary break-all">
                       <Mail className="size-4 text-primary shrink-0" />
                       {contact.email}
                     </p>
@@ -244,7 +283,7 @@ export function ContactPage() {
 
               <Reveal delay={200}>
                 <a
-                  href="https://maps.google.com"
+                  href={mapsHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center justify-between bg-background border border-border rounded-xl p-6 hover:border-primary transition-colors shadow-card"
