@@ -32,6 +32,17 @@ import gallary_20 from "@/assets/gallery/gallary_20.jpg";
 import gallary_21 from "@/assets/gallery/gallary_21.jpg";
 import gallary_22 from "@/assets/gallery/gallary_22.jpg";
 
+// ================= ALUMNI IMAGES =================
+
+import alumuni_1 from "@/assets/alumuni/alumuni_1.jpg";
+import alumuni_2 from "@/assets/alumuni/alumuni_2.jpg";
+import alumuni_3 from "@/assets/alumuni/alumuni_3.jpg";
+import alumuni_4 from "@/assets/alumuni/alumuni_4.jpg";
+import alumuni_5 from "@/assets/alumuni/alumuni_5.jpg";
+import alumuni_6 from "@/assets/alumuni/alumuni_6.jpg";
+import alumuni_7 from "@/assets/alumuni/alumuni_7.jpg";
+import alumuni_8 from "@/assets/alumuni/alumuni_8.jpg";
+
 // ================= EXPORT =================
 
 export const images = {
@@ -129,6 +140,16 @@ export const images = {
   stemProgram: gallary_22,
   galleryScience: gallary_17,
   galleryQirat: gallary_6,
+
+  // alumni portraits
+  alumuni_1,
+  alumuni_2,
+  alumuni_3,
+  alumuni_4,
+  alumuni_5,
+  alumuni_6,
+  alumuni_7,
+  alumuni_8,
 
   staffPrincipal: undefined,
   staffAcademics: undefined,

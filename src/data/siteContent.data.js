@@ -26,7 +26,7 @@ export const siteContent = {
   principal: {
     name: "Dr. Hassan",
     title: "Principal",
-    image: dummyImages.principal,
+    image: images.principal,
     welcomeHeading: "Welcome to Al-Hadi Academy Gilgit",
     paragraphs: [
       "At Al-Hadi, we believe every child carries unique potential. Our mission is to create an environment where curiosity thrives, character is built, and futures are shaped through education that goes beyond textbooks.",
@@ -240,10 +240,14 @@ export const siteContent = {
       { name: "Ms. S. Iqbal", role: "Head of Activities (LSA)", bio: "Coordinates athletics, arts, clubs, and community service.", image: images.staffActivities },
     ],
     alumuni: [
-      { name: "Adeel Ahmed", Matric: "98%", review: "Al-Hadi Academy is the best school in Gilgit. The teachers genuinely care about every single student.", image: images.staffPrincipal },
-      { name: "Shoaib Karim", Matric: "96%", review: "The hostel environment kept me focused and helped me turn good habits into great marks.", image: images.staffAcademics },
-      { name: "Maryam Ali", Matric: "93%", review: "The science labs and STEM program took me far beyond what the board exams required.", image: images.staffActivities },
-      { name: "Hassan Raza", Matric: "91%", review: "Discipline, caring mentors, and a supportive community made all the difference for me.", image: images.staffStem },
+      { name: "Adeel Ahmed", Matric: "98%", review: "Al-Hadi Academy is the best school in Gilgit. The teachers genuinely care about every single student.", image: images.alumuni_1 },
+      { name: "Shoaib Karim", Matric: "96%", review: "The hostel environment kept me focused and helped me turn good habits into great marks.", image: images.alumuni_2 },
+      { name: "Maryam Ali", Matric: "93%", review: "The science labs and STEM program took me far beyond what the board exams required.", image: images.alumuni_3 },
+      { name: "Hassan Raza", Matric: "91%", review: "Discipline, caring mentors, and a supportive community made all the difference for me.", image: images.alumuni_4 },
+      { name: "Rafiq Shah", Matric: "90%", review: "The sports and hiking programme made me physically and mentally stronger alongside my studies.", image: images.alumuni_5 },
+      { name: "Fatima Bibi", Matric: "89%", review: "I owe my confidence on stage to the school's Qirat and cultural events. Thank you, Al-Hadi.", image: images.alumuni_6 },
+      { name: "Usman Ali", Matric: "88%", review: "The teachers here go beyond the syllabus — they build character that lasts a lifetime.", image: images.alumuni_7 },
+      { name: "Zainab Noor", Matric: "87%", review: "Al-Hadi's leadership clubs and community service shaped who I am today. Proud alumna.", image: images.alumuni_8 },
     ]
   },
 

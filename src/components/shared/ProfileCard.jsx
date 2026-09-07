@@ -13,16 +13,15 @@ function DetailMarker() {
 export function ProfileCard({ name, image, primaryDetail, secondaryDetail }) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-border-strong hover:shadow-lg">
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-primary-light">
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface-tertiary flex items-center justify-center">
         {image ? (
           <>
             <img
               src={image}
               alt={name}
-              className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="size-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </>
         ) : (
           <div className="flex size-full items-center justify-center text-primary">
