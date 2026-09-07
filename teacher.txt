@@ -1,0 +1,117 @@
+===================================================================================
+                           [SCHOOL / ACADEMY NAME]
+                        FACULTY PERMANENT MASTER RECORD
+===================================================================================
+Employee ID No: __________________              Date of Joining: ____ / ____ / 20___
+Designation / Role: _______________              Employment Status: [  ] Permanent
+Department / Wing: _______________                                 [  ] Probation
+Academic Session: 20___ - 20___                                   [  ] Contract
+-----------------------------------------------------------------------------------
+                                                                +-----------------+
+                                                                |                 |
+                                                                |   PASTE RECENT  |
+                                                                |  PASSPORT-SIZE  |
+                                                                |    PHOTOGRAPH   |
+                                                                |       HERE      |
+                                                                |                 |
+                                                                +-----------------+
+
+1. PERSONAL INFORMATION
+-----------------------------------------------------------------------------------
+Full Name: ________________________________________________________________________
+Father's Name: _______________________________   Status: [  ] Alive  [  ] Deceased
+Spouse's Name (if married): ____________________  Status: [  ] Alive  [  ] Deceased
+Date of Birth: ____ / ____ / 19___   Gender: [  ] Male  [  ] Female  [  ] Other
+CNIC / National ID No: ________________________   Blood Group: _____________________
+Marital Status: [  ] Single  [  ] Married  [  ] Widowed   Religion: ________________
+Residential Address: ______________________________________________________________
+___________________________________________________________________________________
+Mobile No (Primary): ____________________  Alternative / WhatsApp: ________________
+Personal Email: _________________________  Official Email: ________________________
+
+2. BANK & DIGITAL WALLET PAYROLL DETAILS
+-----------------------------------------------------------------------------------
+Preferred Disbursement Method: [  ] Commercial Bank Account
+                               [  ] Digital / Mobile Wallet
+                               [  ] Cheque  [  ] Cash
+
+--- COMMERCIAL BANK ACCOUNT (IF APPLICABLE) ---
+Account Title / Holder Name: ______________________________________________________
+Bank Name: ___________________________________  Branch Name: ______________________
+Branch Code: _________________________________  Account Number: ___________________
+IBAN (International Bank Account No): _____________________________________________
+
+--- DIGITAL & MOBILE WALLET ACCOUNTS (IF APPLICABLE) ---
+Mobile Wallet Type: [  ] Easypaisa    [  ] JazzCash    [  ] SadaPay    [  ] NayaPay
+                    [  ] UPaisa       [  ] Raast ID    [  ] Other: _______________
+Wallet Account Title: _____________________________________________________________
+Registered Mobile Number (Wallet ID): _____________________________________________
+Linked CNIC / Registration No: _____________________________________________________
+
+--- TAX & STATUTORY IDENTIFIERS ---
+Tax Identification / NTN No: __________________  EOBI / Social Security No: ________
+
+3. EMERGENCY CONTACT DETAILS
+-----------------------------------------------------------------------------------
+Contact Person Name: ________________________ Relationship: _____________________
+Mobile Number: _____________________________ Residential Address: _______________
+
+4. ACADEMIC & PROFESSIONAL QUALIFICATIONS
+-----------------------------------------------------------------------------------
+Degree / Diploma   | Institution / Board / Univ | Year Passed | Major Subjects | Grade/Div
+-------------------|----------------------------|-------------|----------------|----------
+Secondary / SSC    |                            |             |                |
+Higher Sec / FSc   |                            |             |                |
+Bachelors (BS/BSc) |                            |             |                |
+Masters (MS/MSc)   |                            |             |                |
+Professional (B.Ed)|                            |             |                |
+Other Certifications|                            |             |                |
+
+5. PREVIOUS TEACHING & ADMINISTRATIVE EXPERIENCE
+-----------------------------------------------------------------------------------
+Institution Name   | Designation / Role         | From - To   | Core Subjects Taught
+-------------------|----------------------------|-------------|----------------------
+                   |                            |             |
+                   |                            |             |
+
+6. CURRENT TEACHING ASSIGNMENT & LOAD
+-----------------------------------------------------------------------------------
+Primary Subject(s) Assigned: _______________________________________________________
+Grades / Classes Assigned: ________________________________________________________
+Class Teacher Responsibility: Class _______ Section _______ (Leave blank if N/A)
+Additional Duties / Portfolios (e.g., Discipline Incharge, Event Coordinator, STEM Mentor):
+___________________________________________________________________________________
+
+7. ANNUAL PERFORMANCE & EVALUATION SUMMARY (THREE TERMS)
+-----------------------------------------------------------------------------------
+Key Performance Indicators   | 1ST TERM SCORE | 2ND TERM SCORE | 3RD TERM SCORE
+                             |   (Out of 100) |   (Out of 100) |   (Out of 100)
+-----------------------------|----------------|----------------|----------------
+Subject Mastery & Pedagogy   |                |                |
+Classroom Management         |                |                |
+Student Result / Passing %   |                |                |
+Lesson Planning & Submission |                |                |
+Punctuality & Discipline     |                |                |
+Parent-Teacher Relations     |                |                |
+-----------------------------|----------------|----------------|----------------
+TOTAL SCORE & PERCENTAGE     |         / %    |         / %    |         / %
+OVERALL RATING               | [ ] Exceeds    | [ ] Exceeds    | [ ] Exceeds
+                             | [ ] Meets Exp. | [ ] Meets Exp. | [ ] Meets Exp.
+                             | [ ] Needs Imp. | [ ] Needs Imp. | [ ] Needs Imp.
+
+8. ATTENDANCE & LEAVE RECORD (CURRENT SESSION)
+-----------------------------------------------------------------------------------
+Term           | Total Working Days | Days Present | Casual Leaves | Medical/Unpaid
+---------------|--------------------|--------------|---------------|---------------
+1st Term       |                    |              |               |
+2nd Term       |                    |              |               |
+3rd Term       |                    |              |               |
+---------------|--------------------|--------------|---------------|---------------
+ANNUAL TOTAL   |                    |              |               |
+
+9. PROFESSIONAL DEVELOPMENT & WORKSHOPS ATTENDED
+-----------------------------------------------------------------------------------
+Date / Session | Workshop / Training Title       | Conducting Organization / Mentor
+---------------|---------------------------------|---------------------------------
+               |                                 |
+               |                                 |

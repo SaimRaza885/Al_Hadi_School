@@ -1,0 +1,429 @@
+# STUDENT DATA
+
+===================================================================================
+[SCHOOL / ACADEMY NAME]
+
+```
+                CUMULATIVE STUDENT PERMANENT RECORD
+```
+
+===================================================================================
+
+Admission No: ______________________________
+Admission Date: ____ / ____ / 20____
+
+Student Registration / ID No: ______________________________
+Academic Session: 20____ - 20____
+
+Current Class / Section: ______________________________
+Roll No: ______________________________
+
+```
+                                  +-----------------+
+                                  |                 |
+                                  |   PASTE RECENT  |
+                                  |  PASSPORT-SIZE  |
+                                  |   PHOTOGRAPH    |
+                                  |      HERE       |
+                                  |                 |
+                                  +-----------------+
+```
+
+===================================================================================
+
+1. GENERAL PERSONAL INFORMATION
+   ===================================================================================
+
+Full Name of Student: ___________________________________________________________
+
+Date of Birth: ____ / ____ / 20____
+Age at Admission: ______ Years ______ Months
+
+Gender: [ ] Male   [ ] Female   [ ] Other
+
+Blood Group: ______________________________
+
+Form-B / B-Form / CNIC / Govt ID No: ___________________________________________
+
+Religion: ______________________________
+Mother Tongue: ______________________________
+
+Residential Address:
+
+---
+
+---
+
+===================================================================================
+2. PARENT & GUARDIAN PROFILE
+============================
+
+FATHER'S INFORMATION
+
+Father's Name: _________________________________________________________________
+
+Status: [ ] Alive   [ ] Deceased
+
+Mobile: ______________________________
+
+Occupation: ______________________________
+
+CNIC / ID No: ______________________________
+
+MOTHER'S INFORMATION
+
+Mother's Name: _________________________________________________________________
+
+Status: [ ] Alive   [ ] Deceased
+
+Mobile: ______________________________
+
+Occupation: ______________________________
+
+CNIC / ID No: ______________________________
+
+GUARDIAN INFORMATION
+
+Appointed Guardian (if any): ___________________________________________________
+
+Relationship with Student: _____________________________________________________
+
+Primary Email for Correspondence: ______________________________________________
+
+Emergency Contact Person: _____________________________________________________
+
+Emergency Contact Phone: ______________________________________________________
+
+===================================================================================
+3. PRIOR ACADEMIC HISTORY
+=========================
+
+Previous School Name:
+
+---
+
+Last Grade Attended: ______________________________
+
+School Leaving Certificate Attached: [ ] Yes   [ ] No
+
+Board / Registration ID (if applicable):
+
+---
+
+===================================================================================
+4. CUMULATIVE ACADEMIC PERFORMANCE SUMMARY
+==========================================
+
+| Academic Year | Grade/Class | Total Marks | Obtained Marks | Percentage/GPA | Rank |
+| ------------- | ----------- | ----------- | -------------- | -------------- | ---- |
+| 20____-20____ |             |             |                |                |      |
+| 20____-20____ |             |             |                |                |      |
+| 20____-20____ |             |             |                |                |      |
+| 20____-20____ |             |             |                |                |      |
+| 20____-20____ |             |             |                |                |      |
+
+===================================================================================
+5. ATTENDANCE RECORD
+====================
+
+| Academic Session | Total School Days | Days Present | Leaves Sanctioned | Attendance % |
+| ---------------- | ----------------- | ------------ | ----------------- | ------------ |
+| 20____-20____    |                   |              |                   |              |
+| 20____-20____    |                   |              |                   |              |
+| 20____-20____    |                   |              |                   |              |
+| 20____-20____    |                   |              |                   |              |
+
+===================================================================================
+6. CO-CURRICULAR ACTIVITIES & ACHIEVEMENTS
+==========================================
+
+Sports / Athletics:
+
+---
+
+Clubs / Societies (Science, Art, Debate, etc.):
+
+---
+
+Positions Held (Class Monitor, House Captain, Prefect, etc.):
+
+---
+
+Awards / Certificates / Honors Received:
+
+---
+
+---
+
+===================================================================================
+7. BEHAVIOR, CONDUCT & PERSONALITY TRAITS
+=========================================
+
+Overall Conduct Rating:
+
+[ ] Excellent   [ ] Good   [ ] Satisfactory   [ ] Needs Improvement
+
+Social Adjustment & Peer Interaction:
+
+---
+
+Work Habits & Discipline:
+
+---
+
+Disciplinary Actions / Warnings (if any):
+
+---
+
+===================================================================================
+8. HEALTH & MEDICAL PROFILE
+===========================
+
+Known Medical Conditions / Allergies:
+
+---
+
+Special Needs / Learning Accommodations:
+
+---
+
+Emergency Doctor / Clinic Contact:
+
+---
+
+===================================================================================
+9. EXTRA-CURRICULAR ACTIVITIES
+==============================
+
+Activity / Program:
+
+---
+
+Category:
+[ ] Sports
+[ ] Arts
+[ ] Music
+[ ] Drama
+[ ] Community Service
+[ ] Competition
+[ ] Leadership
+[ ] Other: ______________________________
+
+Role / Participation:
+
+---
+
+Position / Achievement:
+
+---
+
+Year / Academic Session: ______________________________
+
+Certificate / Award Received:
+[ ] Yes   [ ] No
+
+Certificate / Award Details:
+
+---
+
+Supporting Document / Certificate Link (if available):
+
+---
+
+===================================================================================
+10. HOSTEL STUDENT DETAILS
+==========================
+
+Hostel Residence Status: [ ] Resident   [ ] Non-Resident / Day Scholar
+
+Hostel Name / Block:
+
+---
+
+Room Number: ______________________________
+
+Bed / Bunk Number:
+[ ] Bed 1   [ ] Bed 2   [ ] Upper Bunk   [ ] Lower Bunk
+[ ] Other: ______________________________
+
+Floor Number: ______________________________
+
+Room Type:
+[ ] Single
+[ ] Double
+[ ] Triple
+[ ] Dormitory
+
+Allotted From: ____ / ____ / 20____
+
+Allotted To: ____ / ____ / 20____
+[ ] Ongoing
+
+Section / Floor Warden Name:
+
+---
+
+Warden Mobile / Contact Number:
+
+---
+
+Warden Email / Extension (Optional):
+
+---
+
+===================================================================================
+11. STUDENT RESULTS, CERTIFICATIONS & AWARDS
+============================================
+
+This section provides a complete digital record of the student's academic results,
+certifications, awards, and achievements.
+
+STUDENT RESULTS LINK / DIGITAL PROFILE
+
+Student Record / Result Link:
+
+---
+
+Example:
+https://schoolwebsite.edu/student-result/[Student-ID]
+
+QR Code for Student Record:
+[ PLACE QR CODE HERE ]
+
+RESULT HISTORY
+
+| Academic Year | Class/Grade | Exam/Term | Total Marks | Obtained | % / GPA | Status |
+| ------------- | ----------- | --------- | ----------- | -------- | ------- | ------ |
+| 20____-20____ |             |           |             |          |         |        |
+| 20____-20____ |             |           |             |          |         |        |
+| 20____-20____ |             |           |             |          |         |        |
+| 20____-20____ |             |           |             |          |         |        |
+
+CERTIFICATIONS & AWARDS
+
+| Certificate / Award Name | Issuing Organization | Category | Date | Verification / Document Link |
+| ------------------------ | -------------------- | -------- | ---- | ---------------------------- |
+|                          |                      |          |      |                              |
+|                          |                      |          |      |                              |
+|                          |                      |          |      |                              |
+|                          |                      |          |      |                              |
+
+ACADEMIC RESULT DOCUMENTS
+
+[ ] Annual Result Card
+[ ] Mid-Term Result
+[ ] Final Examination Result
+[ ] Board Examination Result
+[ ] School Leaving Certificate
+[ ] Transfer Certificate
+[ ] Other Academic Document
+
+Document Link / File Reference:
+
+---
+
+ACHIEVEMENT DETAILS
+
+Achievement Title:
+
+---
+
+Achievement Description:
+
+---
+
+Level:
+[ ] School
+[ ] District
+[ ] Regional
+[ ] Provincial
+[ ] National
+[ ] International
+
+Date Received: ____ / ____ / 20____
+
+Certificate / Award Number (if applicable):
+
+---
+
+Verification Link:
+
+---
+
+Verified By: ______________________________
+
+Verification Date: ____ / ____ / 20____
+
+===================================================================================
+12. STUDENT DIGITAL RECORD ACCESS
+=================================
+
+A unique secure student profile may be created to provide authorized access to:
+
+[ ] Complete Academic Results
+[ ] Annual Result Cards
+[ ] Attendance Records
+[ ] Certificates
+[ ] Awards & Achievements
+[ ] Co-Curricular Activities
+[ ] Extra-Curricular Activities
+[ ] Hostel Information
+[ ] Academic Documents
+
+Unique Student Record ID:
+
+---
+
+Secure Student Profile Link:
+
+---
+
+QR Code:
+[ PLACE QR CODE HERE ]
+
+Last Record Update: ____ / ____ / 20____
+
+===================================================================================
+SCHOOL VERIFICATION & AUTHORIZATION
+===================================
+
+Class Teacher's Name: __________________________________________________________
+
+Signature: ______________________________
+Date: ____ / ____ / 20____
+
+Principal / Head of Institution:
+
+Name: _________________________________________________________________________
+
+Signature & Official Stamp:
+
+---
+
+Date: ____ / ____ / 20____
+
+===================================================================================
+RECORD STATUS
+=============
+
+Record Status:
+
+[ ] Active
+[ ] Transferred
+[ ] Graduated
+[ ] Withdrawn
+[ ] Archived
+
+Last Updated By: _______________________________________________________________
+
+Last Updated Date: ____ / ____ / 20____
+
+Remarks:
+
+---
+
+---
+
+===================================================================================
+END OF STUDENT PERMANENT RECORD
+===============================
