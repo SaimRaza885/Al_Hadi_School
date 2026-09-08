@@ -41,14 +41,13 @@ export function HeroSection() {
               fetchPriority={index === 0 ? "high" : undefined}
               decoding="async"
               className={cn(
-                "absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-out",
+                "absolute inset-0 w-full h-full object-cover  object-center transition-opacity duration-1000 ease-out",
                 index === activeIndex ? "opacity-100" : "opacity-0"
               )}
             />
           ))}
-          {/* Depth scrim â€” uniform veil + stronger dark toward text */}
-          {/* <div className="absolute inset-0 bg-black/15" /> */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/50 to-black/50" />
+          {/* Depth scrim â€” darkest behind the centered text, image stays visible at the edges */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/60 to-black/30" />
         </div>
 
         {/* Centered content */}

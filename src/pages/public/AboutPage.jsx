@@ -171,7 +171,7 @@ export function AboutPage() {
           </Reveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {about.leadership.map((member, index) => (
+            {about.leadership.slice(0,4).map((member, index) => (
               <Reveal key={index} delay={index * 60}>
                 <FacultyCard member={member} />
               </Reveal>

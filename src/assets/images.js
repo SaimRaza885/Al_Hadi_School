@@ -1,21 +1,14 @@
 // ================= HERO + GENERAL IMAGES =================
 
 import hero_1 from "@/assets/hero_1.jpg";
-import hero_2 from "@/assets/hero_2.jpg";
-import hero_3 from "@/assets/hero_3.jpg";
-import hero_5 from "@/assets/hero_5.jpg";
 
 import hero_1_m from "@/assets/hero_1_m.jpg";
-import hero_2_m from "@/assets/hero_2_m.jpg";
-import hero_3_m from "@/assets/hero_3_m.jpg";
-import hero_5_m from "@/assets/hero_5_m.jpg";
 
 import logo from "@/assets/logo.jpg";
 
 import about_hero from "@/assets/about.jpg";
 
 import middle_program from "@/assets/middle_program.jpg";
-import high_school from "@/assets/high_school.jpg";
 import art from "@/assets/art.jpg";
 
 // ================= FACULTY IMAGES =================
@@ -25,6 +18,7 @@ import Sajjad_Photo from "@/assets/faculty/sajjad.jpg"
 import Yaadgar_Photo from "@/assets/faculty/yaadgar.jpg"
 import Kumail_photo from "@/assets/faculty/kumail.jpg"
 import Arif_photo from "@/assets/faculty/arif.jpg"
+import Naqi_photo from "@/assets/faculty/naqi.jpg"
 
 // ================= GALLERY IMAGES =================
 
@@ -60,16 +54,12 @@ import alumuni_8 from "@/assets/alumuni/alumuni_8.jpg";
 export const images = {
   // hero
   hero_1,
-  hero_2,
-  hero_3,
-  hero_5,
 
   // general
   logo,
 
   // program / activity banners
   middle_program,
-  high_school,
   art,
 
   // gallery
@@ -90,13 +80,8 @@ export const images = {
   gallary_26,
 
   // site aliases (point any page image to a photo above)
-  heroSlides: [
-    { src: hero_1, srcSet: `${hero_1_m} 480w, ${hero_1} 1280w`, width: 1280, height: 960 },
-    { src: hero_2, srcSet: `${hero_2_m} 480w, ${hero_2} 1920w`, width: 1920, height: 1534 },
-    { src: hero_3, srcSet: `${hero_3_m} 480w, ${hero_3} 1920w`, width: 1920, height: 1080 },
-    { src: hero_5, srcSet: `${hero_5_m} 480w, ${hero_5} 1600w`, width: 1600, height: 1200 },
-  ],
-  pageHeroBg: hero_1,
+  heroImage: { src: gallary_7, srcSet: `${hero_1_m} 480w, ${hero_1} 1280w`, width: 1280, height: 575 },
+  pageHeroBg: gallary_24,
   gallery: [
     gallary_1,
     gallary_2,
@@ -135,11 +120,11 @@ export const images = {
   about_hero,
 
   principal: gallary_1,
-  sports: hero_3,
+  sports: gallary_3,
   arts: art,
   clubs: gallary_7,
   middleProgram: middle_program,
-  secondaryProgram: high_school,
+  secondaryProgram: gallary_2,
   stemProgram: gallary_22,
   galleryScience: gallary_6,
   galleryQirat: gallary_6,
@@ -160,6 +145,7 @@ export const images = {
   staffYaadgar: Yaadgar_Photo,
   staffKumail: Kumail_photo,
   staffArif: Arif_photo,
+  staffNaqi: Naqi_photo,
   // Temporary local portraits until dedicated faculty photos are provided.
   staffAcademics: alumuni_2,
   staffStem: alumuni_3,

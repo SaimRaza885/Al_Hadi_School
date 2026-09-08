@@ -56,10 +56,10 @@ After building any component — update this file with the component name, file 
 
 #### `HeroSection`
 - **Path:** `src/components/public/HeroSection.jsx`
-- **Last updated:** 2026-08-18
-- **Tokens/Classes:** full-bleed auto slider — images from `images.heroSlides` (`src/assets/images.js` → `src/assets/hero_1/2/3/5.jpg`), crossfade via `opacity` + `transition-opacity duration-1000`, active `opacity-100` / inactive `opacity-0`, autoplay `setInterval` 5000ms (respects `prefers-reduced-motion`), depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20`, dot indicators `h-1.5 rounded-full` active `w-8 bg-white` / inactive `w-3 bg-white/40 hover:bg-white/70`, headline `text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight` (matches `WelcomeSection` principal heading — Plus Jakarta Sans) with light-blue accent `text-primary-light`, subtitle `text-white/95`, CTA `bg-primary text-primary-foreground rounded-sm px-7 py-3.5`, quick-links strip `bg-surface border-b border-border-light` with icon tiles `size-10 rounded-lg bg-primary-light text-primary group-hover:bg-primary group-hover:text-primary-foreground`.
-- **Purpose:** Main hero with auto-rotating campus background slider, eyebrow pill, serif headline, trust stats, single admission CTA, and a 4-item quick-links strip below.
-- **2026-09-08:** navbar is `sticky` (in-flow) so the hero no longer needs to duck under it — background slider layer changed back to `absolute inset-0` (full-bleed from the top of the hero) and section height changed from `min-h-screen` to `min-h-[calc(100vh-5rem)] lg:min-h-[calc(100vh-6rem)]` so the section ends exactly at the fold below the 80px/96px navbar.
+- **Last updated:** 2026-09-08
+- **Tokens/Classes:** static full-bleed hero — single image from `images.heroImage` (`src/assets/images.js` → `src/assets/hero_1.jpg`, srcSet `hero_1_m 480w` / `hero_1 1280w`), `loading="eager"` + `fetchPriority="high"` (LCP), depth scrim `bg-gradient-to-t from-black/15 via-black/50 to-black/25`, headline `text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight` with drop shadow, CTA `bg-primary text-primary-foreground rounded-sm px-7 py-3.5` (single "Explore Our Programs" link).
+- **Purpose:** Main hero with one static high-quality campus image, depth scrim, headline, and single admission CTA. Slider removed.
+- **2026-09-08:** navbar is `sticky` (in-flow) so the hero no longer needs to duck under it — background image layer is `absolute inset-0` (full-bleed from the top of the hero) and section height is `min-h-[calc(100vh-5rem)] lg:min-h-[calc(100vh-6rem)]` so the section ends exactly at the fold below the 80px/96px navbar. Auto-rotating slider (slides array, crossfade, 5000ms `setInterval`, `prefers-reduced-motion` check, dot indicators) replaced with the static `heroImage`.
 
 #### `WelcomeSection`
 - **Path:** `src/components/public/WelcomeSection.jsx`

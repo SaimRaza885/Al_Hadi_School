@@ -11,13 +11,10 @@ export function PageHero({ title, subtitle, crumb }) {
           src={images.pageHeroBg}
           alt=""
           aria-hidden="true"
-          width={1280}
-          height={960}
-          decoding="async"
           className="w-full h-full object-cover object-center"
         />
-        {/* Depth scrim â€” dark toward text, image stays visible above */}
-        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/10 to-black/10" /> */}
+        {/* Depth scrim â€” darkest under the title block, image stays visible below */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/30" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-16 sm:pb-20">

@@ -5,7 +5,7 @@ import { Jimp } from "jimp";
 const ASSETS_DIR = "src/assets";
 const MOBILE_WIDTH = 480;
 const JPEG_QUALITY = 62;
-const HEROES = ["hero_1.jpg", "hero_2.jpg", "hero_3.jpg", "hero_5.jpg"];
+const HEROES = ["hero_1.jpg"];
 
 for (const name of HEROES) {
   const filePath = join(ASSETS_DIR, name);
