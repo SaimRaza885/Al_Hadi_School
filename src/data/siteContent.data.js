@@ -4,7 +4,7 @@ const schoolContact = {
   phone: "03555679715",
   email: "alhadiacademygilgit123@gmail.com",
   // Shown on the website
-  address: "Danyor Main Chock Near Shaheen Adda",
+  address: "Danyor Main Chock Near Shaheen Van Stop",
   // Used only for Google Maps (plus code / precise location)
   mapsQuery: "W9CJ+C6J, Danyor",
   timings: "Monday – Saturday: 8:00 AM – 2:30 PM",
@@ -242,6 +242,7 @@ export const siteContent = {
       { name: "Kumail Abbas", role: "BS Computer Science", bio: "Computer science faculty guiding students in the digital world.", image: images.staffKumail },
       { name: "Arif Hussain", role: "MS Chemistry", bio: "Chemistry faculty supporting students across the science and STEM programmes.", image: images.staffArif },
       { name: "Muhammad Naqi", role: "BS Mathematics", bio: "Mathematics faculty building analytical thinking and problem-solving skills.", image: images.staffNaqi },
+      { name: "Asif Hussain", role: "International Relations", bio: "Social sciences faculty guiding students in History, Pakistan Studies, and Social Studies with a focus on national and global affairs.", image: images.staffAsif },
     ],
     alumuni: [
       { name: "Mukaram Ali Shah", fatherName: "Sultan Khan", rollNo: "1056687", Matric: "90", review: "The science labs and STEM program took me far beyond what the board exams required.", image: images.alumuni_3 },

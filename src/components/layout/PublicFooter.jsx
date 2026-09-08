@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Facebook, 
-  Twitter, 
-  Instagram, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Facebook,
+  Twitter,
+  Instagram,
   Linkedin,
   CalendarCheck,
   ChevronRight
@@ -17,7 +17,7 @@ export function PublicFooter() {
     <footer className="bg-footer-bg text-footer-text pt-16 pb-8 border-t border-footer-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-footer-border">
-          
+
           {/* Col 1: Brand & Contact Info (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
             <div className="flex items-center gap-3">
@@ -55,13 +55,13 @@ export function PublicFooter() {
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="#facebook"
+                href="https://www.facebook.com/profile.php?id=61579753127665"
                 aria-label="Facebook"
                 className="size-9 rounded-full bg-footer-border hover:bg-primary flex items-center justify-center text-footer-text hover:text-footer-heading transition-colors"
               >
                 <Facebook className="size-4" />
               </a>
-              <a
+              {/* <a
                 href="#twitter"
                 aria-label="Twitter"
                 className="size-9 rounded-full bg-footer-border hover:bg-primary flex items-center justify-center text-footer-text hover:text-footer-heading transition-colors"
@@ -81,7 +81,7 @@ export function PublicFooter() {
                 className="size-9 rounded-full bg-footer-border hover:bg-primary flex items-center justify-center text-footer-text hover:text-footer-heading transition-colors"
               >
                 <Linkedin className="size-4" />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -146,28 +146,27 @@ export function PublicFooter() {
           {/* Col 4: School Hours & Campus Visiting (3 cols) — REPLACED NEWSLETTER */}
           <div className="lg:col-span-3 space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-widest text-footer-heading flex items-center gap-1.5">
-          Office Hours
+              Office Hours
             </h4>
             <div className="space-y-2 text-xs text-footer-muted">
               <div className="flex justify-between py-1 border-b border-footer-border">
                 <span className="font-medium">Mon – Thu:</span>
                 <span className="text-footer-heading">7:30 AM – 2:30 PM</span>
               </div>
+              
               <div className="flex justify-between py-1 border-b border-footer-border">
-                <span className="font-medium">Friday:</span>
-                <span className="text-footer-heading">7:30 AM – 12:30 PM</span>
-              </div>
-              <div className="flex justify-between py-1 border-b border-footer-border">
-                <span className="font-medium">Saturday:</span>
+                <span className="font-medium">Fri & Sat</span>
                 <span className="text-footer-heading">Office Only (8:00 AM - 12:00 PM)</span>
               </div>
+            
+
               <div className="flex justify-between py-1">
                 <span className="font-medium">Sunday & Holidays:</span>
                 <span className="text-warning font-semibold">Closed</span>
               </div>
             </div>
 
-            
+
           </div>
 
         </div>
