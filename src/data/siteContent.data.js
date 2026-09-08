@@ -246,7 +246,7 @@ export const siteContent = {
       { name: "Mukaram Ali Shah", fatherName: "Sultan Khan", rollNo: "1056687", Matric: "90", review: "The science labs and STEM program took me far beyond what the board exams required.", image: images.alumuni_3 },
       { name: "Kashif Hussain", fatherName: "Hajat Ali", rollNo: "1056685", Matric: "87", review: "Al-Hadi's leadership clubs and community service shaped who I am today.", image: images.alumuni_8 },
       { name: "Muhammad Abbas", fatherName: "Sultan Mir", rollNo: "1056692", Matric: "86", image: undefined },
-      { name: "Ali Faizan", fatherName: "Najat Hussain", rollNo: "1056691", Matric: "84", image: images.alumuni_1 },
+      { name: "Ali Faizan", fatherName: "Najat Hussain", rollNo: "1056691", Matric: "84", review: "The teachers here always encouraged me to aim higher than I thought possible.", image: images.alumuni_1 },
       { name: "Ali Muhammad", fatherName: "Sher Ali", rollNo: "1056684", Matric: "80", image: undefined },
       { name: "Muzamil Hassan", fatherName: "Muhammad Hassan", rollNo: "1056690", Matric: "79", review: "The hostel environment kept me focused and helped me turn good habits into great marks.", image: images.alumuni_2 },
       { name: "Azmat Hussain", fatherName: "Shamsullah", rollNo: "1056686", Matric: "79", review: "Discipline, caring mentors, and a supportive community made all the difference for me.", image: images.alumuni_4 },
