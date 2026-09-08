@@ -20,6 +20,7 @@ import Kumail_photo from "@/assets/faculty/kumail.jpg"
 import Arif_photo from "@/assets/faculty/arif.jpg"
 import Naqi_photo from "@/assets/faculty/naqi.jpg"
 import Shahid_Photo from "@/assets/faculty/shahid.jpg"
+import Sardar_Photo from "@/assets/faculty/sardar.jpg"
 import Sajid_Photo from "@/assets/faculty/sajid.jpg"
 
 // ================= GALLERY IMAGES =================
@@ -151,6 +152,7 @@ export const images = {
   staffArif: Arif_photo,
   staffNaqi: Naqi_photo,
   staffShahid: Shahid_Photo,
+  staffSardar: Sardar_Photo,
   staffSajid: Sajid_Photo,
   // Temporary local portraits until dedicated faculty photos are provided.
   staffAcademics: alumuni_2,
