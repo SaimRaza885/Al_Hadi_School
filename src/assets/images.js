@@ -5,6 +5,11 @@ import hero_2 from "@/assets/hero_2.jpg";
 import hero_3 from "@/assets/hero_3.jpg";
 import hero_5 from "@/assets/hero_5.jpg";
 
+import hero_1_m from "@/assets/hero_1_m.jpg";
+import hero_2_m from "@/assets/hero_2_m.jpg";
+import hero_3_m from "@/assets/hero_3_m.jpg";
+import hero_5_m from "@/assets/hero_5_m.jpg";
+
 import logo from "@/assets/logo.jpg";
 
 import about_hero from "@/assets/about.jpg";
@@ -85,7 +90,12 @@ export const images = {
   gallary_22,
 
   // site aliases (point any page image to a photo above)
-  heroSlides: [hero_1, hero_2, hero_3, hero_5],
+  heroSlides: [
+    { src: hero_1, srcSet: `${hero_1_m} 480w, ${hero_1} 1280w`, width: 1280, height: 960 },
+    { src: hero_2, srcSet: `${hero_2_m} 480w, ${hero_2} 1920w`, width: 1920, height: 1534 },
+    { src: hero_3, srcSet: `${hero_3_m} 480w, ${hero_3} 1920w`, width: 1920, height: 1080 },
+    { src: hero_5, srcSet: `${hero_5_m} 480w, ${hero_5} 1600w`, width: 1600, height: 1200 },
+  ],
   pageHeroBg: hero_1,
   gallery: [
     gallary_1,

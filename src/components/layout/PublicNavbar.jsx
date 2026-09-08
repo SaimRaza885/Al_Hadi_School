@@ -181,8 +181,11 @@ const navItems = [
               <img
                 src={siteContent.schoolLogo}
                 alt={siteContent.schoolName}
+                width={433}
+                height={447}
                 className="size-full object-contain p-0.5"
                 loading="eager"
+                decoding="async"
               />
             </div>
             <div className="flex flex-col">

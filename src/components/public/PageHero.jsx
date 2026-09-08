@@ -11,6 +11,9 @@ export function PageHero({ title, subtitle, crumb }) {
           src={images.pageHeroBg}
           alt=""
           aria-hidden="true"
+          width={1280}
+          height={960}
+          decoding="async"
           className="w-full h-full object-cover object-center"
         />
         {/* Depth scrim â€” dark toward text, image stays visible above */}

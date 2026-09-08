@@ -26,10 +26,10 @@
   --color-text-subtle: #9ca3af;        /* placeholders, disabled */
   --color-text-inverse: #ffffff;       /* text on primary / dark */
 
-  /* ---- Primary — logo teal test palette ---- */
-  --color-primary: #149b84;
-  --color-primary-hover: #0f806d;      /* button hover */
-  --color-primary-active: #0b6657;     /* button pressed */
+  /* ---- Primary — logo teal palette (darkened for AA contrast) ---- */
+  --color-primary: #0e846f;
+  --color-primary-hover: #0b6d5c;      /* button hover */
+  --color-primary-active: #085c4e;     /* button pressed */
   --color-primary-light: #e4f6f1;      /* tint bg (active nav, info chips) */
   --color-primary-muted: #f1fbf8;      /* very subtle tint */
   --color-primary-foreground: #ffffff; /* text/icon on primary */
@@ -37,6 +37,14 @@
   /* ---- Secondary accent — deep blue for logo contrast ---- */
   --color-brand-accent: #1c74bd;
   --color-brand-accent-light: #e8f1fa;
+
+  /* ---- Footer (dark navy surface) ---- */
+  --color-footer-bg: #0b132b;
+  --color-footer-border: #1e293b;      /* footer dividers */
+  --color-footer-heading: #ffffff;     /* footer headings */
+  --color-footer-text: #cbd5e1;        /* footer body text (AA on footer-bg) */
+  --color-footer-muted: #94a3b8;       /* footer secondary text */
+  --color-footer-subtle: #7b8aa1;      /* footer copyright (AA on footer-bg) */
 
   /* ---- Success — approved / pass / published-ok (green) ---- */
   --color-success: #16a34a;

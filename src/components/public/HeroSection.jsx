@@ -7,7 +7,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
-  const slides = images.heroSlides || [images.pageHeroBg];
+  const slides = (images.heroSlides || [images.pageHeroBg]).map((slide) =>
+    typeof slide === "string" ? { src: slide } : slide
+  );
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -26,12 +28,18 @@ export function HeroSection() {
       <section className="relative min-h-[calc(100vh-5rem)] lg:min-h-[calc(100vh-6rem)] overflow-hidden text-white flex items-center">
         {/* Background image slider layer */}
         <div className="absolute inset-0 z-0">
-          {slides.map((src, index) => (
+          {slides.map((slide, index) => (
             <img
-              key={src}
-              src={src}
+              key={slide.src}
+              src={slide.src}
+              srcSet={slide.srcSet}
+              width={slide.width}
+              height={slide.height}
               alt=""
-              aria-hidden={index !== activeIndex}
+              aria-hidden="true"
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : undefined}
+              decoding="async"
               className={cn(
                 "absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-out",
                 index === activeIndex ? "opacity-100" : "opacity-0"
@@ -76,19 +84,24 @@ export function HeroSection() {
         {/* Slider dots â€” pinned to bottom of hero */}
         {slides.length > 1 && (
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex items-center justify-center gap-2">
-            {slides.map((src, index) => (
+            {slides.map((slide, index) => (
               <button
-                key={src}
+                key={slide.src}
                 type="button"
                 onClick={() => setActiveIndex(index)}
                 aria-label={`Show slide ${index + 1}`}
-                className={cn(
-                  "h-1.5 rounded-full transition-all duration-300",
-                  index === activeIndex
-                    ? "w-8 bg-white"
-                    : "w-3 bg-white/40 hover:bg-white/70"
-                )}
-              />
+                aria-current={index === activeIndex}
+                className="size-6 flex items-center justify-center"
+              >
+                <span
+                  className={cn(
+                    "block h-1.5 rounded-full transition-all duration-300",
+                    index === activeIndex
+                      ? "w-8 bg-white"
+                      : "w-3 bg-white/40 hover:bg-white/70"
+                  )}
+                />
+              </button>
             ))}
           </div>
         )}

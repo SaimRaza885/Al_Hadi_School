@@ -14,9 +14,9 @@ import { siteContent } from "@/data/siteContent.data";
 
 export function PublicFooter() {
   return (
-    <footer className="bg-[#0B132B] text-slate-300 pt-16 pb-8 border-t border-slate-800">
+    <footer className="bg-footer-bg text-footer-text pt-16 pb-8 border-t border-footer-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-slate-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-footer-border">
           
           {/* Col 1: Brand & Contact Info (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
@@ -25,16 +25,19 @@ export function PublicFooter() {
                 <img
                   src={siteContent.schoolLogo}
                   alt={siteContent.schoolName}
+                  width={433}
+                  height={447}
                   className="size-full object-contain p-0.5"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
-              <span className="text-xl font-bold tracking-tight text-white">
+              <span className="text-xl font-bold tracking-tight text-footer-heading">
                 {siteContent.schoolTag || siteContent.schoolName}
               </span>
             </div>
 
-            <div className="space-y-3 text-sm text-slate-400">
+            <div className="space-y-3 text-sm text-footer-muted">
               <div className="flex items-start gap-3">
                 <MapPin className="size-4.5 text-primary shrink-0 mt-0.5" />
                 <span>{siteContent.contact.address}</span>
@@ -54,28 +57,28 @@ export function PublicFooter() {
               <a
                 href="#facebook"
                 aria-label="Facebook"
-                className="size-9 rounded-full bg-slate-800/80 hover:bg-primary flex items-center justify-center text-slate-300 hover:text-white transition-colors"
+                className="size-9 rounded-full bg-footer-border hover:bg-primary flex items-center justify-center text-footer-text hover:text-footer-heading transition-colors"
               >
                 <Facebook className="size-4" />
               </a>
               <a
                 href="#twitter"
                 aria-label="Twitter"
-                className="size-9 rounded-full bg-slate-800/80 hover:bg-primary flex items-center justify-center text-slate-300 hover:text-white transition-colors"
+                className="size-9 rounded-full bg-footer-border hover:bg-primary flex items-center justify-center text-footer-text hover:text-footer-heading transition-colors"
               >
                 <Twitter className="size-4" />
               </a>
               <a
                 href="#instagram"
                 aria-label="Instagram"
-                className="size-9 rounded-full bg-slate-800/80 hover:bg-primary flex items-center justify-center text-slate-300 hover:text-white transition-colors"
+                className="size-9 rounded-full bg-footer-border hover:bg-primary flex items-center justify-center text-footer-text hover:text-footer-heading transition-colors"
               >
                 <Instagram className="size-4" />
               </a>
               <a
                 href="#linkedin"
                 aria-label="LinkedIn"
-                className="size-9 rounded-full bg-slate-800/80 hover:bg-primary flex items-center justify-center text-slate-300 hover:text-white transition-colors"
+                className="size-9 rounded-full bg-footer-border hover:bg-primary flex items-center justify-center text-footer-text hover:text-footer-heading transition-colors"
               >
                 <Linkedin className="size-4" />
               </a>
@@ -84,7 +87,7 @@ export function PublicFooter() {
 
           {/* Col 2: Quick Links (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-white">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-footer-heading">
               Quick Links
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -118,7 +121,7 @@ export function PublicFooter() {
 
           {/* Col 3: Portals (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-white">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-footer-heading">
               Portals
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -142,25 +145,25 @@ export function PublicFooter() {
 
           {/* Col 4: School Hours & Campus Visiting (3 cols) — REPLACED NEWSLETTER */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-white flex items-center gap-1.5">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-footer-heading flex items-center gap-1.5">
           Office Hours
             </h4>
-            <div className="space-y-2 text-xs text-slate-400">
-              <div className="flex justify-between py-1 border-b border-slate-800/80">
+            <div className="space-y-2 text-xs text-footer-muted">
+              <div className="flex justify-between py-1 border-b border-footer-border">
                 <span className="font-medium">Mon – Thu:</span>
-                <span className="text-slate-200">7:30 AM – 2:30 PM</span>
+                <span className="text-footer-heading">7:30 AM – 2:30 PM</span>
               </div>
-              <div className="flex justify-between py-1 border-b border-slate-800/80">
+              <div className="flex justify-between py-1 border-b border-footer-border">
                 <span className="font-medium">Friday:</span>
-                <span className="text-slate-200">7:30 AM – 12:30 PM</span>
+                <span className="text-footer-heading">7:30 AM – 12:30 PM</span>
               </div>
-              <div className="flex justify-between py-1 border-b border-slate-800/80">
+              <div className="flex justify-between py-1 border-b border-footer-border">
                 <span className="font-medium">Saturday:</span>
-                <span className="text-slate-200">Office Only (8:00 AM - 12:00 PM)</span>
+                <span className="text-footer-heading">Office Only (8:00 AM - 12:00 PM)</span>
               </div>
               <div className="flex justify-between py-1">
                 <span className="font-medium">Sunday & Holidays:</span>
-                <span className="text-amber-400 font-semibold">Closed</span>
+                <span className="text-warning font-semibold">Closed</span>
               </div>
             </div>
 
@@ -170,7 +173,7 @@ export function PublicFooter() {
         </div>
 
         {/* Bottom copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-footer-subtle">
           <p>© 2026 {siteContent.schoolTag || siteContent.schoolName}. All rights reserved.</p>
         </div>
       </div>

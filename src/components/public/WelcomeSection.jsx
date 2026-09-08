@@ -16,13 +16,16 @@ export function WelcomeSection() {
                 <img
                   src={principal.image}
                   alt={principal.name}
+                  width={761}
+                  height={800}
                   className="w-full h-[420px] sm:h-[460px] object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="mt-4 flex items-center justify-between px-1">
                 <div>
-                  <h4 className="text-base font-bold text-text-primary">{principal.name}</h4>
+                  <h3 className="text-base font-bold text-text-primary">{principal.name}</h3>
                   <p className="text-xs text-text-muted font-medium">{principal.title}</p>
                 </div>
                 {/* <span className="font-serif italic text-sm font-semibold text-primary">
