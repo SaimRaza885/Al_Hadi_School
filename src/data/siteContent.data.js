@@ -251,7 +251,7 @@ export const siteContent = {
       { name: "Muzamil Hassan", fatherName: "Muhammad Hassan", rollNo: "1056690", Matric: "79", review: "The hostel environment kept me focused and helped me turn good habits into great marks.", image: images.alumuni_2 },
       { name: "Azmat Hussain", fatherName: "Shamsullah", rollNo: "1056686", Matric: "79", review: "Discipline, caring mentors, and a supportive community made all the difference for me.", image: images.alumuni_4 },
       { name: "Nizam Hussain", fatherName: "Essa", rollNo: "1056689", Matric: "79", review: "I owe my confidence on stage to the school's Qirat and cultural events. Thank you, Al-Hadi.", image: images.alumuni_6 },
-      { name: "Imtiyaz Ali", fatherName: "Mukhtar Ali", rollNo: "1056688", Matric: "78", image: undefined },
+      { name: "Imtiyaz Ali", fatherName: "Mukhtar Ali", rollNo: "1056688", Matric: "78", review: "Al-Hadi helped me stay disciplined and focused every single day.", image: images.alumuni_9 },
       { name: "Awais Iqbal", fatherName: "Bakhtawar Khan", rollNo: "1056682", Matric: "77", review: "The teachers here go beyond the syllabus — they build character that lasts a lifetime.", image: images.alumuni_7 },
       { name: "Shabi ul Hassan", fatherName: "Asghar Hussain", rollNo: "1056681", Matric: "77", review: "The sports and hiking programme made me physically and mentally stronger alongside my studies.", image: images.alumuni_5 },
       { name: "Muhammad Mujtaba", fatherName: "Basharat Hussain", rollNo: "1056683", Matric: "74", image: undefined },

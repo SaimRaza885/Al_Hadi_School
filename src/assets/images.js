@@ -50,6 +50,7 @@ import alumuni_5 from "@/assets/alumuni/alumuni_5.jpg";
 import alumuni_6 from "@/assets/alumuni/alumuni_6.jpg";
 import alumuni_7 from "@/assets/alumuni/alumuni_7.jpg";
 import alumuni_8 from "@/assets/alumuni/alumuni_8.jpg";
+import alumuni_9 from "@/assets/alumuni/alumuni_9.jpg";
 
 // ================= EXPORT =================
 
@@ -140,6 +141,7 @@ export const images = {
   alumuni_6,
   alumuni_7,
   alumuni_8,
+  alumuni_9,
 
   staffPrincipal: Principal_Photo,
   staffAmjad: Amjad_Photo,
