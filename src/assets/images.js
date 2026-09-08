@@ -7,6 +7,11 @@ import hero_5 from "@/assets/hero_5.jpg";
 
 import logo from "@/assets/logo.jpg";
 
+import about_hero from "@/assets/about.jpg";
+
+// ================= FACULTY IMAGES =================
+import Principal_Photo from "@/assets/faculty/princple.jpg"
+
 // ================= GALLERY IMAGES =================
 
 import gallary_1 from "@/assets/gallery/gallary_1.jpg";
@@ -131,8 +136,10 @@ export const images = {
     "gallary_22",
   ],
 
+  about_hero,
+
   principal: gallary_1,
-  sports: gallary_12,
+  sports: hero_3,
   arts: gallary_4,
   clubs: gallary_7,
   middleProgram: gallary_15,
@@ -151,8 +158,9 @@ export const images = {
   alumuni_7,
   alumuni_8,
 
-  staffPrincipal: undefined,
-  staffAcademics: undefined,
-  staffStem: undefined,
-  staffActivities: undefined,
+  staffPrincipal: Principal_Photo,
+  // Temporary local portraits until dedicated faculty photos are provided.
+  staffAcademics: alumuni_2,
+  staffStem: alumuni_3,
+  staffActivities: alumuni_4,
 };

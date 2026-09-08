@@ -25,9 +25,9 @@ export function WelcomeSection() {
                   <h4 className="text-base font-bold text-text-primary">{principal.name}</h4>
                   <p className="text-xs text-text-muted font-medium">{principal.title}</p>
                 </div>
-                <span className="font-serif italic text-sm font-semibold text-primary">
+                {/* <span className="font-serif italic text-sm font-semibold text-primary">
                   {principal.name}
-                </span>
+                </span> */}
               </div>
             </div>
           </Reveal>
@@ -57,7 +57,7 @@ export function WelcomeSection() {
                   <Quote className="size-5" />
                 </div>
                 <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
-                  <span className="font-semibold text-text-primary">Holistic LSA Framework: </span>
+                  <span className="font-semibold text-text-primary">From the Principal: </span>
                   {principal.lsaNote}
                 </p>
               </div>

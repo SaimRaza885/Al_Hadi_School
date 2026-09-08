@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { PageHero } from "@/components/public/PageHero";
 import { CtaBanner } from "@/components/public/CtaBanner";
+import { SEOHead } from "@/components/SEOHead";
 import { Reveal } from "@/components/shared/Reveal";
 
 const extraCurricularAreas = [
@@ -109,6 +110,11 @@ const extraCurricularAreas = [
 export function ExtraCurricularPage() {
   return (
     <div className="w-full flex flex-col">
+      <SEOHead
+        title="Extra-Curricular"
+        description="Extra-curricular and enrichment programmes at Al-Hadi Academy Gilgit — academic societies, sports, arts, clubs and character-building activities that develop the whole student."
+        path="/activities/extra-curricular"
+      />
       <PageHero
         title="Extra-Curricular Activities"
         subtitle="A broad programme of academic, creative, physical, and character-building opportunities that helps every student discover a strength and a sense of purpose."

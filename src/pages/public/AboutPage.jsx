@@ -12,9 +12,10 @@ import {
 } from "lucide-react";
 import { PageHero } from "@/components/public/PageHero";
 import { CtaBanner } from "@/components/public/CtaBanner";
+import { SEOHead } from "@/components/SEOHead";
 import { siteContent } from "@/data/siteContent.data";
 import { images } from "@/assets/images";
-import { StaffCard } from "@/components/shared/StaffCard";
+import { FacultyCard } from "@/components/shared/FacultyCard";
 import { Reveal } from "@/components/shared/Reveal";
 
 const valueIcons = {
@@ -29,6 +30,11 @@ export function AboutPage() {
 
   return (
     <div className="w-full flex flex-col">
+      <SEOHead
+        title="About Us"
+        description="Discover the mission, vision and story of Al-Hadi Academy Gilgit, Danyor — a modern Islamic school blending academic excellence, ethical character and family partnership for grades 6-10."
+        path="/about"
+      />
       <PageHero
         title="About Us"
         subtitle={about.heroSubtitle}
@@ -46,7 +52,7 @@ export function AboutPage() {
                 </div>
                 <span className="text-xs font-bold uppercase tracking-widest text-text-muted">Our Vision</span>
                 <p className="mt-3 text-text-secondary leading-relaxed text-sm sm:text-base">
-                  {about.mission}
+                  {about.vision}
                 </p>
               </div>
             </Reveal>
@@ -58,7 +64,7 @@ export function AboutPage() {
                 </div>
                 <span className="text-xs font-bold uppercase tracking-widest text-primary">Our Mission</span>
                 <p className="mt-3 text-text-secondary leading-relaxed text-sm sm:text-base">
-                  {about.vision}
+                  {about.mission}
                 </p>
               </div>
             </Reveal>
@@ -102,7 +108,7 @@ export function AboutPage() {
               <Reveal delay={100} className="lg:h-full">
                 <div className="relative h-72 lg:h-full lg:min-h-[24rem] w-full overflow-hidden rounded-2xl border border-border shadow-card">
                   <img
-                    src={images.heroSlides[0] || images.pageHeroBg}
+                    src={images.about_hero}
                     alt="Al-Hadi Academy Gilgit campus"
                     className="size-full object-cover"
                     loading="lazy"
@@ -167,7 +173,7 @@ export function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {about.leadership.map((member, index) => (
               <Reveal key={index} delay={index * 60}>
-                <StaffCard member={member} />
+                <FacultyCard member={member} />
               </Reveal>
             ))}
           </div>
@@ -175,10 +181,10 @@ export function AboutPage() {
           <Reveal delay={200}>
             <div className="mt-12 text-center">
               <Link
-                to="/staff"
+                to="/faculty"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary-hover transition-colors"
               >
-                <span>View all start</span>
+                <span>View Faculty Directory</span>
                 <ArrowRight className="size-4" />
               </Link>
             </div>

@@ -1,6 +1,7 @@
 ﻿import { Link } from "react-router-dom";
 import { ArrowRight, CalendarDays, Clock3 } from "lucide-react";
 import { PageHero } from "@/components/public/PageHero";
+import { SEOHead } from "@/components/SEOHead";
 import { blogsData } from "@/data/blogs.data";
 import { images } from "@/assets/images";
 import { Reveal } from "@/components/shared/Reveal";
@@ -10,6 +11,11 @@ const fallbackImages = [images.galleryScience, images.sports];
 export function BlogsPage() {
   return (
     <div className="w-full flex flex-col">
+      <SEOHead
+        title="blogs & stories"
+        description="Read the latest news and stories from Al-Hadi Academy Gilgit — sports, culture, STEM and the everyday life of our school community."
+        path="/blogs"
+      />
       <PageHero
         title="Blogs"
         subtitle="Explore the learning, curiosity, and community shaping everyday life at Al-Hadi."
@@ -28,7 +34,7 @@ export function BlogsPage() {
                   <div className="relative h-60 overflow-hidden bg-surface-tertiary">
                     <img
                       src={blog.coverImage}
-                      alt=""
+                      alt={`${blog.title} — cover image`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       onError={(event) => {
                         event.currentTarget.src = fallbackImages[idx % fallbackImages.length];

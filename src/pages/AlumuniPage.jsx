@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Quote } from "lucide-react";
 import { PageHero } from "@/components/public/PageHero";
 import { CtaBanner } from "@/components/public/CtaBanner";
+import { SEOHead } from "@/components/SEOHead";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { siteContent } from "@/data/siteContent.data";
 import { AlumuniCard } from "@/components/shared/AlumuniCard";
@@ -20,6 +21,11 @@ export function AlumuniPage() {
 
     return (
         <div className="w-full flex flex-col">
+            <SEOHead
+              title="Alumni & Matric Toppers"
+              description="Meet the outstanding alumni and Matric toppers of Al-Hadi Academy Gilgit whose dedication continues to inspire every student."
+              path="/alumuni"
+            />
             <PageHero
                 title="Our Alumni"
                 subtitle="Meet the toppers and proud graduates whose dedication continues to inspire every student at Al-Hadi."

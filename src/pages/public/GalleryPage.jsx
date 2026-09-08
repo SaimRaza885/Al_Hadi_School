@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { X, ChevronLeft, ChevronRight, Images, Camera } from "lucide-react";
 import { PageHero } from "@/components/public/PageHero";
 import { CtaBanner } from "@/components/public/CtaBanner";
+import { SEOHead } from "@/components/SEOHead";
 import { Reveal } from "@/components/shared/Reveal";
 import { images } from "@/assets/images";
 
@@ -45,6 +46,11 @@ export function GalleryPage() {
 
   return (
     <div className="w-full flex flex-col">
+      <SEOHead
+        title=" Gallery"
+        description="Browse the Al-Hadi Academy Gilgit photo gallery — sports galas, science exhibitions, cultural festivals and student achievements across the years."
+        path="/gallery"
+      />
       <PageHero
         title="Gallery"
         subtitle="Visual archives of sports galas, annual exhibitions, cultural festivals, and student achievements across the years."
@@ -60,11 +66,7 @@ export function GalleryPage() {
                   Campus Memories
                 </h2>
                 <p className="text-sm text-text-muted mt-1">
-                  Managed in{" "}
-                  <code className="text-xs px-1.5 py-0.5 rounded bg-surface-tertiary">
-                    src/assets/images.js
-                  </code>{" "}
-                  — add or remove a photo there any time.
+                  A look back at the moments that keep our campus alive.
                 </p>
               </div>
               <div className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-surface border border-border text-text-secondary">
@@ -89,7 +91,7 @@ export function GalleryPage() {
                     <div className="aspect-[4/3] w-full overflow-hidden bg-surface-tertiary">
                       <img
                         src={src}
-                        alt={images.galleryNames[idx] ?? "campus photo"}
+                        alt={`School life at Al-Hadi Academy Gilgit — ${images.galleryNames[idx] ?? "campus photo"}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />

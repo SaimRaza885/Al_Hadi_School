@@ -32,10 +32,11 @@ After building any component — update this file with the component name, file 
 
 #### `PublicNavbar`
 - **Path:** `src/components/layout/PublicNavbar.jsx`
-- **Last updated:** 2026-09-07
-- **Tokens/Classes:** `fixed top-0 z-50 w-full bg-surface/95 backdrop-blur-md border-b border-border-light shadow-xs`, logo tile `size-12 sm:size-14 lg:size-20`, nav links `text-text-secondary hover:text-primary hover:bg-surface-tertiary/60`, active/open state `text-primary` with `bg-primary` underline, desktop dropdown panel `absolute left-0 top-full mt-2 w-72 rounded-xl border border-border bg-surface/95 backdrop-blur-md shadow-lg p-2` with top caret (`size-2.5 rotate-45 border-l border-t`) and `.animate-dropdown-in` keyframe (opacity 0→1 + -6px→0 translateY, 0.18s ease-out), item entry `group/item` two-line: icon tile `size-9 rounded-md bg-primary-light text-primary` flipping to `bg-primary text-primary-foreground` on hover + label `text-sm font-semibold` + caption `text-xs text-text-muted` + `ChevronRight` slide-in on hover (`-translate-x-1 opacity-0` → active), mobile drawer `bg-surface`, mobile submenu `border-l-2 border-primary-light` with same icon tiles (`size-8`).
+- **Last updated:** 2026-09-08
+- **Tokens/Classes:** `sticky top-0 z-50 w-full bg-surface/95 backdrop-blur-md border-b border-border-light shadow-xs`, logo tile `size-12 sm:size-14 lg:size-20`, nav links `text-text-secondary hover:text-primary hover:bg-surface-tertiary/60`, active/open state `text-primary` with `bg-primary` underline, desktop dropdown panel `absolute left-0 top-full mt-2 w-72 rounded-xl border border-border bg-surface/95 backdrop-blur-md shadow-lg p-2` with top caret (`size-2.5 rotate-45 border-l border-t`) and `.animate-dropdown-in` keyframe (opacity 0→1 + -6px→0 translateY, 0.18s ease-out), item entry `group/item` two-line: icon tile `size-9 rounded-md bg-primary-light text-primary` flipping to `bg-primary text-primary-foreground` on hover + label `text-sm font-semibold` + caption `text-xs text-text-muted` + `ChevronRight` slide-in on hover (`-translate-x-1 opacity-0` → active), mobile drawer `bg-surface`, mobile submenu `border-l-2 border-primary-light` with same icon tiles (`size-8`).
 - **Purpose:** Public website header with About Us and Academics dropdowns, hover-intent opening (120ms in / 180ms leave grace), click-away closing, Escape closing, route-change closing, accessible expanded states (`aria-expanded`/`aria-haspopup`), and expandable mobile navigation.
 - **2026-09-07:** Dropdowns enriched + modernized. ABOUT US now: Overview, Facilities, Staff Information, Alumni & Topers. ACADEMICS now: Curriculum, Co-curricular Activities, Facilities & Labs, School Activities. Every dropdown item gained an icon (`navIconMap` in-component) + one-line caption; desktop panel got caret, blur, entrance animation; hover opens in addition to click with a 180ms grace timer so the panel doesn't close while moving the cursor into it.
+- **2026-09-08:** `fixed top-0` → `sticky top-0`. The navbar now lives in-flow at the top of the page (no longer overlays the hero image top), and still pins to the top when scrolling — no overlap, no JS. ACADEMICS dropdown gained "Academic Calendar" (`/academic-calendar`, `CalendarDays` icon) and "Examinations" (`/examinations`, `ClipboardList` icon) next to Curriculum.
 
 #### `PublicFooter`
 - **Path:** `src/components/layout/PublicFooter.jsx`
@@ -57,7 +58,7 @@ After building any component — update this file with the component name, file 
 - **Last updated:** 2026-08-18
 - **Tokens/Classes:** full-bleed auto slider — images from `images.heroSlides` (`src/assets/images.js` → `src/assets/hero_1/2/3/5.jpg`), crossfade via `opacity` + `transition-opacity duration-1000`, active `opacity-100` / inactive `opacity-0`, autoplay `setInterval` 5000ms (respects `prefers-reduced-motion`), depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20`, dot indicators `h-1.5 rounded-full` active `w-8 bg-white` / inactive `w-3 bg-white/40 hover:bg-white/70`, headline `text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight` (matches `WelcomeSection` principal heading — Plus Jakarta Sans) with light-blue accent `text-primary-light`, subtitle `text-white/95`, CTA `bg-primary text-primary-foreground rounded-sm px-7 py-3.5`, quick-links strip `bg-surface border-b border-border-light` with icon tiles `size-10 rounded-lg bg-primary-light text-primary group-hover:bg-primary group-hover:text-primary-foreground`.
 - **Purpose:** Main hero with auto-rotating campus background slider, eyebrow pill, serif headline, trust stats, single admission CTA, and a 4-item quick-links strip below.
-- **2026-09-07:** background slider layer changed from `absolute inset-0` to `absolute inset-x-0 top-16 lg:top-20 bottom-0` to match `PageHero` — the slider images begin below the fixed navbar so the photo top is no longer hidden behind the solid navbar.
+- **2026-09-08:** navbar is `sticky` (in-flow) so the hero no longer needs to duck under it — background slider layer changed back to `absolute inset-0` (full-bleed from the top of the hero) and section height changed from `min-h-screen` to `min-h-[calc(100vh-5rem)] lg:min-h-[calc(100vh-6rem)]` so the section ends exactly at the fold below the 80px/96px navbar.
 
 #### `WelcomeSection`
 - **Path:** `src/components/public/WelcomeSection.jsx`
@@ -102,11 +103,10 @@ After building any component — update this file with the component name, file 
 
 #### `PageHero`
 - **Path:** `src/components/public/PageHero.jsx`
-- **Last updated:** 2026-09-07
-- **Tokens/Classes:** background image `images.pageHeroBg` (= `src/assets/images.js` → `hero_1.jpg`) with depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20`, text `text-white`, breadcrumb `text-white/70 hover:text-white`, title `text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-sm`, subtitle `text-white/85 drop-shadow-sm`, container `pt-24 sm:pt-32` (clears fixed navbar).
+- **Last updated:** 2026-09-08
+- **Tokens/Classes:** background image `images.pageHeroBg` (= `src/assets/images.js` → `hero_1.jpg`) with depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20`, text `text-white`, breadcrumb `text-white/70 hover:text-white`, title `text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-sm`, subtitle `text-white/85 drop-shadow-sm`, container `pt-24 sm:pt-32` (clears navbar).
 - **Purpose:** Shared page header for all public subpages, using a short direct title instead of a separate eyebrow badge.
-- **2026-09-07:** background image layer changed from `absolute inset-0` to `absolute inset-x-0 top-16 lg:top-20 bottom-0` so the image starts BELOW the fixed navbar instead of being sliced by it — navbar stays solid, hero image is fully visible from the top of its visible area down.
-- **Pattern note:** Depth scrim (bottom-weighted black gradient) matches the homepage hero exactly (`from-black/80 via-black/55 to-black/20`) for consistent legibility.
+- **2026-09-08:** navbar is now `sticky` (in-flow) so the background image layer changed back from `absolute inset-x-0 top-16 lg:top-20 bottom-0` to `absolute inset-0` — the image is full-bleed from the hero's top, directly below the navbar (no 64–80px blank gap).
 
 ### Public Subpage Components
 
@@ -117,18 +117,20 @@ After building any component — update this file with the component name, file 
 
 #### `CurriculumPage`
 - **Path:** `src/pages/public/CurriculumPage.jsx`
-- **Tokens/Classes:** shared `PageHero`, page section `bg-background py-20`, program cards `bg-surface border border-border rounded-xl overflow-hidden shadow-card`, program imagery `object-cover`, subject checks `rounded-full bg-primary-light`.
-- **Purpose:** Dedicated curriculum page showing the three academic programs, grades, descriptions, subjects, and enquiry link.
+- **Last updated:** 2026-09-08
+- **Tokens/Classes:** shared `PageHero`, then six sections driven by new `src/data/curriculum.data.js` (content from `Al_Hadi_Academy_Curriculum_Booklet.md`): Philosophy (`bg-background py-20`), Levels (`bg-surface border-b border-border-light`), Assessment (`bg-background`), Methodology (`bg-surface border-b`), Calendar (`bg-background`), Co-curricular (`bg-surface border-b`), closing `CtaBanner`. Philosophy/Methodology cards `bg-surface border border-border rounded-xl p-6 shadow-card hover:-translate-y-1 hover:shadow-md` with `size-12 rounded-xl bg-primary-light` icon tiles; Level cards `border rounded-xl overflow-hidden shadow-card` with `bg-primary-muted` header strip + `rounded-full bg-primary-light` grades pill (`Award` icon) + subject chips `rounded-md bg-surface-tertiary` with `Check`; Assessment uses a stacked bar (`h-4 rounded-full`, `w-[40%] bg-primary` / `w-[60%] bg-primary-active`) plus two cards with `text-3xl font-extrabold text-primary` weights and `rounded-full bg-primary-light` check items; Calendar cards have a `absolute left-0 w-1 bg-primary-light` accent bar + `rounded-full bg-primary-light` session-chip; Co-curricular band `rounded-2xl bg-primary-muted border border-border` with `size-12 rounded-xl bg-surface` icon tiles.
+- **Purpose:** Dedicated `/curriculum` page presenting the school's official 2026–27 curriculum plan — philosophy, Middle (6–8) & Secondary (9–10) levels with subjects/approach, Formative 40% / Summative 60% assessment, and teaching methodology. Icon names are stored as strings in the data file and resolved by an in-component `iconMap` (matches `PublicNavbar` pattern).
+- **2026-09-08:** Academic Calendar Flow and Co-Curricular sections removed from the page (per owner); `calendar` and `coCurricular` arrays removed from `curriculum.data.js` and the now-unused `Microscope`/`Trophy`/`HeartHandshake` icons dropped from the map. Page closes with `CtaBanner` after Methodology.
 
 #### `CoCurricularPage`
 - **Path:** `src/pages/public/CoCurricularPage.jsx`
 - **Tokens/Classes:** shared `PageHero`, activity cards `bg-surface border border-border rounded-xl overflow-hidden shadow-card`, activity imagery `object-cover`, highlight checks `rounded-full bg-primary-light`.
 - **Purpose:** Dedicated co-curricular activities page for coached sports, creative arts, and leadership programs.
 
-#### `StaffPage`
-- **Path:** `src/pages/public/StaffPage.jsx`
-- **Tokens/Classes:** shared `PageHero`, staff cards `bg-surface border border-border rounded-xl p-6 shadow-card`, portrait `size-24 rounded-full object-cover ring-4 ring-primary-muted`, fallback icon `text-primary`, role label `text-primary`.
-- **Purpose:** Dedicated staff information page using the existing leadership card pattern and contact CTA.
+#### `FacultyPage`
+- **Path:** `src/pages/public/FacultyPage.jsx`
+- **Tokens/Classes:** shared `PageHero`, responsive faculty grid `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`, shared `FacultyCard` landscape profile cards, and staggered `Reveal` animation.
+- **Purpose:** Dedicated `/faculty` page presenting the school's faculty and leadership team. The legacy `/staff` URL redirects here.
 
 #### `FacilitiesPage`
 - **Path:** `src/pages/public/FacilitiesPage.jsx`
@@ -172,8 +174,24 @@ After building any component — update this file with the component name, file 
 
 #### `AlumuniCard`
 - **Path:** `src/components/shared/AlumuniCard.jsx`
-- **Tokens/Classes:** `bg-surface border border-border rounded-xl p-6 shadow-card hover:shadow-md hover:-translate-y-1 h-full text-center`, corner quote mark `text-primary-light group-hover:text-primary/30`, portrait circle `size-24 rounded-full bg-primary-light ring-4 ring-primary-muted` (fallback `UserRound text-primary`), name `text-base font-bold text-text-primary`, Matric badge pill `rounded-full bg-primary-light text-primary px-3 py-1` with `Award` icon, review `text-sm text-text-muted leading-relaxed` wrapped in curly quotes.
-- **Purpose:** Alumni profile card — portrait, name, Matric marks badge, short review.
+- **Last updated:** 2026-09-08
+- **Tokens/Classes:** `group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-card hover:-translate-y-1 hover:border-border-strong hover:shadow-lg transition-all`, photo container `relative aspect-[4/3] w-full overflow-hidden bg-surface-secondary` with bottom depth scrim `bg-gradient-to-t from-black/60 via-transparent to-black/20`, vector SVG/CSS honor medal badge `absolute top-2.5 right-2.5 sm:top-3 sm:right-3 z-10` (`h-24 w-20 sm:h-28 sm:w-24 md:h-32 md:w-26`) with reddish starburst outer ring (`#DC2626`), crimson gradient disc (`#DC2626` → `#991B1B`), dual ribbon tails (`#991B1B`/`#7F1D1D`), centered white score text (`text-xl sm:text-2xl md:text-3xl font-black drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]`), and golden `Matric` subtitle, card body `p-4 sm:p-5 md:p-6` with name `text-lg sm:text-xl md:text-2xl font-extrabold text-text-primary group-hover:text-primary`, animated blue underline `h-0.5 w-12 bg-primary-light group-hover:w-16 group-hover:bg-primary`, and italic quote review `text-sm sm:text-base font-medium text-text-muted`.
+- **Purpose:** Alumni topper profile card — portrait photo featuring a custom vector SVG/CSS honor medal badge with crisp score text, student name, and testimonial quote.
+- **2026-09-08:** Replaced external image asset with a pure vector SVG/CSS honor medal badge. 100% responsive, zero resolution degradation on high-DPI screens, vector crisp on all device sizes. Removed reliance on `badge.jpg`.
+- **2026-09-08:** Badge recoloured to a reddish/crimson honor seal per owner — outer starburst ring `#DC2626`, badge disc gradient `#DC2626 → #991B1B`, ribbon tails `#991B1B`/`#7F1D1D`, white stroke retained, and the `%` + `Matric` label kept in gold (`amber-300`/`amber-200`) for contrast.
+
+#### `AcademicCalendarPage`
+- **Path:** `src/pages/public/AcademicCalendarPage.jsx`
+- **Last updated:** 2026-09-08
+- **Tokens/Classes:** shared `PageHero`, then sections driven by `src/data/academicCalendar.data.js` (content from `Academic Calender 26-27.md`): Key Dates (`bg-background py-20`) with month-chip cards `bg-surface border border-border rounded-xl p-6 shadow-card` + `absolute left-0 w-1 bg-primary` accent bar, `CalendarDays` in `rounded-full bg-primary-light` month pill; Term Schedule (`bg-surface border-b`) three term cards with `bg-primary-muted` header strip + `GraduationCap` period pill + `Check` lists; Working Days (`bg-background py-16`) `grid-cols-4 sm:grid-cols-6 lg:grid-cols-12` cells with `text-xl font-extrabold` counts; Holidays (`bg-surface`) `Landmark` icon-tile rows; Co-curricular (`bg-background`) `Trophy` icon-tile cards; closing `CtaBanner`.
+- **Purpose:** Dedicated `/academic-calendar` page for session 2026–27 — key dates/milestones, three-term structure with monthly tests + summative exams, working-day counts (224), public holidays & breaks, and co-curricular events. Linked from the ACADEMICS navbar dropdown ("Academic Calendar", `CalendarDays` icon).
+- **2026-09-08:** "Examination Policies" section removed from this page (moved to the new dedicated `/examinations` page, `ExaminationPage`); the `Award`/`ClipboardList` imports and `policies` data usage dropped.
+
+#### `ExaminationPage`
+- **Path:** `src/pages/public/ExaminationPage.jsx`
+- **Last updated:** 2026-09-08
+- **Tokens/Classes:** shared `PageHero`, then data-driven sections from new `src/data/examination.data.js`. Session snapshot strip `bg-background py-16 border-b border-border` with stat numbers `text-4xl sm:text-5xl font-extrabold text-primary` + uppercase `text-text-muted` labels (matches `StatsBar` voice). Signature **marks-distribution comparison**: two cards `bg-surface border rounded-xl p-6 sm:p-8 shadow-card` each with a segmented stacked bar `flex h-4 rounded-full overflow-hidden bg-surface-tertiary` — widths from a static percent→class map (`w-[30%]` / `w-[40%]` / `w-[25%]` / `w-[35%]`) so Tailwind v4 sees them, segment fill `bg-primary` → `bg-primary-hover` → `bg-primary-active`, and a legend of `size-3 rounded-sm` swatches. Policy cards `ClipboardList` icon tiles + `Check` lists. Passing-marks tiles `text-4xl font-extrabold text-primary` + promotion callout `rounded-2xl bg-primary-muted border-border p-6 sm:p-8` with `BadgeCheck`/`RefreshCcw`. Closing `CtaBanner`.
+- **Purpose:** Dedicated `/examinations` page — session snapshot, Monthly-vs-Summative marks distribution with durations and coverage, examination policies (monthly/summative/general), passing marks by grade (70/75/80), and re-exam + promotion criteria. Linked from the ACADEMICS navbar dropdown ("Examinations", `ClipboardList` icon).
 
 #### `ContactPage`
 - **Path:** `src/pages/public/ContactPage.jsx`
@@ -189,3 +207,22 @@ After building any component — update this file with the component name, file 
 - **Path:** `src/components/shared/ProfileCard.jsx`
 - **Tokens/Classes:** responsive landscape image `aspect-[4/3]`, `rounded-2xl`, white content panel `bg-surface`, `shadow-card`, `text-brand-accent` details, and responsive grids using `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`.
 - **2026-09-07:** restyled on root text tokens — card now `border border-border` + hover `hover:border-border-strong hover:shadow-lg hover:-translate-y-1`; image gains an on-hover gradient veil `bg-gradient-to-t from-black/45 via-black/10 to-transparent`; decorative `DetailMarker` (primary/success/warning squares) kept; body uses `text-text-primary` name, an animated divider `h-px w-10 bg-primary-light` → `group-hover:w-14 group-hover:bg-primary`, `text-text-secondary` primary detail, and `text-text-muted` secondary detail (no more blue `text-brand-accent` on details).
+- **2026-09-08:** `ProfileCard` superseded by `FacultyCard` for the faculty directory page.
+
+### SEO / Metadata Components (non-visual)
+
+#### `AlumniHomeSection`
+- **Path:** `src/components/public/AlumniHomeSection.jsx`
+- **Tokens/Classes:** `section` `py-20 sm:py-24 bg-background border-b border-border-light`, center-aligned `SectionHeading` (eyebrow `text-primary`), responsive alumni grid `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6`, CTA link `bg-primary text-primary-foreground hover:bg-primary-hover focus:ring-primary`.
+- **Purpose:** Featured Matric toppers promo on the homepage (after StatsBar), reusing `AlumuniCard` per person with a "View All Alumni" link to `/alumuni`. Renders top N (`count` prop, default 6) alumni; returns null if none.
+- **2026-09-08:** Added and wired into `HomePage` right after `<StatsBar />`.
+
+#### `SEOHead`
+- **Path:** `src/components/SEOHead.jsx`
+- **Dependency:** `react-helmet-async`
+- **Purpose:** Central `<Helmet>` manager rendering per-page `<title>`, meta description, canonical URL, Open Graph + Twitter/X card tags, and optional `noindex`. Reads site identity + production domain from `src/config/seo.js`. Used on every public page with unique metadata; login & 404 pages pass `noindex`.
+- **2026-09-08:** Added to all ~15 public routes + dynamic blog slugs (`type="article"`).
+
+#### `SchemaData` (`OrganizationSchema` / `WebSiteSchema`)
+- **Path:** `src/components/SchemaData.jsx`
+- **Purpose:** Injects JSON-LD structured data via Helmet — `EducationalOrganization` (real name, description, url, email, phone, address, logo) and `WebSite` (publisher). Rendered on the homepage. No invented data; uses only `siteContent`/`seo` values.

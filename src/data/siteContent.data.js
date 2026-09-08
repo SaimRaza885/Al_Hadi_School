@@ -17,22 +17,25 @@ export const siteContent = {
   tagline: "Tomorrow's Leaders Start Here",
   heroSubtitle:
     "Experience a transformative education that balances academic rigor with personal growth, preparing students to excel in a global landscape.",
-  admissionsSession: "2026â€“2027",
+  admissionsSession: "2026-2027",
   announcement:
-    "Admissions for Academic Session 2026â€“2027 are officially OPEN!",
+    "Admissions for Academic Session 2026-2027 are officially OPEN!",
 
   contact: schoolContact,
 
   principal: {
-    name: "Dr. Hassan",
+    name: "Hassan Abbas",
     title: "Principal",
-    image: images.principal,
-    welcomeHeading: "Welcome to Al-Hadi Academy Gilgit",
+    image: images.staffPrincipal,
+    welcomeHeading: "Welcome to  Al-Hadi Academy Gilgit",
     paragraphs: [
-      "At Al-Hadi, we believe every child carries unique potential. Our mission is to create an environment where curiosity thrives, character is built, and futures are shaped through education that goes beyond textbooks.",
-      "We are dedicated to academic distinction, fostering an atmosphere where digital literacy and holistic life skills are integrated into every facet of the learning journey, ensuring our students are prepared for the global stage.",
+      "In the Name of Allah, the Most Compassionate, the Most Merciful.",
+      "At Al-Hadi Academy, we view a school not merely as an administrative building or a center for the transmission of textbooks, but as a \u201cliving social institution.\u201d Our mission is rooted in the sacred task of Human-Building (Insan-Sazi), and we are committed to a model of \u201cModern Islamic Education\u201d that harmonizes the highest standards of contemporary scientific excellence with the timeless, foundational values of faith, ethics, and character.",
+      "Our vision is to cultivate a generation that reaches the \u201cpeaks of knowledge\u201d while remaining deeply grounded in spiritual integrity. We do not simply prepare students to succeed in examinations; we prepare them to be the vanguard of a society built on justice, service, and devotion.",
+  
     ],
-    lsaNote: "Our comprehensive Life Skills & Activities (LSA) program ensures every student finds their passion and builds resilient character.",
+    lsaNote:
+      "We invite you to join us on this transformative journey of excellence and growth. \u2014 Hassan Abbas, Principal, Al-Hadi Academy Gilgit.",
   },
 
   stats: [{ value: "5+", label: "YEARS OF EXCELLENCE" }, 
@@ -47,7 +50,7 @@ export const siteContent = {
       description:
         "From competitive football to swimming, we offer professional coaching in over 12 different sports disciplines.",
       link: "/facilities#sports",
-      linkText: "View Sports Facilities â†’",
+      linkText: "View Sports Facilities ",
       image: images.sports,
     },
     {
@@ -55,8 +58,8 @@ export const siteContent = {
       title: "Creative Arts",
       description:
         "Our fine arts, music, and drama programs provide a platform for self-expression, theatre production, and creative exploration.",
-      link: "/activities#arts",
-      linkText: "Explore the Arts â†’",
+      link: "/co-curricular#arts",
+      linkText: "Explore the Arts ",
       image: images.arts,
     },
     {
@@ -64,8 +67,8 @@ export const siteContent = {
       title: "Leadership & Clubs",
       description:
         "Developing civic responsibility through student council, debate clubs, robotics teams, and community service initiatives.",
-      link: "/activities#clubs",
-      linkText: "See Active Clubs â†’",
+      link: "/co-curricular#clubs",
+      linkText: "See Active Clubs ",
       image: images.clubs,
     },
   ],
@@ -74,7 +77,7 @@ export const siteContent = {
     {
       id: "middle",
       name: "Middle School",
-      grades: "Grades 6 â€“ 8",
+      grades: "Grades 6 - 8",
       description: "Exploration of integrated sciences, humanities, analytical mathematics, and creative arts.",
       image: images.middleProgram,
       subjects: [
@@ -95,7 +98,7 @@ export const siteContent = {
     {
       id: "secondary",
       name: "Secondary School",
-      grades: "Grades 9 â€“ 10",
+      grades: "Grades 9 - 10",
       description: "Rigorous board exam preparation, specialized science and computer applications tracks.",
       image: images.secondaryProgram,
       subjects: [
@@ -116,7 +119,7 @@ export const siteContent = {
     {
       id: "stem",
       name: "STEM Wings",
-      grades: "Grades 6 â€“ 10",
+      grades: "Grades 6 - 10",
       description: "Cutting-edge robotics, digital fabrication, computer science, and experiential physics labs.",
       image: images.stemProgram,
       subjects: [
@@ -175,7 +178,7 @@ export const siteContent = {
     {
       step: 2,
       title: "Document Review",
-      description: "Our team evaluates academic transcripts, birth certificate, and previous records.",
+      description: "Our team evaluates academic transcripts and other important documents.",
     },
     {
       step: 3,
@@ -193,36 +196,31 @@ export const siteContent = {
     heroEyebrow: "Who We Are",
     heroTitle: "A Legacy of Learning, A Future of Leaders",
     heroSubtitle:
-      "Since our founding, Al-Hadi Public School has grown into a modern centre of academic excellence â€” where every child is known, guided, and challenged to lead.",
+      "A living social institution rooted in Human-Building (Insan-Sazi) — where contemporary scientific excellence meets the timeless values of faith, ethics, and character.",
     mission:
-      "To create an environment where curiosity thrives, character is built, and futures are shaped through education that goes beyond textbooks.",
+      "Our mission is rooted in the sacred task of Human-Building (Insan-Sazi) — a model of \u201cModern Islamic Education\u201d that harmonizes the highest standards of contemporary scientific excellence with the timeless, foundational values of faith, ethics, and character.",
     vision:
-      "To nurture confident, compassionate, and digitally-literate global citizens who lead with integrity and serve their communities.",
+      "To cultivate a generation that reaches the \u201cpeaks of knowledge\u201d while remaining deeply grounded in spiritual integrity — not merely prepared to succeed in examinations, but ready to be the vanguard of a society built on justice, service, and devotion.",
     story: [
-      "Al-Hadi Public School was established with a simple belief: that a great school shapes not only minds but also hearts. What began as a small campus with a few classrooms has grown into a complete educational community serving grades 6 through 10.",
-      "Today our campus houses modern science and robotics laboratories, a central library, sports grounds, and creative arts studios â€” all in service of a balanced, child-centred education. Our faculty blends experienced educators with young, technology-savvy teachers to keep learning vibrant and relevant.",
-      "We measure success not just in examination results, but in the confidence of a student who speaks on stage, the teamwork of a house that wins a relay, and the character of a graduate who leads with kindness.",
+      "At Al-Hadi Academy, we view a school not merely as an administrative building or a center for the transmission of textbooks, but as a \u201cliving social institution.\u201d Our mission is rooted in the sacred task of Human-Building (Insan-Sazi), and our philosophy is built on three inseparable pillars.",
+      "First, Academic Excellence as a Tool for Empowerment: we believe the modern sciences are essential tools for the dignity and progress of our community, and we challenge every student to become a committed specialist who serves humanity. Second, Ethical Refinement and Spiritual Self-Construction (Tarbiyat): true education is the refinement of the soul, guided by teachers who are Morabbis (mentors) \u2014 educators whose own ethical character flows like a waterfall into the hearts of their students.",
+      "Third, the Sacred Synergy of School and Family: the family is the primary foundation of a child\u2019s identity, so we invite parents to be active, conscious partners, ensuring the values of our classrooms are mirrored in the sanctuary of the home. As we navigate the 21st century, Al-Hadi Academy remains \u201calways the same\u201d in its core principles, yet dynamic and innovative in its methods — protecting the \u201cjewels of faith\u201d entrusted to our care so every graduate enters society as a source of honor and benefit.",
     ],
     values: [
       {
-        title: "Academic Excellence",
-        description: "Rigorous, well-planned academics with consistent assessment and personalised attention.",
+        title: "Academic Excellence as a Tool for Empowerment",
+        description: "Modern sciences as essential tools for the empowerment and dignity of our community — technical expertise used not for personal gain, but for the selfless service of humanity and the progress of our nation.",
         icon: "GraduationCap",
       },
       {
-        title: "Character & Integrity",
-        description: "A values-based culture that builds honesty, responsibility, and respect for others.",
+        title: "Ethical Refinement & Spiritual Self-Construction",
+        description: "True education as the \u201crefinement of the soul.\u201d Our teachers are Morabbis (mentors) whose ethical self-building flows naturally into the hearts of their students — cultivating honesty, simplicity, and moral anchor in an ever-changing world.",
         icon: "ShieldCheck",
       },
       {
-        title: "Holistic Growth",
-        description: "Life Skills & Activities woven into every term so talent grows beyond the classroom.",
+        title: "The Sacred Synergy of School & Family",
+        description: "The family is the primary foundation of a child\u2019s identity. We align the school and home as sacred partners, so the values practised in our classrooms are lived again in the sanctuary of the home.",
         icon: "HeartHandshake",
-      },
-      {
-        title: "Innovation & Technology",
-        description: "Smart classrooms, robotics, and digital literacy that prepare students for tomorrow.",
-        icon: "Cpu",
       },
     ],
     milestones: [
@@ -231,23 +229,20 @@ export const siteContent = {
       { year: "2017", title: "Robotics & STEM", description: "Launched our STEM program with robotics kits and coding curriculum." },
       { year: "2021", title: "Digital Campus", description: "Every classroom upgraded with interactive smart boards." },
       { year: "2024", title: "Results Portal", description: "Online published results and a modern admissions portal go live." },
-      { year: "2026", title: "1,200+ Students", description: "A thriving community of learners across grades 6â€“10." },
+      { year: "2026", title: "1,200+ Students", description: "A thriving community of learners across grades 6-10." },
     ],
     leadership: [
-      { name: "Dr. A. Ali", role: "Principal", bio: "Over 25 years in education leadership, championing holistic learning.", image: images.staffPrincipal },
-      { name: "Ms. F. Hassan", role: "Vice Principal & Academics", bio: "Drives curriculum design, assessments, and teacher development.", image: images.staffAcademics },
-      { name: "Mr. K. Mehmood", role: "Head of STEM", bio: "Leads robotics, coding, and the innovation lab program.", image: images.staffStem },
-      { name: "Ms. S. Iqbal", role: "Head of Activities (LSA)", bio: "Coordinates athletics, arts, clubs, and community service.", image: images.staffActivities },
+      { name: "Hassan Abbas", role: "Principal", bio: "Leads the school's vision of \u201cModern Islamic Education\u201d — human-building through academic excellence and spiritual refinement.", image: images.staffPrincipal },
     ],
     alumuni: [
-      { name: "Adeel Ahmed", Matric: "98%", review: "Al-Hadi Academy is the best school in Gilgit. The teachers genuinely care about every single student.", image: images.alumuni_1 },
-      { name: "Shoaib Karim", Matric: "96%", review: "The hostel environment kept me focused and helped me turn good habits into great marks.", image: images.alumuni_2 },
-      { name: "Maryam Ali", Matric: "93%", review: "The science labs and STEM program took me far beyond what the board exams required.", image: images.alumuni_3 },
-      { name: "Hassan Raza", Matric: "91%", review: "Discipline, caring mentors, and a supportive community made all the difference for me.", image: images.alumuni_4 },
-      { name: "Rafiq Shah", Matric: "90%", review: "The sports and hiking programme made me physically and mentally stronger alongside my studies.", image: images.alumuni_5 },
-      { name: "Fatima Bibi", Matric: "89%", review: "I owe my confidence on stage to the school's Qirat and cultural events. Thank you, Al-Hadi.", image: images.alumuni_6 },
-      { name: "Usman Ali", Matric: "88%", review: "The teachers here go beyond the syllabus — they build character that lasts a lifetime.", image: images.alumuni_7 },
-      { name: "Zainab Noor", Matric: "87%", review: "Al-Hadi's leadership clubs and community service shaped who I am today. Proud alumna.", image: images.alumuni_8 },
+      { name: "Faizan Abbas", Matric: "90", review: "Al-Hadi Academy is the best school in Gilgit. The teachers genuinely care about every single student.", image: images.alumuni_1 },
+      { name: "Muzammil", Matric: "90", review: "The hostel environment kept me focused and helped me turn good habits into great marks.", image: images.alumuni_2 },
+      { name: "Mukaram", Matric: "94", review: "The science labs and STEM program took me far beyond what the board exams required.", image: images.alumuni_3 },
+      { name: "Azmat Hussain", Matric: "59", review: "Discipline, caring mentors, and a supportive community made all the difference for me.", image: images.alumuni_4 },
+      { name: "Shabi ul Hassan", Matric: "94", review: "The sports and hiking programme made me physically and mentally stronger alongside my studies.", image: images.alumuni_5 },
+      { name: "Nizam", Matric: "84", review: "I owe my confidence on stage to the school's Qirat and cultural events. Thank you, Al-Hadi.", image: images.alumuni_6 },
+      { name: "Awais Ali", Matric: "44", review: "The teachers here go beyond the syllabus — they build character that lasts a lifetime.", image: images.alumuni_7 },
+      { name: "Kashif", Matric: "87", review: "Al-Hadi's leadership clubs and community service shaped who I am today.", image: images.alumuni_8 },
     ]
   },
 
@@ -259,7 +254,7 @@ export const siteContent = {
     cards: [
       {
         title: "Visit Our Campus",
-        lines: [schoolContact.address, "Gate opens 8:00 AM â€“ 2:30 PM"],
+        lines: [schoolContact.address, "Gate opens 8:00 AM - 2:30 PM"],
         icon: "MapPin",
       },
       {

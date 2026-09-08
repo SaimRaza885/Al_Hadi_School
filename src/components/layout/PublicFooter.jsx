@@ -104,13 +104,13 @@ export function PublicFooter() {
                 </Link>
               </li>
               <li>
-                <Link to="/activities" className="hover:text-primary transition-colors">
+                <Link to="/co-curricular" className="hover:text-primary transition-colors">
                   Student Activities
                 </Link>
               </li>
               <li>
-                <Link to="/staff" className="hover:text-primary transition-colors">
-                  Staff Directory
+                <Link to="/faculty" className="hover:text-primary transition-colors">
+                  Faculty Directory
                 </Link>
               </li>
             </ul>

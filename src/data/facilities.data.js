@@ -74,8 +74,8 @@ export const facilitiesData = [
 ];
 
 export const facilitiesStats = [
-  { value: "6", label: "SPECIALISED LABS" },
-  { value: "12,000+", label: "LIBRARY TITLES" },
-  { value: "4", label: "SPORTS ARENAS" },
-  { value: "100%", label: "SMART CLASSROOMS" },
+  { value: "3", label: "SPECIALISED LABS" },
+  { value: "500+", label: "LIBRARY TITLES" },
+  { value: "2", label: "SPORTS ARENAS" },
+  { value: "1", label: "COMPUTER LAB" },
 ];

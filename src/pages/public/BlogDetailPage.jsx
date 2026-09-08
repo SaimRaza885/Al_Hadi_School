@@ -1,6 +1,7 @@
 ﻿import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, CalendarDays, Clock3 } from "lucide-react";
 import { PageHero } from "@/components/public/PageHero";
+import { SEOHead } from "@/components/SEOHead";
 import { PlaceholderPage } from "@/pages/public/PlaceholderPage";
 import { blogsData } from "@/data/blogs.data";
 import { images } from "@/assets/images";
@@ -24,6 +25,12 @@ export function BlogDetailPage() {
 
   return (
     <div className="w-full flex flex-col">
+      <SEOHead
+        title={blog.title}
+        description={blog.excerpt}
+        path={`/blogs/${blog.slug}`}
+        type="article"
+      />
       <PageHero
         title={blog.title}
         subtitle={blog.excerpt}

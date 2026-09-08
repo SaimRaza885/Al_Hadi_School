@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { PageHero } from "@/components/public/PageHero";
 import { CtaBanner } from "@/components/public/CtaBanner";
+import { SEOHead } from "@/components/SEOHead";
 import { activitiesData } from "@/data/activities.data";
 import { Reveal } from "@/components/shared/Reveal";
 
@@ -26,6 +27,11 @@ const extraIcons = {
 export function ActivitiesPage() {
   return (
     <div className="w-full flex flex-col">
+      <SEOHead
+        title="Student Activities"
+        description="Explore sports, creative arts, clubs and leadership programmes at Al-Hadi Academy Gilgit. Structured co-curricular activities that build confidence, teamwork and discipline."
+        path="/activities/extra-curricular"
+      />
       <PageHero
         title="Activities"
         subtitle={activitiesData.intro}

@@ -1,11 +1,17 @@
 import { Check } from "lucide-react";
 import { PageHero } from "@/components/public/PageHero";
 import { CtaBanner } from "@/components/public/CtaBanner";
+import { SEOHead } from "@/components/SEOHead";
 import { activitiesData } from "@/data/activities.data";
 
 export function CoCurricularPage() {
   return (
     <div className="w-full flex flex-col">
+      <SEOHead
+        title="Co-curricular"
+        description="Co-curricular activities at Al-Hadi Academy Gilgit — sports, arts, clubs and leadership that build confidence, teamwork and discipline alongside academics."
+        path="/co-curricular"
+      />
       <PageHero
         title="Co-curricular Activities"
         subtitle="Structured activities help students build confidence, teamwork, discipline, and a strong sense of belonging alongside their academic work."

@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { PageHero } from "@/components/public/PageHero";
 import { Reveal } from "@/components/shared/Reveal";
+import { SEOHead } from "@/components/SEOHead";
 import { siteContent } from "@/data/siteContent.data";
 
 export function ApplicationClosedPage() {
@@ -20,6 +21,11 @@ export function ApplicationClosedPage() {
 
   return (
     <div className="w-full flex flex-col bg-background min-h-screen">
+      <SEOHead
+        title="Application Portal Closed"
+        description="Current admission application status for Al-Hadi Academy Gilgit. Learn how to enquire and apply for grades 6-10 via the admissions office."
+        path="/application"
+      />
       {/* Hero Header */}
       {/* <PageHero
         title="Application Status"

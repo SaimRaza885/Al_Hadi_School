@@ -7,7 +7,7 @@ Update this file after every completed feature. Any AI agent reading this should
 ## Current Status
 
 **Phase:** Phase 1 — Public Website & Pages (Static Frontend)
-**Last completed:** 06 Public Static Blog & Notices (static listing and article detail UI)
+**Last completed:** Image optimization (2026-09-08): added light pure-JS `jimp` (devDep) + reusable `npm run images` script (`scripts/optimize-images.mjs`). Every `src/assets` photo resized to its real display size and re-compressed as JPEG with a "never grow" safety net — any image whose re-encode wasn't smaller was left byte-identical. Result: total image payload ~17.9MB → ~5.4MB (≈70% smaller) with identical on-screen appearance. Hero: `hero_3` 3.2MB→337KB (-90%), `hero_2` 1.3MB→489KB (-62%); `about` 2.2MB→225KB (-90%); `gallary_4` 2.2MB→273KB (-88%); `gallary_3` 1.8MB→202KB (-89%); `princple.png`→`princple.jpg` 1.9MB→67KB (-97%, photo converted PNG→JPG, `images.js` import updated). Already-small files (some alumni, `hero_1`, `logo`) kept as-is. All same filenames/extensions — no component changes needed. Run `npm run images` after adding new photos.
 **Next:** 02 Database Schema & RLS Foundation
 
 ---
@@ -26,13 +26,15 @@ Update this file after every completed feature. Any AI agent reading this should
 - [x] 05 Public Informational Pages
 - [x] 06 Public Static Blog & Notices
 - [x] Alumni page upgraded to a full public section: polished hero copy, `StatsBar`-style alumni metrics strip, `SectionHeading`-led spotlight grid with improved `AlumuniCard` (hover lift, Matric marks badge, curly-quote review), and a primary featured-quote band — data typos/duplicates in `siteContent.about.alumuni` cleaned (distinct alumni, mark % only).
+- [x] `AlumuniCard` badge replaced with a custom vector SVG/CSS honor medal badge: replaced image dependency (`badge.jpg`) with a pure vector badge featuring a gold starburst outer seal (`#F59E0B`), brand primary gradient disc (`#1C74BD`), gold dashed inner ring (`#FDE047`), dual ribbon tails, and bold score typography (`text-xl font-black` to `text-3xl font-black`). Vector-sharp and 100% responsive across every screen resolution.
+- [x] Homepage Alumni Toppers section added (2026-09-08): new `AlumniHomeSection` component (`src/components/public/AlumniHomeSection.jsx`) placed right after the `StatsBar` on the homepage. Center-aligned `SectionHeading` + grid of top 6 `AlumuniCard`s and a "View All Alumni" CTA linking to `/alumuni`.
 - [x] Reveal animation applied to the shared public route shell so all public pages inherit the same fade-in effect instead of only the home page.
 
 Homepage includes a static blog highlights section, `/blogs` listing, and slug-driven `/blogs/:slug` article detail pages. Content remains static until a future content-management scope is approved.
 
-Public navbar dropdown enhancement completed: About Us includes Facilities and Staff Information, Academics includes Curriculum and Co-curricular Activities, and Activities includes Sports, Creative Arts, Clubs, and Leadership & Community Service. Section anchors were added to the existing public pages.
+Public navbar dropdown enhancement completed: About Us includes Facilities and Faculty, Academics includes Curriculum and Co-curricular Activities, and Activities includes Sports, Creative Arts, Clubs, and Leadership & Community Service. Section anchors were added to the existing public pages.
 
-Added dedicated public routes for `/curriculum`, `/co-curricular`, and `/staff`. Academics and Staff dropdown items now use these pages; Activities keeps its category dropdown because each category remains a useful direct entry point.
+Added dedicated public routes for `/curriculum`, `/co-curricular`, and `/faculty`. Academics and Faculty dropdown items now use these pages; `/staff` remains a compatibility redirect, and Activities keeps its category dropdown because each category remains a useful direct entry point.
 
 Added the dedicated `/activities/enrichment` page with eight responsive activity categories from the school enrichment programme. The Activities navigation now links to both the existing overview and the new Enrichment Programs page.
 

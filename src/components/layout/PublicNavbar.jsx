@@ -3,8 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import {
   Building2,
   BookOpen,
+  CalendarDays,
   ChevronDown,
   ChevronRight,
+  ClipboardList,
   Compass,
   FileText,
   FlaskConical,
@@ -22,6 +24,8 @@ import { cn } from "@/lib/utils";
 const navIconMap = {
   Building2,
   BookOpen,
+  CalendarDays,
+  ClipboardList,
   Compass,
   FlaskConical,
   GraduationCap,
@@ -42,7 +46,7 @@ const navItems = [
     dropdown: [
       { name: "Overview", path: "/about", icon: "Compass" },
       { name: "Facilities", path: "/facilities", icon: "Building2" },
-      { name: "Staff Information", path: "/staff", icon: "Users" },
+      { name: "Faculty", path: "/faculty", icon: "Users" },
       { name: "Alumni & Topers", path: "/alumuni", icon: "GraduationCap" },
     ],
   },
@@ -51,13 +55,14 @@ const navItems = [
     path: "/curriculum",
     dropdown: [
       { name: "Curriculum", path: "/curriculum", icon: "BookOpen" },
+      { name: "Academic Calendar", path: "/academic-calendar", icon: "CalendarDays" },
+      { name: "Examinations", path: "/examinations", icon: "ClipboardList" },
     ],
   },
   {
     name: "ACTIVITIES",
-    path: "/activities",
+    path: "/co-curricular",
     dropdown: [
-      { name: "Activities Overview", path: "/activities", icon: "Compass" },
       { name: "Co-curricular ", path: "/co-curricular", icon: "Sparkles" },
       { name: "Extra-Curricular  ", path: "/activities/extra-curricular", icon: "Trophy" },
     ],
@@ -165,7 +170,7 @@ const navItems = [
     });
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-surface backdrop-blur-md border-b border-border-light shadow-xs py-2">
+    <header className="sticky top-0 z-50 w-full bg-surface backdrop-blur-md border-b border-border-light shadow-xs py-2">
       {/* Main Navbar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">

@@ -23,9 +23,9 @@ export function HeroSection() {
   return (
     <div>
       {/* 1. HERO â€” auto-rotating campus images + clean hierarchy */}
-      <section className="relative min-h-screen overflow-hidden text-white flex items-center">
+      <section className="relative min-h-[calc(100vh-5rem)] lg:min-h-[calc(100vh-6rem)] overflow-hidden text-white flex items-center">
         {/* Background image slider layer */}
-        <div className="absolute inset-x-0 top-16 lg:top-20 bottom-0 z-0">
+        <div className="absolute inset-0 z-0">
           {slides.map((src, index) => (
             <img
               key={src}

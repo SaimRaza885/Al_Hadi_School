@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /login
+
+Sitemap: https://alhadiacademygilgit.com/sitemap.xml

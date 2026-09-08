@@ -8,7 +8,7 @@ export const blogsData = [
     date: "2026-02-14",
     category: "Co-Curricular",
     readTime: "4 min read",
-    coverImage: images.sports,
+    coverImage: images.gallary_6,
     excerpt:
       "From the opening torch relay to the final whistle, our students turned the playing field into a lesson in discipline, sportsmanship, and school spirit.",
     introduction:
@@ -35,7 +35,7 @@ export const blogsData = [
     date: "2026-01-27",
     category: "Culture",
     readTime: "3 min read",
-    coverImage: images.galleryQirat,
+    coverImage: images.gallary_13,
     excerpt:
       "Students marked the blessed month of Rabi-ul-Awwal with naat recitations, nasheed performances, and lessons in the character of our beloved Prophet (PBUH).",
     introduction:
@@ -62,7 +62,7 @@ export const blogsData = [
     date: "2026-02-05",
     category: "Academic",
     readTime: "4 min read",
-    coverImage: images.stemProgram,
+    coverImage: images.gallary_13,
     excerpt: "How inquiry-based science education fosters critical thinking and problem-solving skills from an early age.",
     introduction: "At Al-Hadi, science begins with a question. Our classrooms give students the time, tools, and confidence to investigate the world around them.",
     sections: [

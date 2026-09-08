@@ -12,6 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import { PageHero } from "@/components/public/PageHero";
 import { CtaBanner } from "@/components/public/CtaBanner";
+import { SEOHead } from "@/components/SEOHead";
 import { facilitiesData, facilitiesStats } from "@/data/facilities.data";
 import { Reveal } from "@/components/shared/Reveal";
 
@@ -28,6 +29,11 @@ const facilityIcons = {
 export function FacilitiesPage() {
   return (
     <div className="w-full flex flex-col">
+      <SEOHead
+        title="Campus Facilities"
+        description="Explore Al-Hadi Academy Gilgit's campus facilities — hostel care, science and STEM labs, library, sports grounds, smart classrooms and creative arts spaces."
+        path="/facilities"
+      />
       <PageHero
         title="Facilities"
         subtitle="Explore our science & robotics laboratories, sports arena, library, and arts studios — built to support academic rigor and holistic growth."

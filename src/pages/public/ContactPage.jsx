@@ -11,6 +11,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { PageHero } from "@/components/public/PageHero";
+import { SEOHead } from "@/components/SEOHead";
 import { siteContent } from "@/data/siteContent.data";
 import { Reveal } from "@/components/shared/Reveal";
 
@@ -94,6 +95,11 @@ export function ContactPage() {
 
   return (
     <div className="w-full flex flex-col">
+      <SEOHead
+        title="Contact"
+        description="Contact Al-Hadi Academy Gilgit, Danyor — admissions office, academic office, accounts and examinations. Call, email or visit our campus for enquiries."
+        path="/contact"
+      />
       <PageHero
         title="Contact Us"
         subtitle={contactPage.heroSubtitle}
@@ -277,10 +283,12 @@ export function ContactPage() {
                       <MapPin className="size-4 text-primary shrink-0" />
                       {contact.address}
                     </p>
+                    <br/>
                     <p className="inline-flex items-center gap-2 text-text-secondary">
                       <Phone className="size-4 text-primary shrink-0" />
                       {contact.phone}
                     </p>
+                    <br/>
                     <p className="inline-flex items-center gap-2 text-text-secondary break-all">
                       <Mail className="size-4 text-primary shrink-0" />
                       {contact.email}

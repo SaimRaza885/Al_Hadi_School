@@ -5,19 +5,20 @@ export const activitiesData = {
     "Our Life Skills & Activities (LSA) program balances academics with athletics, creative arts, leadership, and community service â€” so every student finds their passion and builds resilient character.",
   coCurricular: [
     {
-      id: "act-hiking",
-      title: "Hiking & Mountain Adventure",
-      tagline: "Explore the valley trails, build endurance",
+      id: "act-sports",
+      title: "Athletics & Sports",
+      tagline: "Competitive spirit, fitness & teamwork",
       description:
-        "Surrounded by the peaks of Gilgit Baltistan, our hiking program takes students onto safe, guided mountain trails — building endurance, teamwork, environmental awareness, and a lifelong connection to nature.",
+        "From competitive football to swimming, we offer professional coaching in over 12 different sports disciplines.",
       image: images.sports,
       highlights: [
-        "Guided weekend hikes on Gilgit's valley & mountain trails",
-        "Camping, navigation & outdoor survival training",
-        "Annual inter-house mountain trekking competition",
-        "Leave-no-trace & environmental stewardship lessons",
+        "Professional coaching across 12+ sports disciplines",
+        "Competitive football and swimming programs",
+        "Inter-house sports competitions and tournaments",
+        "View Sports Facilities →",
       ],
     },
+
     {
       id: "act-arts",
       title: "Creative Arts & Drama",
