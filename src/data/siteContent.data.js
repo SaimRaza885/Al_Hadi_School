@@ -79,7 +79,7 @@ export const siteContent = {
       name: "Middle School",
       grades: "Grades 6 - 8",
       description: "Exploration of integrated sciences, humanities, analytical mathematics, and creative arts.",
-      image: images,
+      image: images.middleProgram,
       subjects: [
         "English, Urdu & Regional Languages",
         "Mathematics (Algebra & Geometry)",
