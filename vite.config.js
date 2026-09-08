@@ -14,9 +14,8 @@ const lcpImagePreload = () => ({
       );
       return file ? "/" + file.fileName : null;
     };
-    const mobile = find(/hero_1_m-[^.]+\.jpg$/);
     const full = find(/hero_1-[^.]+\.jpg$/);
-    if (!mobile || !full) return html;
+    if (!full) return html;
     return {
       html,
       tags: [
@@ -25,8 +24,7 @@ const lcpImagePreload = () => ({
           attrs: {
             rel: "preload",
             as: "image",
-            imagesrcset: `${mobile} 480w, ${full} 1280w`,
-            imagesizes: "100vw",
+            href: full,
             fetchpriority: "high",
             type: "image/jpeg",
           },

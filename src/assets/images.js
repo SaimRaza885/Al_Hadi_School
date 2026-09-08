@@ -2,8 +2,6 @@
 
 import hero_1 from "@/assets/hero_1.jpg";
 
-import hero_1_m from "@/assets/hero_1_m.jpg";
-
 import logo from "@/assets/logo.jpg";
 
 import about_hero from "@/assets/about.jpg";
@@ -41,6 +39,7 @@ import gallary_23 from "@/assets/gallery/gallary_23.jpg";
 import gallary_24 from "@/assets/gallery/gallary_24.jpg";
 import gallary_25 from "@/assets/gallery/gallary_25.jpg";
 import gallary_26 from "@/assets/gallery/gallary_26.jpg";
+import gallery_121 from "@/assets/gallery/gallery_121.jpg";
 
 // ================= ALUMNI IMAGES =================
 
@@ -85,7 +84,7 @@ export const images = {
   gallary_26,
 
   // site aliases (point any page image to a photo above)
-  heroImage: { src: gallary_7, srcSet: `${hero_1_m} 480w, ${hero_1} 1280w`, width: 1280, height: 575 },
+  heroImage: { src: hero_1, width: 4032, height: 3024 },
   pageHeroBg: gallary_24,
   gallery: [
     gallary_1,
@@ -102,6 +101,7 @@ export const images = {
     gallary_24,
     gallary_25,
     gallary_26,
+    gallery_121,
     gallery_main,
   ],
   galleryNames: [
@@ -119,6 +119,7 @@ export const images = {
     "Photo 12",
     "Photo 13",
     "Photo 14",
+    "Photo 15",
     "Campus Memories",
   ],
 

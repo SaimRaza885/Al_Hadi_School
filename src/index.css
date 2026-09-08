@@ -3,6 +3,7 @@
 @theme {
   /* ---- Font ---- */
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-public-heading: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-public-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 
@@ -89,18 +90,15 @@
   font-family: var(--font-public-body);
   font-weight: 400;
 }
-
 .public-shell :where(h1, h2, h3, h4, h5, h6) {
   font-family: var(--font-public-heading);
   font-weight: 700;
 }
-
 .public-shell :where(p) {
   font-family: var(--font-public-body);
   font-weight: 400;
   line-height: 1.6;
 }
-
 .public-shell :where(nav, label, button, small, [role="status"]) {
   font-family: var(--font-public-body);
   font-weight: 500;
