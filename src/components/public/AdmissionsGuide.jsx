@@ -3,7 +3,7 @@ import { Reveal } from "@/components/shared/Reveal";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 
 export function AdmissionsGuide() {
-  const { admissionsGuide } = siteContent;
+const { admissionsGuide } = siteContent;
 
   return (
     <section className="py-20 sm:py-24 bg-surface border-b border-border-light">

@@ -13,6 +13,7 @@ const RULES = [
   { name: "faculty", test: /faculty\//, max: 800 },
   { name: "alumni", test: /alumuni\//, max: 640 },
   { name: "logo", test: /logo\.(jpe?g|png)$/, max: 900 },
+  { name: "banner-skip", test: /\/(art|middle_program|high_school)\.jpg$/, max: Infinity, skip: true },
 ];
 
 function findRule(absPath) {
@@ -42,6 +43,10 @@ async function collectImages(dir) {
 
 async function processImage(filePath) {
   const rule = findRule(filePath);
+  if (rule.skip) {
+    console.log(`${filePath.replace(/\\/g, "/")}: skipped (protected by rule ${rule.name})`);
+    return;
+  }
   const before = (await stat(filePath)).size;
   const ext = extname(filePath).toLowerCase();
   const isPng = ext === ".png";

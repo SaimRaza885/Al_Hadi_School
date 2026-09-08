@@ -14,33 +14,35 @@ import logo from "@/assets/logo.jpg";
 
 import about_hero from "@/assets/about.jpg";
 
+import middle_program from "@/assets/middle_program.jpg";
+import high_school from "@/assets/high_school.jpg";
+import art from "@/assets/art.jpg";
+
 // ================= FACULTY IMAGES =================
 import Principal_Photo from "@/assets/faculty/princple.jpg"
+import Amjad_Photo from "@/assets/faculty/amjad.jpg"
+import Sajjad_Photo from "@/assets/faculty/sajjad.jpg"
+import Yaadgar_Photo from "@/assets/faculty/yaadgar.jpg"
+import Kumail_photo from "@/assets/faculty/kumail.jpg"
+import Arif_photo from "@/assets/faculty/arif.jpg"
 
 // ================= GALLERY IMAGES =================
 
 import gallary_1 from "@/assets/gallery/gallary_1.jpg";
 import gallary_2 from "@/assets/gallery/gallary_2.jpg";
 import gallary_3 from "@/assets/gallery/gallary_3.jpg";
-import gallary_4 from "@/assets/gallery/gallary_4.jpg";
 import gallary_5 from "@/assets/gallery/gallary_5.jpg";
 import gallary_6 from "@/assets/gallery/gallary_6.jpg";
 import gallary_7 from "@/assets/gallery/gallary_7.jpg";
-import gallary_8 from "@/assets/gallery/gallary_8.jpg";
-import gallary_9 from "@/assets/gallery/gallary_9.jpg";
-import gallary_10 from "@/assets/gallery/gallary_10.jpg";
-import gallary_11 from "@/assets/gallery/gallary_11.jpg";
 import gallary_12 from "@/assets/gallery/gallary_12.jpg";
 import gallary_13 from "@/assets/gallery/gallary_13.jpg";
-import gallary_14 from "@/assets/gallery/gallary_14.jpg";
-import gallary_15 from "@/assets/gallery/gallary_15.jpg";
-import gallary_16 from "@/assets/gallery/gallary_16.jpg";
-import gallary_17 from "@/assets/gallery/gallary_17.jpg";
-import gallary_18 from "@/assets/gallery/gallary_18.jpg";
-import gallary_19 from "@/assets/gallery/gallary_19.jpg";
 import gallary_20 from "@/assets/gallery/gallary_20.jpg";
-import gallary_21 from "@/assets/gallery/gallary_21.jpg";
 import gallary_22 from "@/assets/gallery/gallary_22.jpg";
+import gallery_main from "@/assets/gallery/GALLERY.jpg";
+import gallary_23 from "@/assets/gallery/gallary_23.jpg";
+import gallary_24 from "@/assets/gallery/gallary_24.jpg";
+import gallary_25 from "@/assets/gallery/gallary_25.jpg";
+import gallary_26 from "@/assets/gallery/gallary_26.jpg";
 
 // ================= ALUMNI IMAGES =================
 
@@ -65,29 +67,27 @@ export const images = {
   // general
   logo,
 
+  // program / activity banners
+  middle_program,
+  high_school,
+  art,
+
   // gallery
   gallary_1,
   gallary_2,
   gallary_3,
-  gallary_4,
   gallary_5,
   gallary_6,
   gallary_7,
-  gallary_8,
-  gallary_9,
-  gallary_10,
-  gallary_11,
   gallary_12,
   gallary_13,
-  gallary_14,
-  gallary_15,
-  gallary_16,
-  gallary_17,
-  gallary_18,
-  gallary_19,
   gallary_20,
-  gallary_21,
   gallary_22,
+  gallery_main,
+  gallary_23,
+  gallary_24,
+  gallary_25,
+  gallary_26,
 
   // site aliases (point any page image to a photo above)
   heroSlides: [
@@ -101,61 +101,47 @@ export const images = {
     gallary_1,
     gallary_2,
     gallary_3,
-    gallary_4,
     gallary_5,
     gallary_6,
     gallary_7,
-    gallary_8,
-    gallary_9,
-    gallary_10,
-    gallary_11,
     gallary_12,
     gallary_13,
-    gallary_14,
-    gallary_15,
-    gallary_16,
-    gallary_17,
-    gallary_18,
-    gallary_19,
     gallary_20,
-    gallary_21,
     gallary_22,
+    gallary_23,
+    gallary_24,
+    gallary_25,
+    gallary_26,
+    gallery_main,
   ],
   galleryNames: [
     "gallary_1",
     "gallary_2",
     "gallary_3",
-    "gallary_4",
     "gallary_5",
     "gallary_6",
     "gallary_7",
-    "gallary_8",
-    "gallary_9",
-    "gallary_10",
-    "gallary_11",
     "gallary_12",
     "gallary_13",
-    "gallary_14",
-    "gallary_15",
-    "gallary_16",
-    "gallary_17",
-    "gallary_18",
-    "gallary_19",
     "gallary_20",
-    "gallary_21",
     "gallary_22",
+    "gallary_23",
+    "gallary_24",
+    "gallary_25",
+    "gallary_26",
+    "Campus Memories",
   ],
 
   about_hero,
 
   principal: gallary_1,
   sports: hero_3,
-  arts: gallary_4,
+  arts: art,
   clubs: gallary_7,
-  middleProgram: gallary_15,
-  secondaryProgram: gallary_2,
+  middleProgram: middle_program,
+  secondaryProgram: high_school,
   stemProgram: gallary_22,
-  galleryScience: gallary_17,
+  galleryScience: gallary_6,
   galleryQirat: gallary_6,
 
   // alumni portraits
@@ -169,6 +155,11 @@ export const images = {
   alumuni_8,
 
   staffPrincipal: Principal_Photo,
+  staffAmjad: Amjad_Photo,
+  staffSajjad: Sajjad_Photo,
+  staffYaadgar: Yaadgar_Photo,
+  staffKumail: Kumail_photo,
+  staffArif: Arif_photo,
   // Temporary local portraits until dedicated faculty photos are provided.
   staffAcademics: alumuni_2,
   staffStem: alumuni_3,

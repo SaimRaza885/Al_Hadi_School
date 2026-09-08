@@ -32,16 +32,16 @@ export const siteContent = {
       "In the Name of Allah, the Most Compassionate, the Most Merciful.",
       "At Al-Hadi Academy, we view a school not merely as an administrative building or a center for the transmission of textbooks, but as a \u201cliving social institution.\u201d Our mission is rooted in the sacred task of Human-Building (Insan-Sazi), and we are committed to a model of \u201cModern Islamic Education\u201d that harmonizes the highest standards of contemporary scientific excellence with the timeless, foundational values of faith, ethics, and character.",
       "Our vision is to cultivate a generation that reaches the \u201cpeaks of knowledge\u201d while remaining deeply grounded in spiritual integrity. We do not simply prepare students to succeed in examinations; we prepare them to be the vanguard of a society built on justice, service, and devotion.",
-  
+
     ],
     lsaNote:
       "We invite you to join us on this transformative journey of excellence and growth. \u2014 Hassan Abbas, Principal, Al-Hadi Academy Gilgit.",
   },
 
-  stats: [{ value: "5+", label: "YEARS OF EXCELLENCE" }, 
-    { value: "25:1", label: "STUDENT-TEACHER RATIO" }, 
-    { value: "24/7", label: "HOSTEL CARE & SUPERVISION" },
-     { value: "30+", label: "CLUBS, SPORTS & ACTIVITIES" },],
+  stats: [{ value: "5+", label: "YEARS OF EXCELLENCE" },
+  { value: "15:1", label: "STUDENT-TEACHER RATIO" },
+  { value: "24/7", label: "HOSTEL CARE & SUPERVISION" },
+  { value: "30+", label: "CLUBS, SPORTS & ACTIVITIES" },],
 
   coCurricular: [
     {
@@ -233,6 +233,11 @@ export const siteContent = {
     ],
     leadership: [
       { name: "Hassan Abbas", role: "Principal", bio: "Leads the school's vision of \u201cModern Islamic Education\u201d — human-building through academic excellence and spiritual refinement.", image: images.staffPrincipal },
+      { name: "Amjad", role: "MS Chemistry", bio: "Chemistry faculty supporting students across the science and STEM programmes.", image: images.staffAmjad },
+      { name: "Sajjad Ali", role: "MS English", bio: "English faculty strengthening students' language, literature, and communication skills.", image: images.staffSajjad },
+      { name: "Yaadgar", role: "MS Biology", bio: "Biology faculty helping students explore the life sciences with practical understanding.", image: images.staffYaadgar },
+      { name: "Kumail Abbas", role: "BS Computer Science", bio: "Computer science faculty guiding students in the digital world.", image: images.staffKumail },
+      { name: "Arif Hussain", role: "MS Chemistry", bio: "Chemistry faculty supporting students across the science and STEM programmes.", image: images.staffArif },
     ],
     alumuni: [
       { name: "Mukaram Ali Shah", fatherName: "Sultan Khan", rollNo: "1056687", Matric: "90", review: "The science labs and STEM program took me far beyond what the board exams required.", image: images.alumuni_3 },

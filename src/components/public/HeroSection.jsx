@@ -48,7 +48,7 @@ export function HeroSection() {
           ))}
           {/* Depth scrim â€” uniform veil + stronger dark toward text */}
           {/* <div className="absolute inset-0 bg-black/15" /> */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/50 to-black/25" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/50 to-black/50" />
         </div>
 
         {/* Centered content */}

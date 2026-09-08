@@ -17,7 +17,7 @@ export function PageHero({ title, subtitle, crumb }) {
           className="w-full h-full object-cover object-center"
         />
         {/* Depth scrim â€” dark toward text, image stays visible above */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/60 to-black/20" />
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/10 to-black/10" /> */}
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-16 sm:pb-20">

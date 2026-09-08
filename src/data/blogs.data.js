@@ -28,33 +28,7 @@ export const blogsData = [
       },
     ],
   },
-  {
-    slug: "milad-un-nabi-17-rabi-ul-awwal",
-    title: "Milad-un-Nabi: Honouring Rabi-ul-Awwal at Al-Hadi",
-    author: "Religious & Moral Education Dept.",
-    date: "2026-01-27",
-    category: "Culture",
-    readTime: "3 min read",
-    coverImage: images.gallary_13,
-    excerpt:
-      "Students marked the blessed month of Rabi-ul-Awwal with naat recitations, nasheed performances, and lessons in the character of our beloved Prophet (PBUH).",
-    introduction:
-      "In the blessed month of Rabi-ul-Awwal, the Al-Hadi Academy family gathered to commemorate the birth of the Holy Prophet Muhammad (PBUH). Through heartfelt recitation, reflection, and community service, our students learned to carry the Prophet's teachings of honesty, kindness, and compassion into their everyday lives.",
-    sections: [
-      {
-        heading: "A morning of recitation and praise",
-        body: "The programme began with the recitation of the Holy Quran, followed by beautiful naats and nasheeds performed by students of all age groups. The assembly hall echoed with praise as young voices delivered their pieces with sincerity and respect, and the atmosphere was one of unity, peace, and devotion.",
-      },
-      {
-        heading: "Lessons in character",
-        body: "Teachers led thoughtful sessions on the life and character of the Prophet (PBUH) â€” his truthfulness, his mercy, his care for the poor, and his patience. Students reflected on how these timeless qualities guide us today, in our friendships, in our studies, and in our treatment of others, regardless of their background.",
-      },
-      {
-        heading: "Compassion in action",
-        body: "To turn reflection into practice, students took part in a voluntary drive, preparing food parcels and heartfelt cards for the less fortunate in our community. It was a fitting reminder that honouring the Prophet's memory is best expressed not in words alone, but in the kindness we show to one another.",
-      },
-    ],
-  },
+ 
   {
     slug: "nurturing-curiosity-science-education",
     title: "Nurturing Curiosity: Modern Science & STEM in Early Education",
