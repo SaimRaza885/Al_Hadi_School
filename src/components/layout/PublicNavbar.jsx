@@ -351,7 +351,7 @@ const navItems = [
                           <Link
                             key={child.path}
                             to={child.path}
-                            className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors hover:bg-surface-tertiary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1"
+                            className="flex items-center gap-3 rounded-lg px-3 py-2.5 transition-colors hover:bg-surface-tertiary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1"
                           >
                             <span className="size-8 rounded-md bg-primary-light text-primary flex items-center justify-center shrink-0 mt-0.5">
                               <Icon className="size-3.5" />
