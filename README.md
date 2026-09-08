@@ -16,9 +16,12 @@ Public website for Al-Hadi Public Academy (Gilgit). A fast, static single-page-a
 Requirements: Node.js 18+ and npm.
 
 ```bash
+
+
 npm install
 npm run dev      # start dev server (http://localhost:5173)
 ```
+next step--
 
 If you see a warning about the API key on first run, no environment variables are required — the site runs fully static.
 
