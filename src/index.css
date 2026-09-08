@@ -27,9 +27,9 @@
   --color-text-inverse: #ffffff;       /* text on primary / dark */
 
   /* ---- Primary — logo teal palette (darkened for AA contrast) ---- */
-  --color-primary: #0e846f;
-  --color-primary-hover: #0b6d5c;      /* button hover */
-  --color-primary-active: #085c4e;     /* button pressed */
+  --color-primary: #0d806b;
+  --color-primary-hover: #0a6b5a;      /* button hover */
+  --color-primary-active: #085a4b;     /* button pressed */
   --color-primary-light: #e4f6f1;      /* tint bg (active nav, info chips) */
   --color-primary-muted: #f1fbf8;      /* very subtle tint */
   --color-primary-foreground: #ffffff; /* text/icon on primary */

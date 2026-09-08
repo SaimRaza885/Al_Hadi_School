@@ -1,6 +1,6 @@
 # UI Tokens
 
-Design tokens for the School Management System. All colors, typography, radius, and component values are anchored on the UI/UX specification (doc 06): **primary `#1C74BD`**, a clean neutral surface palette, a modern sans-serif, and a radius scale of **8 / 10 / 12 / 16**. Use these tokens throughout the codebase — never hardcode a hex value or use a raw Tailwind color class in a component.
+Design tokens for the School Management System. All colors, typography, radius, and component values are anchored on the UI/UX specification (doc 06): **primary teal `#0D806B`** (darkened from the original logo-teal `#149B84` and doc-06 brand blue `#1C74BD` so white text passes AA contrast), a clean neutral surface palette, a modern sans-serif, and a radius scale of **8 / 10 / 12 / 16**. Use these tokens throughout the codebase — never hardcode a hex value or use a raw Tailwind color class in a component.
 
 ---
 
@@ -61,13 +61,21 @@ className="bg-blue-600 text-gray-500"
   --color-text-subtle: #9ca3af;        /* placeholders, disabled */
   --color-text-inverse: #ffffff;       /* text on primary / dark */
 
-  /* ---- Primary — brand blue (#1C74BD) ---- */
-  --color-primary: #1c74bd;
-  --color-primary-hover: #175e99;      /* button hover */
-  --color-primary-active: #12507f;     /* button pressed */
-  --color-primary-light: #e8f1fa;      /* tint bg (active nav, info chips) */
-  --color-primary-muted: #f2f7fc;      /* very subtle tint */
+  /* ---- Primary — logo teal (#0D806B, AA-contrast pass) ---- */
+  --color-primary: #0d806b;
+  --color-primary-hover: #0a6b5a;      /* button hover */
+  --color-primary-active: #085a4b;     /* button pressed */
+  --color-primary-light: #e4f6f1;      /* tint bg (active nav, info chips) */
+  --color-primary-muted: #f1fbf8;      /* very subtle tint */
   --color-primary-foreground: #ffffff; /* text/icon on primary */
+
+  /* ---- Footer (dark navy surface) ---- */
+  --color-footer-bg: #0b132b;
+  --color-footer-border: #1e293b;      /* footer dividers */
+  --color-footer-heading: #ffffff;     /* footer headings */
+  --color-footer-text: #cbd5e1;        /* footer body text (AA on footer-bg) */
+  --color-footer-muted: #94a3b8;       /* footer secondary text */
+  --color-footer-subtle: #7b8aa1;      /* footer copyright (AA on footer-bg) */
 
   /* ---- Success — approved / pass / published-ok (green) ---- */
   --color-success: #16a34a;
@@ -164,7 +172,7 @@ Tailwind v4 generates utilities from every `--color-*` and `--radius-*` token ab
 | Placeholder, disabled | `text-text-subtle` (#9CA3AF) |
 | Text on primary/dark | `text-text-inverse` |
 
-### Primary (brand blue)
+### Primary (brand teal)
 
 Used for: primary buttons, active nav, links, focus rings, key stats, selected states, the results countdown accent.
 
@@ -360,7 +368,7 @@ print: colors preserved via print-color-adjust: exact
 
 - Never put a raw hex value in a component — always use a token (Tailwind utility or `var(--color-*)`).
 - Never use a raw Tailwind color scale (`bg-blue-600`, `text-gray-500`) — use project tokens only.
-- **`#1C74BD` is the only brand blue.** Never use Tailwind's built-in `blue-*` scale for the primary.
+- **`#0D806B` is the only brand primary.** Never use Tailwind's built-in `blue-*`/`teal-*` scale for the primary.
 - Font is **Inter**, loaded via `@fontsource-variable/inter` (or a Google Fonts `<link>`) — never fall back to a bare system font as the primary.
 - All radii come from the scale **8 / 10 / 12 / 16** (`--radius-sm/md/lg/xl`) — no arbitrary radii.
 - Radius intent is fixed: **buttons/badges 8**, **inputs 10**, **cards 12**, **modals/large sections 16**.

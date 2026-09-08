@@ -40,10 +40,11 @@ After building any component — update this file with the component name, file 
 
 #### `PublicFooter`
 - **Path:** `src/components/layout/PublicFooter.jsx`
-- **Last updated:** 2026-09-02
-- **Tokens/Classes:** `bg-[#0B132B] text-slate-300 border-t border-slate-800`, newsletter input `bg-slate-900 border border-slate-700 text-white`, submit icon button `bg-primary hover:bg-primary-hover text-white rounded-md`, brand logo tile `size-10 rounded-lg bg-white ring-1 ring-black/5` with `img` logo (`siteContent.schoolLogo`).
-- **Purpose:** 4-column public site footer with contact details, quick links, portal links, newsletter form, and copyright.
+- **Last updated:** 2026-09-08
+- **Tokens/Classes:** `bg-footer-bg text-footer-text border-t border-footer-border`, contact block `text-footer-muted`, headings `text-footer-heading`, office-hours values `text-footer-heading` / borders `border-footer-border`, "Closed" status `text-warning font-semibold`, copyright `text-footer-subtle`, social icon tiles `size-9 rounded-full bg-footer-border text-footer-text hover:bg-primary hover:text-footer-heading`. Footer palette replaces raw hex/slate: `--color-footer-*` tokens in `src/index.css` (bg `#0b132b`, border `#1e293b`, heading `#ffffff`, text `#cbd5e1`, muted `#94a3b8`, subtle `#7b8aa1` — all ≥4.5:1 on the navy).
+- **Purpose:** 4-column public site footer with contact details, quick links, portal links, office hours, and copyright.
 - **2026-09-02:** "Admission Process" `/admissions` → `/application`, "Academic Programs" `/academics` → `/curriculum`; removed dead `/results` (Student Portal), `/privacy`, and `/terms` links.
+- **2026-09-08:** contrast + token cleanup — replaced `bg-[#0B132B]`/`text-slate-*` raw classes with the new footer token family (copyright was `text-slate-500`, below the 4.5:1 AA threshold on the navy). Logo `img` gained explicit `width`/`height` + `decoding="async"`.
 
 #### `PublicShell`
 - **Path:** `src/components/layout/PublicShell.jsx`

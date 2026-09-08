@@ -14,8 +14,8 @@ const lcpImagePreload = () => ({
       );
       return file ? "/" + file.fileName : null;
     };
-    const mobile = find(/^hero_1_m-[^.]+\.jpg$/);
-    const full = find(/^hero_1-[^.]+\.jpg$/);
+    const mobile = find(/hero_1_m-[^.]+\.jpg$/);
+    const full = find(/hero_1-[^.]+\.jpg$/);
     if (!mobile || !full) return html;
     return {
       html,

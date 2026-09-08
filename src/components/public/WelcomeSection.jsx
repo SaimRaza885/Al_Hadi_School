@@ -39,7 +39,7 @@ export function WelcomeSection() {
           <div className="lg:col-span-7 space-y-6">
             <Reveal>
               <span className="text-xs font-bold uppercase tracking-widest text-primary">
-                Welcome from the Principal
+                {/* Welcome from the Principal */}
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-text-primary tracking-tight leading-tight mt-2">
                 {principal.welcomeHeading}
