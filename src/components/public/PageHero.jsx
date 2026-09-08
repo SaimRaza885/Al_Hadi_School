@@ -8,18 +8,18 @@ export function PageHero({ title, subtitle, crumb }) {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img
-          src={images.pageHeroBg}
+          src={images.heroImage.src}
           alt=""
           aria-hidden="true"
           className="w-full h-full object-cover object-center"
         />
-        {/* Depth scrim â€” darkest under the title block, image stays visible below */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/30" />
+        {/* Depth scrim — darkest under the title block, image stays visible below */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/30" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-16 sm:pb-20">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-1.5 text-xs font-medium text-white/70 mb-5" aria-label="Breadcrumb">
+        <nav className="flex items-center gap-1.5 text-xs font-medium text-white mb-5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]" aria-label="Breadcrumb">
           <Link
             to="/"
             className="inline-flex items-center gap-1.5 hover:text-white transition-colors"
@@ -31,12 +31,12 @@ export function PageHero({ title, subtitle, crumb }) {
           <span className="text-white">{crumb || title}</span>
         </nav>
 
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight max-w-3xl drop-shadow-sm">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight max-w-3xl text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)] drop-shadow-[0_10px_30px_rgba(0,0,0,0.4)]">
           {title}
         </h1>
 
         {subtitle && (
-          <p className="text-sm sm:text-base text-white/85 max-w-2xl mt-4 leading-relaxed drop-shadow-sm">
+          <p className="text-sm sm:text-base text-white max-w-2xl mt-4 leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.7)]">
             {subtitle}
           </p>
         )}
