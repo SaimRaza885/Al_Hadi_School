@@ -79,7 +79,7 @@ export const siteContent = {
       name: "Middle School",
       grades: "Grades 6 - 8",
       description: "Exploration of integrated sciences, humanities, analytical mathematics, and creative arts.",
-      image: images.middleProgram,
+      image: images,
       subjects: [
         "English, Urdu & Regional Languages",
         "Mathematics (Algebra & Geometry)",
@@ -100,7 +100,7 @@ export const siteContent = {
       name: "Secondary School",
       grades: "Grades 9 - 10",
       description: "Rigorous board exam preparation, specialized science and computer applications tracks.",
-      image: images.hero_1,
+      image: images.secondaryProgram,
       subjects: [
         "English, Urdu & Islamic Studies",
         "Mathematics",

@@ -1,6 +1,7 @@
 // ================= HERO + GENERAL IMAGES =================
 
 import hero_1 from "@/assets/hero_1.jpg";
+import high_school from "@/assets/high_school.jpg";
 
 import logo from "@/assets/logo.jpg";
 
@@ -130,7 +131,7 @@ export const images = {
   arts: art,
   clubs: gallary_7,
   middleProgram: middle_program,
-  secondaryProgram: gallary_2,
+  secondaryProgram: high_school,
   stemProgram: gallary_22,
   galleryScience: gallary_6,
   galleryQirat: gallary_6,
