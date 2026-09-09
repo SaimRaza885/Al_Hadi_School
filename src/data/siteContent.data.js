@@ -234,7 +234,7 @@ export const siteContent = {
     leadership: [
         { name: "Hassan Abbas", role: "Principal", bio: "Leads the school's vision of \u201cModern Islamic Education\u201d — human-building through academic excellence and spiritual refinement.", image: images.staffPrincipal },
         { name: "Sardar Ali", role: "Chief Coordinator of Moral Values (Gilgit Region)", bio: "Coordinates moral and character-building programmes for students across schools in the Gilgit region.", image: images.staffSardar },
-        { name: "Sajid Ali", role: "Hostel Incharge", bio: "Supports the principal in leading the school's vision of \u201cModern Islamic Education\u201d — human-building through academic excellence and spiritual refinement.", image: images.staffSajid },
+        { name: "Sajid Ali", role: "Hostel Incharge ", bio: "Supports the principal in leading the school's vision of \u201cModern Islamic Education\u201d — human-building through academic excellence and spiritual refinement.", image: images.staffSajid },
         { name: "Shahid Hussain", role: "Financial Manager", bio: "Financial manager overseeing the academy's accounts, fee management, and financial planning.", image: images.staffShahid },
         { name: "Amjad Hussain", role: "MS Chemistry", bio: "Chemistry faculty supporting students across the science and STEM programmes.", image: images.staffAmjad },
         { name: "Sajjad Ali", role: "MS English", bio: "English faculty strengthening students' language, literature, and communication skills.", image: images.staffSajjad },
