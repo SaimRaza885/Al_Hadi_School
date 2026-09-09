@@ -1,4 +1,4 @@
-# Al-Hadi Public Academy  phase 1.0
+# Al-Hadi Public Academy 
 
 Public website for Al-Hadi Public Academy (Gilgit). A fast, static single-page-app built with React and Vite, styled with Tailwind CSS v4 design tokens. All content is static frontend data — there is no backend, database, or build-time server.
 
