@@ -17,7 +17,7 @@ import { Navigate } from "react-router-dom";
 import { FacultyPage } from "@/pages/public/FacultyPage";
 import { PlaceholderPage } from "@/pages/public/PlaceholderPage";
 import { ApplicationClosedPage } from "@/pages/public/ApplicationClosedPage";
-import { AlumuniPage } from "@/pages/AlumuniPage";
+import { AlumuniPage } from "@/pages/public/AlumuniPage";
 
 export const router = createBrowserRouter([
   {

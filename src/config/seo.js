@@ -8,12 +8,12 @@ export const seo = {
     name: "Al-Hadi Academy Gilgit",
     alternateName: "Al-Hadi Academy",
     description:
-      "Al-Hadi Academy in Gilgit, Danyor is a school offering Modern Islamic Education for grades 6-10, blending academic excellence with character building, STEM, sports and the arts.",
+      "Al-Hadi Academy in Gilgit, Danyore is a school offering Modern Islamic Education for grades 6-10, blending academic excellence with character building, STEM, sports and the arts.",
     url: "https://alhadiacademygilgit.com",
     email: "alhadiacademygilgit123@gmail.com",
     telephone: "+923555679715",
-    address: "Danyor Main Chock Near Shaheen Adda, Gilgit, Pakistan",
+    address: "Danyor Main Chock Near Shaheen van stop, Gilgit, Pakistan",
   },
   defaultDescription:
-    "Al-Hadi Academy Gilgit, Danyor is a modern Islamic school for grades 6-10 combining academic excellence, character building, STEM, sports and the arts. Enquiries and admissions open.",
+    "Al-Hadi Academy Gilgit, Danyore is a modern Islamic school for grades 6-10 combining academic excellence, character building, STEM, sports and the arts. Enquiries and admissions open.",
 };
